@@ -6,6 +6,7 @@ type HeroProps = {
   title: string;
   tagline?: string;
   description: string;
+  descriptionSecondary?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   pills?: string[];
@@ -17,6 +18,7 @@ export function Hero({
   title,
   tagline,
   description,
+  descriptionSecondary,
   primaryCta,
   secondaryCta,
   pills,
@@ -53,6 +55,11 @@ export function Hero({
         <p className="animate-fade-up animate-delay-200 mt-6 text-lg text-muted leading-relaxed sm:text-xl">
           {description}
         </p>
+        {descriptionSecondary && (
+          <p className="animate-fade-up animate-delay-200 mt-4 text-lg text-muted leading-relaxed sm:text-xl">
+            {descriptionSecondary}
+          </p>
+        )}
 
         {(primaryCta || secondaryCta) && (
           <div className="animate-fade-up animate-delay-300 mt-10 flex flex-wrap gap-4">

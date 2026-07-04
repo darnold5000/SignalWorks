@@ -143,7 +143,7 @@ export default function HomePage() {
 
       <CTASection
         title="Ready to build something that works?"
-        description="Whether you need a Launch Website, a Business Website, or custom software — we'll help you choose the right build and the right level of partnership."
+        description="Whether you need a Launch Website or a Growth Website — we'll recommend the right partnership for your business."
       />
     </>
   );

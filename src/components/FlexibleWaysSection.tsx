@@ -3,13 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 
 const offerings = [
   { label: "Launch Website", href: "/pricing#launch-website" },
-  { label: "Business Website", href: "/pricing#business-website" },
-  { label: "Custom Software", href: "/pricing#custom-software" },
-] as const;
-
-const engagementModels = [
-  { label: "Growth Partnership", href: "/pricing#growth-partnership" },
-  { label: "Traditional Project", href: "/pricing#traditional-project" },
+  { label: "Growth Website", href: "/pricing#growth-website" },
 ] as const;
 
 export function FlexibleWaysSection() {
@@ -17,34 +11,21 @@ export function FlexibleWaysSection() {
     <section className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
-          title="Flexible ways to work together"
-          description="Long-term digital partnerships that grow with your business. Choose what you're building, then how you'd like to invest."
+          title="Your long-term technology partner"
+          description="Professional websites backed by a monthly partnership — hosting, security, updates, and continuous improvements included."
           align="center"
           className="mx-auto"
         />
-
-        <p className="mt-10 text-center text-xs font-semibold tracking-[0.2em] uppercase text-muted">
-          What are you building?
-        </p>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           {offerings.map((option) => (
             <Button key={option.label} href={option.href} variant="secondary">
               {option.label}
             </Button>
           ))}
+          <Button href="/pricing" variant="primary">
+            View Pricing
+          </Button>
         </div>
-
-        <p className="mt-10 text-center text-xs font-semibold tracking-[0.2em] uppercase text-muted">
-          How would you like to pay?
-        </p>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
-          {engagementModels.map((option) => (
-            <Button key={option.label} href={option.href} variant="secondary">
-              {option.label}
-            </Button>
-          ))}
-        </div>
-
         <p className="mx-auto mt-10 max-w-xl text-center text-sm text-muted">
           Not sure which option fits? We&apos;ll recommend the right approach after
           a short conversation.

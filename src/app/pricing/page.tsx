@@ -1,15 +1,16 @@
 import { Hero } from "@/components/Hero";
+import { PricingPhilosophySection } from "@/components/PricingPhilosophySection";
 import { WebsiteOfferingsSection } from "@/components/WebsiteOfferingsSection";
-import { EngagementModelsSection } from "@/components/EngagementModelsSection";
-import { PartnershipLevelsSection } from "@/components/PartnershipLevelsSection";
-import { PricingComparison } from "@/components/PricingComparison";
+import { PartnershipVariesSection } from "@/components/PartnershipVariesSection";
+import { EverythingIncludedSection } from "@/components/EverythingIncludedSection";
+import { GrowthOptionsSection } from "@/components/GrowthOptionsSection";
+import { TraditionalOwnershipSection } from "@/components/TraditionalOwnershipSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
   pricingFaqs,
-  pricingPhilosophy,
-  pricingHeroDescription,
+  pricingHero,
   pricingReassurance,
   pricingPhilosophyLines,
 } from "@/data/pricing";
@@ -20,7 +21,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Launch websites from $995, business websites from $3,500, and custom software. Long-term digital partnerships that grow with your business.",
+    "Professional websites backed by a long-term technology partnership. Launch from $500 with monthly partnerships starting at $99/month.",
   path: "/pricing",
 });
 
@@ -31,7 +32,7 @@ export default function PricingPage() {
         data={[
           webPageSchema(
             "Pricing",
-            "Website and software pricing by Signal Works",
+            "Website partnership pricing by Signal Works",
             "/pricing",
           ),
           faqSchema(pricingFaqs),
@@ -43,23 +44,26 @@ export default function PricingPage() {
       />
 
       <Hero
-        eyebrow="Pricing"
-        title={pricingPhilosophy}
-        description={pricingHeroDescription}
-        primaryCta={{ label: "Let's Talk", href: "/contact" }}
+        title={pricingHero.title}
+        description={pricingHero.description}
+        descriptionSecondary={pricingHero.descriptionSecondary}
+        primaryCta={pricingHero.primaryCta}
+        secondaryCta={pricingHero.secondaryCta}
         size="large"
       />
 
+      <PricingPhilosophySection />
+
       <WebsiteOfferingsSection />
 
-      <EngagementModelsSection />
+      <PartnershipVariesSection />
 
-      <PartnershipLevelsSection />
+      <EverythingIncludedSection />
 
-      <PricingComparison />
+      <GrowthOptionsSection />
 
-      <section className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center lg:px-8 lg:py-32">
+      <section className="border-t border-border bg-neutral-50">
+        <div className="mx-auto max-w-6xl px-6 py-20 text-center lg:px-8 lg:py-24">
           <div className="mx-auto max-w-2xl space-y-2">
             {pricingPhilosophyLines.map((line) => (
               <p key={line} className="font-display text-2xl tracking-tight sm:text-3xl">
@@ -67,11 +71,13 @@ export default function PricingPage() {
               </p>
             ))}
           </div>
-          <p className="mx-auto mt-12 max-w-xl text-muted leading-relaxed">
+          <p className="mx-auto mt-10 max-w-xl text-muted leading-relaxed">
             {pricingReassurance}
           </p>
         </div>
       </section>
+
+      <TraditionalOwnershipSection />
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
@@ -83,9 +89,9 @@ export default function PricingPage() {
       </section>
 
       <CTASection
-        title="Ready for a conversation?"
-        description="Tell us about your business. We'll recommend the right build and the right level of partnership."
-        buttonLabel="Let's Talk"
+        title="Ready to stop thinking about your website?"
+        description="Signal Works handles it — build once, improve continuously."
+        buttonLabel="Start Your Project"
       />
     </>
   );
