@@ -14,6 +14,11 @@ export type Project = {
   summary: string;
   description: string;
   storyHook: string;
+  previewDescription: string;
+  transformation: {
+    from: string;
+    to: string;
+  };
   featured: boolean;
   technologies: string[];
   result: string;
@@ -44,6 +49,11 @@ export const projects: Project[] = [
       "Replaced an outdated WordPress site with a premium platform built for credibility, search, and client trust.",
     storyHook:
       "Real software for a real financial advisory firm — not a template.",
+    previewDescription: "Premium financial advisor website.",
+    transformation: {
+      from: "WordPress",
+      to: "Premium Next.js platform",
+    },
     featured: true,
     technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel", "Schema.org"],
     result: "A credible, high-trust digital presence built for search and AI discovery.",
@@ -106,6 +116,11 @@ export const projects: Project[] = [
       "Transformed an outdated youth sports website into a fast, mobile-first recruiting and program platform.",
     storyHook:
       "Built for travel baseball families on their phones — where decisions actually happen.",
+    previewDescription: "Sports training and facility website.",
+    transformation: {
+      from: "Old website",
+      to: "Modern recruiting platform",
+    },
     featured: true,
     technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
     result: "A fast, mobile-first site that drives program inquiries and facility visits.",
@@ -165,6 +180,11 @@ export const projects: Project[] = [
       "Custom AI scouting platform that turns screenshot uploads into structured opponent reports — saving coaches hours every week.",
     storyHook:
       "AI that coaches actually use — not a demo, a daily workflow.",
+    previewDescription: "AI scouting application.",
+    transformation: {
+      from: "Manual stat entry",
+      to: "AI-powered scouting platform",
+    },
     featured: true,
     technologies: ["Next.js", "Supabase", "OpenAI", "TypeScript", "Vercel"],
     result: "Coaches save hours of manual stat entry with AI-powered scouting reports.",
@@ -220,6 +240,11 @@ export const projects: Project[] = [
       "Live meet tracking platform so parents follow results, schedules, and rankings in real time.",
     storyHook:
       "Parents follow meets live — scores, schedules, and rankings in one place.",
+    previewDescription: "Live gymnastics meet tracking platform.",
+    transformation: {
+      from: "Spreadsheets",
+      to: "Live meet tracking app",
+    },
     featured: true,
     technologies: ["Next.js", "React", "Database", "Cloud"],
     result: "Centralized meet data management replacing scattered spreadsheets and manual tracking.",
@@ -273,6 +298,11 @@ export const projects: Project[] = [
       "Competition management platform for cheer events — schedules, divisions, teams, and live performance data.",
     storyHook:
       "Built for the complexity of live cheer competitions — not spreadsheets.",
+    previewDescription: "Cheer competition management platform.",
+    transformation: {
+      from: "Manual tracking",
+      to: "Cloud competition platform",
+    },
     featured: false,
     technologies: ["Next.js", "Cloud Run", "Data Ingestion", "Automation"],
     result: "Streamlined competition management from event ingestion through reporting.",
@@ -320,6 +350,11 @@ export const projects: Project[] = [
       "Marketplace connecting youth baseball players who need live reps with teammates who are available.",
     storyHook:
       "A marketplace concept built with real authentication, profiles, and secure data.",
+    previewDescription: "Youth baseball rep marketplace.",
+    transformation: {
+      from: "Group texts",
+      to: "Structured marketplace",
+    },
     featured: false,
     technologies: ["Next.js", "Supabase", "TypeScript", "Tailwind", "RLS"],
     result: "A connected marketplace concept linking players who need reps with available teammates.",
@@ -363,6 +398,18 @@ export function getProject(slug: string): Project | undefined {
 
 export function getFeaturedProjects(): Project[] {
   return projects.filter((p) => p.featured);
+}
+
+export const homepagePreviewSlugs = [
+  "market-street",
+  "zero-limits",
+  "dugout-intel",
+] as const;
+
+export function getHomepagePreviewProjects(): Project[] {
+  return homepagePreviewSlugs
+    .map((slug) => getProject(slug))
+    .filter((p): p is Project => p !== undefined);
 }
 
 export const projectCategories: ProjectCategory[] = [

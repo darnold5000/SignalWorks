@@ -1,17 +1,15 @@
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
-import { ProjectCard } from "@/components/ProjectCard";
 import { PricingCard } from "@/components/PricingCard";
 import { CTASection } from "@/components/CTASection";
-import { LogoCloud } from "@/components/LogoCloud";
-import { FounderIntro } from "@/components/FounderIntro";
-import { WhySignalWorks } from "@/components/WhySignalWorks";
+import { WhySignalWorksIntro } from "@/components/WhySignalWorksIntro";
+import { ProjectPreviewCard } from "@/components/ProjectPreviewCard";
 import { HowWeWork } from "@/components/HowWeWork";
 import { Testimonials } from "@/components/Testimonials";
 import { RecentExperiments } from "@/components/RecentExperiments";
 import { WhatIDontDo } from "@/components/WhatIDontDo";
-import { getFeaturedProjects } from "@/data/projects";
+import { getHomepagePreviewProjects } from "@/data/projects";
 import { homepagePricingPreview, pricingDisclaimer } from "@/data/pricing";
 import { testimonials } from "@/data/testimonials";
 import { createPageMetadata } from "@/lib/metadata";
@@ -19,7 +17,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Signal Works",
   description:
-    "Signal Works designs and builds custom digital products — premium websites, custom software, and AI-powered business tools for growing businesses.",
+    "Software engineering for growing businesses. Modern websites, custom software, and AI solutions built with clarity.",
   path: "/",
 });
 
@@ -63,7 +61,7 @@ const whatIBuild = [
 ];
 
 export default function HomePage() {
-  const featuredProjects = getFeaturedProjects();
+  const previewProjects = getHomepagePreviewProjects();
 
   return (
     <>
@@ -71,39 +69,24 @@ export default function HomePage() {
         eyebrow="Better signal. Less noise."
         title="Websites that win business. Software that saves time. AI that actually gets used."
         tagline="Modern websites backed by real software engineering."
-        description="Signal Works designs and builds custom digital products — from premium marketing websites to AI-powered business software — for financial advisors, sports organizations, and growing businesses."
+        description="Software engineering for growing businesses — modern websites, custom applications, and AI tools for organizations that have outgrown templates."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
         size="large"
       />
 
-      <FounderIntro />
-
-      <LogoCloud />
-
-      <WhySignalWorks />
+      <WhySignalWorksIntro />
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <SectionHeading
-            eyebrow="Case Studies"
-            title="Real businesses. Real software."
-            description="Financial advisors, baseball facilities, gymnastics clubs, and cheer competitions — not concepts, not mockups. Software built for organizations that use it every day."
+            eyebrow="Work"
+            title="Recent projects"
+            description="A sample of what we build — full stories on the Work page."
           />
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            {featuredProjects.map((project) => (
-              <ProjectCard
-                key={project.slug}
-                title={project.title}
-                industry={project.industry}
-                category={project.category}
-                description={project.description}
-                storyHook={project.storyHook}
-                technologies={project.technologies}
-                result={project.result}
-                href={`/work/${project.slug}`}
-                accent={project.accent}
-              />
+          <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-8">
+            {previewProjects.map((project) => (
+              <ProjectPreviewCard key={project.slug} project={project} />
             ))}
           </div>
         </div>
@@ -119,7 +102,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="What we build"
-          description="Not just pages — digital products designed to grow with your business."
+          description="Not just pages — technology built for real businesses."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whatIBuild.map((item) => (

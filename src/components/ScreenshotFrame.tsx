@@ -4,7 +4,7 @@ type ScreenshotFrameProps = {
   title: string;
   accent?: string;
   className?: string;
-  aspectRatio?: "video" | "square" | "wide";
+  aspectRatio?: "video" | "square" | "wide" | "hero";
 };
 
 export function ScreenshotFrame({
@@ -17,6 +17,7 @@ export function ScreenshotFrame({
     video: "aspect-video",
     square: "aspect-square",
     wide: "aspect-[16/10]",
+    hero: "aspect-[16/10] sm:aspect-[2/1]",
   };
 
   return (

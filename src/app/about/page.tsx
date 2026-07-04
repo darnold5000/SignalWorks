@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "Signal Works is a boutique digital product studio founded by Dave Arnold — premium websites, custom software, and AI-powered business tools.",
+    "Meet Dave Arnold — software engineer and founder of Signal Works. Modern websites, custom software, and AI solutions for growing businesses.",
   path: "/about",
 });
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
         data={[
           webPageSchema(
             "About",
-            `About ${siteConfig.name} digital product studio`,
+            `About ${siteConfig.name} — software engineering for growing businesses`,
             "/about",
           ),
           breadcrumbSchema([
@@ -37,14 +37,14 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About"
-        title="A boutique studio — not a web design shop"
+        title="Meet Dave"
         tagline="Built by a software engineer — not a marketing agency."
-        description="Signal Works designs and builds custom digital products for businesses that need more than a template. You work directly with the person writing the software."
+        description="Signal Works is how I help businesses that have outgrown templates — premium websites, custom applications, and AI tools, built with direct access to the person writing the software."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
       />
 
-      <FounderIntro variant="about" />
+      <FounderIntro />
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">

@@ -1,8 +1,7 @@
 import { Hero } from "@/components/Hero";
-import { WorkStoryCard } from "@/components/WorkStoryCard";
+import { PortfolioSection } from "@/components/PortfolioSection";
 import { Testimonials } from "@/components/Testimonials";
 import { CTASection } from "@/components/CTASection";
-import { LogoCloud } from "@/components/LogoCloud";
 import { projects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
 import { createPageMetadata } from "@/lib/metadata";
@@ -12,7 +11,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Work",
   description:
-    "Case studies from Signal Works — transformations across financial services, youth sports, and custom software.",
+    "Portfolio of websites, custom software, and AI tools built by Signal Works for financial services, youth sports, and growing businesses.",
   path: "/work",
 });
 
@@ -34,29 +33,19 @@ export default function WorkPage() {
       />
 
       <Hero
-        eyebrow="Case Studies"
-        title="Transformations, not screenshots"
-        description="People buy outcomes — faster sites, modern brands, software that saves time. Every project below started with a business problem."
+        eyebrow="Work"
+        title="Look what we've built."
+        tagline="Modern websites backed by real software engineering."
+        description="Scroll through real projects — financial services, youth sports, and custom software built for businesses that needed more than a template."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
+        size="default"
       />
 
-      <LogoCloud />
-
-      <section className="mx-auto max-w-6xl px-6 pb-12 lg:px-8">
-        <div className="space-y-8">
-          {projects.map((project) => (
-            <WorkStoryCard
-              key={project.slug}
-              title={project.title}
-              industry={project.industry}
-              challenge={project.workStory.challenge}
-              solution={project.workStory.solution}
-              results={project.workStory.results}
-              href={`/work/${project.slug}`}
-            />
-          ))}
-        </div>
-      </section>
+      <div>
+        {projects.map((project, index) => (
+          <PortfolioSection key={project.slug} project={project} index={index} />
+        ))}
+      </div>
 
       <Testimonials items={testimonials} />
 
