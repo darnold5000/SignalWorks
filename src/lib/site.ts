@@ -9,7 +9,7 @@ export const siteConfig = {
   author: "Dave Arnold",
   // company: "Arnold Digital", // internal use only — not shown on public site
   brandStatement: "Better signal. Less noise.",
-  email: process.env.CONTACT_EMAIL ?? "hello@hiresignalworks.dev",
+  email: process.env.CONTACT_EMAIL ?? "hello@hiresignalworks.com",
   location: {
     city: "Indianapolis",
     region: "IN",
