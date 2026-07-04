@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
-import { SubscriptionPartnershipCard } from "@/components/SubscriptionPartnershipCard";
+import { GrowthPartnershipCard } from "@/components/GrowthPartnershipCard";
 import { EngagementModelCard } from "@/components/EngagementModelCard";
+import { PricingComparison } from "@/components/PricingComparison";
 import { WhichOptionSection } from "@/components/WhichOptionSection";
 import { OngoingPartnershipSection } from "@/components/OngoingPartnershipSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
@@ -10,8 +11,9 @@ import {
   engagementModels,
   pricingFaqs,
   pricingPhilosophy,
+  pricingPhilosophyExtended,
   pricingReassurance,
-  subscriptionTermsNote,
+  growthPartnershipTermsNote,
 } from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
@@ -20,7 +22,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Website Launch starting at $750, Ongoing Partnership at $149/month, or traditional projects from $3,500+. Professional websites without enterprise pricing.",
+    "Growth Partnership from $750 launch + $149/month, or Traditional Projects from $3,500+. Professional websites without the big upfront investment.",
   path: "/pricing",
 });
 
@@ -46,13 +48,15 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title={pricingPhilosophy}
         tagline="Modern websites backed by real software engineering."
-        description="Flexible pricing that grows with your business. Enterprise-quality work without enterprise pricing — build once, improve continuously."
+        description={`${pricingPhilosophyExtended} Flexible pricing that grows with your business — build once, improve continuously.`}
         primaryCta={{ label: "Let's Talk", href: "/contact" }}
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-8 lg:px-8">
-        <SubscriptionPartnershipCard />
-        <p className="mt-4 text-center text-xs text-muted">{subscriptionTermsNote}</p>
+        <GrowthPartnershipCard />
+        <p className="mt-4 text-center text-xs text-muted">
+          {growthPartnershipTermsNote}
+        </p>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           {engagementModels.map((model) => (
@@ -64,6 +68,8 @@ export default function PricingPage() {
           {pricingReassurance}
         </p>
       </section>
+
+      <PricingComparison />
 
       <WhichOptionSection />
 

@@ -16,7 +16,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Signal Works",
   description:
-    "Enterprise-quality websites without enterprise pricing. Modern websites, custom software, and AI solutions backed by real software engineering.",
+    "Professional websites without the big upfront investment. Modern websites, custom software, and AI solutions backed by real software engineering.",
   path: "/",
 });
 
@@ -68,7 +68,7 @@ export default function HomePage() {
         eyebrow="Better signal. Less noise."
         title="Websites that win business. Software that saves time. AI that actually gets used."
         tagline="Modern websites backed by real software engineering."
-        description="Enterprise-quality websites without enterprise pricing. Flexible pricing that grows with your business — build once, improve continuously."
+        description="Professional websites without the big upfront investment. Flexible pricing that grows with your business — build once, improve continuously."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
         size="large"
@@ -101,7 +101,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="What we build"
-          description="Technology built for real businesses — professional quality without enterprise complexity."
+          description="Technology built for real businesses — professional quality without agency pricing."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whatIBuild.map((item) => (
@@ -143,7 +143,7 @@ export default function HomePage() {
 
       <CTASection
         title="Ready to build something that works?"
-        description="Whether it's a subscription partnership, outright ownership, or custom software — let's find the right approach for your business."
+        description="Whether you want a Growth Partnership with ongoing support, a Traditional Project with upfront ownership, or custom software — we'll find the right approach for your business."
       />
     </>
   );

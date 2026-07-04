@@ -7,12 +7,14 @@ type EngagementModelCardProps = EngagementModel;
 export function EngagementModelCard({
   id,
   name,
+  subtitle,
   headline,
   copy,
   price,
   priceLabel,
   includes,
   optional,
+  ownershipNote,
   note,
   examples,
   featured,
@@ -39,6 +41,9 @@ export function EngagementModelCard({
       <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted">
         {name}
       </p>
+      {subtitle && (
+        <p className="mt-2 text-sm text-muted">{subtitle}</p>
+      )}
       <h3 className="mt-4 font-display text-2xl tracking-tight sm:text-3xl">
         {headline}
       </h3>
@@ -94,6 +99,12 @@ export function EngagementModelCard({
         <p className="mt-4 text-sm text-muted">
           <span className="font-medium text-foreground">Optional:</span> {optional}
         </p>
+      )}
+
+      {ownershipNote && (
+        <div className="mt-6 border border-border bg-neutral-50 px-5 py-4">
+          <p className="text-sm font-medium text-foreground">{ownershipNote}</p>
+        </div>
       )}
 
       <div className="mt-8">

@@ -1,7 +1,7 @@
-import { subscriptionPartnership } from "@/data/pricing";
+import { growthPartnership } from "@/data/pricing";
 import { Button } from "./Button";
 
-export function SubscriptionPartnershipCard() {
+export function GrowthPartnershipCard() {
   const {
     id,
     name,
@@ -10,10 +10,11 @@ export function SubscriptionPartnershipCard() {
     badge,
     phases,
     flowSteps,
+    ownershipCallout,
     closingNote,
     cta,
     ctaHref,
-  } = subscriptionPartnership;
+  } = growthPartnership;
 
   return (
     <article
@@ -34,7 +35,6 @@ export function SubscriptionPartnershipCard() {
       </h3>
       <p className="mt-4 max-w-2xl text-sm text-muted leading-relaxed">{copy}</p>
 
-      {/* Visual flow */}
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3 border border-border bg-neutral-50 px-6 py-5 text-sm font-medium sm:gap-4">
         {flowSteps.map((step, index) => (
           <span key={step} className="flex items-center gap-3 sm:gap-4">
@@ -48,24 +48,18 @@ export function SubscriptionPartnershipCard() {
         ))}
       </div>
 
-      {/* Two phases */}
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
         {phases.map((phase, index) => (
-          <div
-            key={phase.title}
-            className="border border-border p-6 lg:p-8"
-          >
+          <div key={phase.title} className="border border-border p-6 lg:p-8">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted">
               Phase {index === 0 ? "One" : "Two"}
             </p>
             <h4 className="mt-2 text-xl font-semibold">{phase.title}</h4>
 
             <div className="mt-6">
-              {phase.priceLabel === "starting at" && (
-                <p className="text-xs font-semibold tracking-wider uppercase text-muted">
-                  {phase.priceLabel}
-                </p>
-              )}
+              <p className="text-xs font-semibold tracking-wider uppercase text-muted">
+                {phase.priceLabel === "per month" ? "Starting at" : phase.priceLabel}
+              </p>
               <p className="font-display text-4xl tracking-tight">{phase.price}</p>
               {phase.priceLabel === "per month" && (
                 <p className="mt-1 text-sm text-muted">/ month</p>
@@ -90,9 +84,12 @@ export function SubscriptionPartnershipCard() {
         ))}
       </div>
 
-      <p className="mt-10 border-t border-border pt-8 text-sm leading-relaxed text-muted">
-        {closingNote}
-      </p>
+      <p className="mt-10 text-sm leading-relaxed text-muted">{closingNote}</p>
+
+      <div className="mt-6 border border-border bg-neutral-50 px-6 py-5">
+        <p className="text-sm font-medium text-foreground">Ownership</p>
+        <p className="mt-2 text-sm text-muted leading-relaxed">{ownershipCallout}</p>
+      </div>
 
       <div className="mt-8">
         <Button href={ctaHref} className="w-full sm:w-auto">

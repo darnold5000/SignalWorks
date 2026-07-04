@@ -9,12 +9,14 @@ export type EngagementPhase = {
 export type EngagementModel = {
   id: string;
   name: string;
+  subtitle?: string;
   headline: string;
   copy: string;
   price: string;
   priceLabel?: string;
   includes?: string[];
   optional?: string;
+  ownershipNote?: string;
   note?: string;
   examples?: string[];
   featured?: boolean;
@@ -23,18 +25,19 @@ export type EngagementModel = {
   ctaHref: string;
 };
 
-export const subscriptionPartnership = {
-  id: "subscription-partnership",
-  name: "Subscription Partnership",
-  headline: "Launch your website without a large upfront investment.",
-  copy: "Perfect for local businesses that want a professional online presence while keeping startup costs manageable.",
+export const growthPartnership = {
+  id: "growth-partnership",
+  name: "Growth Partnership",
+  headline:
+    "Launch your website with a smaller initial investment and continue improving it over time.",
+  copy: "Designed as a long-term partnership. A smaller Website Launch investment is possible because we commit to hosting, maintaining, and improving your site together over time.",
   badge: "Most Popular",
   phases: [
     {
       title: "Website Launch",
       price: "$750",
       priceLabel: "starting at",
-      sublabel: "One-time investment.",
+      sublabel: "Smaller initial investment.",
       includes: [
         "Strategy session",
         "Custom design",
@@ -46,7 +49,7 @@ export const subscriptionPartnership = {
       title: "Ongoing Partnership",
       price: "$149",
       priceLabel: "per month",
-      sublabel: "12-month minimum partnership.",
+      sublabel: "24-month minimum partnership.",
       includes: [
         "Hosting",
         "Security",
@@ -64,8 +67,10 @@ export const subscriptionPartnership = {
     "Ongoing Partnership",
     "Continuous Improvements",
   ],
+  ownershipCallout:
+    "You'll receive a fully custom website immediately. Ownership transfers to you after successfully completing the 24-month partnership — at no additional cost.",
   closingNote:
-    "Most clients choose this option because it keeps upfront costs manageable while ensuring their website continues to improve long after launch.",
+    "Most clients choose this option because it spreads the investment over time while ensuring their website never becomes outdated.",
   cta: "Let's Talk",
   ctaHref: "/contact",
 };
@@ -74,10 +79,12 @@ export const engagementModels: EngagementModel[] = [
   {
     id: "traditional-project",
     name: "Traditional Project",
-    headline: "Prefer to purchase your website outright?",
-    copy: "Ideal for businesses that prefer a traditional project with full ownership from day one.",
+    subtitle: "One-time investment with optional ongoing support.",
+    headline: "Pay for the full website build upfront.",
+    copy: "Ideal for businesses that prefer to pay for the full website build upfront, then choose whether to continue with ongoing support after launch.",
     price: "$3,500+",
     priceLabel: "starting at",
+    ownershipNote: "You own your website from day one.",
     includes: [
       "Complete custom website",
       "Mobile-first design",
@@ -117,13 +124,13 @@ export const engagementModels: EngagementModel[] = [
 export const whichOptionCards = [
   {
     title: "Small Business",
-    description: "Want to launch without spending thousands upfront?",
-    model: "Subscription Partnership",
-    href: "/pricing#subscription-partnership",
+    description: "Want a smaller initial investment with ongoing support built in?",
+    model: "Growth Partnership",
+    href: "/pricing#growth-partnership",
   },
   {
     title: "Growing Business",
-    description: "Want to own your website from day one?",
+    description: "Prefer to pay upfront and own your website immediately?",
     model: "Traditional Project",
     href: "/pricing#traditional-project",
   },
@@ -135,11 +142,22 @@ export const whichOptionCards = [
   },
 ] as const;
 
+export const pricingComparison = {
+  note: "Both options deliver a custom website built for your business. The difference is payment structure, ongoing support, and when ownership transfers.",
+  rows: [
+    { feature: "Upfront investment", growth: "Lower", traditional: "Higher" },
+    { feature: "Monthly partnership", growth: "Included", traditional: "Optional" },
+    { feature: "Continuous improvements", growth: "✓", traditional: "Optional" },
+    { feature: "Hosting & support", growth: "✓", traditional: "Optional" },
+    { feature: "Ownership", growth: "After partnership", traditional: "Immediately" },
+  ],
+} as const;
+
 export const ongoingPartnership = {
   title: "Ongoing Partnership",
   price: "$149/month",
   description:
-    "Available after any website launch — whether through a Subscription Partnership or a Traditional Project. Your site keeps improving long after go-live.",
+    "Available after a Traditional Project launch, or included in a Growth Partnership. Your site keeps improving long after go-live.",
   includes: [
     "Hosting",
     "Security",
@@ -153,24 +171,32 @@ export const ongoingPartnership = {
 };
 
 export const pricingPhilosophy =
-  "Professional websites and software without enterprise pricing.";
+  "Professional websites without the big upfront investment.";
+
+export const pricingPhilosophyExtended =
+  "Professional websites and software without agency pricing.";
 
 export const pricingReassurance =
   "Not sure which option fits? We'll recommend the right approach after a short conversation.";
 
-export const subscriptionTermsNote =
-  "Final pricing depends on project scope and complexity. Website Launch typically starts at $750; Ongoing Partnership at $149/month with a 12-month minimum.";
+export const growthPartnershipTermsNote =
+  "Final pricing depends on project scope and complexity. Website Launch typically starts at $750; Ongoing Partnership at $149/month with a 24-month minimum.";
 
 export const pricingFaqs = [
   {
-    question: "How does the Subscription Partnership work?",
+    question: "Do I own my website?",
     answer:
-      "It's two phases — not financing. Phase one is Website Launch (starting at $750), a one-time investment covering strategy, custom design, your professional website, and launch. Phase two is Ongoing Partnership (starting at $149/month), which includes hosting, security, monitoring, updates, technical SEO, AI optimization, and continuous improvements with a 12-month minimum partnership.",
+      "Yes. With a Traditional Project, you own it immediately. With a Growth Partnership, ownership transfers to you after completing the 24-month partnership. This approach allows us to significantly reduce the upfront investment while continuing to improve and support your website over time.",
   },
   {
-    question: "When does a Traditional Project make more sense?",
+    question: "What is the difference between Growth Partnership and Traditional Project?",
     answer:
-      "A Traditional Project starts at $3,500+ when you prefer full ownership from day one. You receive a complete custom website with mobile-first design, technical SEO, AI-search optimization, analytics, and launch support. An Ongoing Partnership at $149/month is available after launch.",
+      "Both options include a custom website. Growth Partnership starts with a smaller Website Launch investment and includes ongoing monthly support — ownership transfers after the partnership term. Traditional Project is a larger upfront investment with full ownership from day one and optional ongoing support after launch.",
+  },
+  {
+    question: "How does the Growth Partnership work?",
+    answer:
+      "It's two phases — a partnership, not a rental. Phase one is Website Launch (starting at $750), covering strategy, custom design, your professional website, and launch. Phase two is Ongoing Partnership (starting at $149/month) with hosting, security, monitoring, updates, technical SEO, AI optimization, and continuous improvements over a 24-month minimum partnership.",
   },
   {
     question: "How are professional services and custom software priced?",

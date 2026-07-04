@@ -3,8 +3,8 @@ import { SectionHeading } from "./SectionHeading";
 
 const options = [
   {
-    label: "Subscription Partnership",
-    href: "/pricing#subscription-partnership",
+    label: "Growth Partnership",
+    href: "/pricing#growth-partnership",
   },
   {
     label: "Traditional Project",
@@ -22,7 +22,7 @@ export function FlexibleWaysSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
           title="Flexible ways to work together"
-          description="Whether you want to spread costs over time, purchase your website outright, or build custom software, Signal Works offers an approach that fits your business."
+          description="Whether you want a smaller initial investment with ongoing support, pay upfront for full ownership, or build custom software — Signal Works offers an approach that fits your business."
           align="center"
           className="mx-auto"
         />
