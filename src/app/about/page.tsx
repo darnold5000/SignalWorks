@@ -1,7 +1,9 @@
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
-import { stats } from "@/data/stats";
+import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { WhySignalWorks } from "@/components/WhySignalWorks";
+import { industryExperience } from "@/data/industries";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -10,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "Signal Works is a digital product studio founded by Dave Arnold, building modern websites, custom software, and AI-powered solutions.",
+    "Signal Works is a digital product studio founded by Dave Arnold — building premium websites, custom software, and AI-powered business tools.",
   path: "/about",
 });
 
@@ -33,20 +35,24 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About"
-        title="A digital product studio built with clarity"
-        description="Signal Works helps businesses cut through the noise with modern websites, custom software, AI tools, and automation — all designed to make the important things obvious."
+        title="A digital product studio — not a web design shop"
+        description="Signal Works designs and builds custom digital products for businesses that need more than a template. Premium websites. Custom software. AI that actually gets used."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-16 lg:px-8">
-        <div className="grid gap-16 lg:grid-cols-2">
-          <div>
+        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+          <div className="lg:col-span-2">
+            <PhotoPlaceholder />
+          </div>
+          <div className="lg:col-span-3">
             <SectionHeading title="Better signal. Less noise." />
             <p className="mt-6 text-muted leading-relaxed">
               Every business is competing with noise. My job is to make your
-              business the signal people notice — whether that&apos;s a better
-              website, a custom app, SEO, AI search optimization, or automation.
+              business the signal people notice — whether that&apos;s a premium
+              website for a financial advisor, a meet tracker for a gymnastics
+              club, or an AI scouting tool for a baseball coach.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               I&apos;m {siteConfig.author}, founder of {siteConfig.name}. Based
@@ -54,31 +60,10 @@ export default function AboutPage() {
               with businesses across the country to build digital products that
               look polished, perform well, and solve real problems.
             </p>
-          </div>
-          <div>
-            <SectionHeading title="What I bring" />
-            <ul className="mt-6 space-y-4 text-muted">
-              <li className="flex items-start gap-3">
-                <span aria-hidden="true">—</span>
-                Premium front-end design with editorial clarity
-              </li>
-              <li className="flex items-start gap-3">
-                <span aria-hidden="true">—</span>
-                Real software architecture — not just page builders
-              </li>
-              <li className="flex items-start gap-3">
-                <span aria-hidden="true">—</span>
-                AI integrations that solve practical business problems
-              </li>
-              <li className="flex items-start gap-3">
-                <span aria-hidden="true">—</span>
-                SEO and AEO structure built into every project
-              </li>
-              <li className="flex items-start gap-3">
-                <span aria-hidden="true">—</span>
-                Experience across financial services, sports tech, and AI tools
-              </li>
-            </ul>
+            <p className="mt-4 text-muted leading-relaxed">
+              People hire people. When you work with Signal Works, you work
+              directly with me — from discovery through launch and beyond.
+            </p>
           </div>
         </div>
       </section>
@@ -86,24 +71,25 @@ export default function AboutPage() {
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
           <SectionHeading
-            eyebrow="By the numbers"
-            title="Real projects, real results"
+            eyebrow="Experience"
+            title="Built for real industries"
+            description="Not generic portfolios — software for organizations that depend on it."
           />
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="border border-border bg-background p-6"
-              >
-                <p className="font-display text-3xl">{stat.value}</p>
-                <p className="mt-1 text-sm text-muted">{stat.label}</p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {industryExperience.map((item) => (
+              <div key={item.industry} className="border border-border bg-background p-6">
+                <h3 className="font-semibold">{item.industry}</h3>
+                <p className="mt-2 text-sm text-muted leading-relaxed">
+                  {item.description}
+                </p>
+                <p className="mt-3 text-xs text-muted">{item.example}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TODO: Add personal/studio photo and logo when available */}
+      <WhySignalWorks />
 
       <CTASection
         title="Let's build something together"

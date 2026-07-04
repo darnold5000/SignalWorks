@@ -10,8 +10,10 @@ export type Project = {
   title: string;
   category: ProjectCategory;
   categories: string[];
+  industry: string;
   summary: string;
   description: string;
+  storyHook: string;
   featured: boolean;
   technologies: string[];
   result: string;
@@ -19,6 +21,8 @@ export type Project = {
   solution: string;
   features: string[];
   results: string[];
+  before?: string[];
+  after?: string[];
   accent: string;
 };
 
@@ -28,10 +32,13 @@ export const projects: Project[] = [
     title: "Market Street Wealth Management",
     category: "Business Websites",
     categories: ["Business Website", "SEO", "AEO"],
+    industry: "Financial Services",
     summary:
       "Premium financial advisor website built with modern design, trust-focused content, fee transparency, and AI-answer optimized pages.",
     description:
-      "Premium financial advisor website with SEO, AEO, blog architecture, client login, fee transparency, and trust-focused design.",
+      "Replaced an outdated WordPress site with a premium platform built for credibility, search, and client trust.",
+    storyHook:
+      "Real software for a real financial advisory firm — not a template.",
     featured: true,
     technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel", "Schema.org"],
     result: "A credible, high-trust digital presence built for search and AI discovery.",
@@ -56,6 +63,18 @@ export const projects: Project[] = [
       "Reduced content clutter with improved hierarchy and scanability",
       "Foundation for ongoing content and SEO growth",
     ],
+    before: [
+      "Old WordPress site with outdated branding",
+      "Hard to navigate service and fee information",
+      "No structure for search or AI discovery",
+      "Cluttered content with poor hierarchy",
+    ],
+    after: [
+      "Modern premium website with editorial design",
+      "Improved information architecture and fee transparency",
+      "SEO and AEO optimized with FAQ schema",
+      "Client portal integration and blog architecture",
+    ],
     accent: "from-neutral-800 to-neutral-600",
   },
   {
@@ -63,10 +82,13 @@ export const projects: Project[] = [
     title: "Zero Limits Baseball",
     category: "Business Websites",
     categories: ["Business Website", "Sports Facility"],
+    industry: "Youth Sports",
     summary:
       "Modern sports performance facility website built to replace an outdated site with a fast, mobile-first, premium design.",
     description:
-      "Modern sports facility website built for speed, mobile experience, strong CTAs, and easy updates.",
+      "Transformed an outdated youth sports website into a fast, mobile-first recruiting and program platform.",
+    storyHook:
+      "Built for travel baseball families on their phones — where decisions actually happen.",
     featured: true,
     technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
     result: "A fast, mobile-first site that drives program inquiries and facility visits.",
@@ -88,6 +110,18 @@ export const projects: Project[] = [
       "Professional brand presence matching facility quality",
       "Fast load times on modern hosting",
     ],
+    before: [
+      "Outdated youth sports website",
+      "Hard for staff to update content",
+      "Poor mobile experience for parents and athletes",
+      "Weak conversion paths for program inquiries",
+    ],
+    after: [
+      "Modern recruiting-focused website",
+      "Fast loading on every device",
+      "Clear program pages and strong CTAs",
+      "Easy content updates on modern hosting",
+    ],
     accent: "from-neutral-700 to-neutral-500",
   },
   {
@@ -95,10 +129,13 @@ export const projects: Project[] = [
     title: "Dugout Intel",
     category: "AI Tools",
     categories: ["AI Application", "Baseball Scouting"],
+    industry: "Youth Sports",
     summary:
       "AI-powered youth baseball scouting tool that converts GameChanger screenshots into structured opponent reports.",
     description:
-      "AI-powered baseball scouting platform that turns GameChanger screenshots into scouting reports.",
+      "Custom AI scouting platform that turns screenshot uploads into structured opponent reports — saving coaches hours every week.",
+    storyHook:
+      "AI that coaches actually use — not a demo, a daily workflow.",
     featured: true,
     technologies: ["Next.js", "Supabase", "OpenAI", "TypeScript", "Vercel"],
     result: "Coaches save hours of manual stat entry with AI-powered scouting reports.",
@@ -122,6 +159,12 @@ export const projects: Project[] = [
       "Faster game preparation for coaching staff",
       "Demonstrated practical AI application in sports",
     ],
+    after: [
+      "Screenshot uploads with AI player extraction",
+      "Structured batting and pitching stat tables",
+      "Automated opponent scouting reports",
+      "Pitching ledger and exportable reports",
+    ],
     accent: "from-neutral-900 to-neutral-700",
   },
   {
@@ -129,10 +172,13 @@ export const projects: Project[] = [
     title: "Gymnastics Meet Tracker",
     category: "Sports Technology",
     categories: ["Custom Web App", "Sports Technology"],
+    industry: "Youth Sports",
     summary:
       "Custom gymnastics tracking platform for meet schedules, athletes, scores, and reporting.",
     description:
-      "Custom meet tracking application for gymnastics data, schedules, scores, and reporting.",
+      "Live meet tracking platform so parents follow results, schedules, and rankings in real time.",
+    storyHook:
+      "Parents follow meets live — scores, schedules, and rankings in one place.",
     featured: true,
     technologies: ["Next.js", "React", "Database", "Cloud"],
     result: "Centralized meet data management replacing scattered spreadsheets and manual tracking.",
@@ -154,6 +200,12 @@ export const projects: Project[] = [
       "Real-time score and schedule visibility",
       "Foundation for future analytics and reporting",
     ],
+    after: [
+      "Parents follow meets live from any device",
+      "Automatic results and score workflows",
+      "Meet scheduling and athlete management",
+      "Rankings and reporting dashboards",
+    ],
     accent: "from-neutral-800 to-neutral-600",
   },
   {
@@ -161,10 +213,13 @@ export const projects: Project[] = [
     title: "Cheer Meet Tracker",
     category: "Sports Technology",
     categories: ["Custom Web App", "Sports Technology"],
+    industry: "Youth Sports",
     summary:
       "Cheer competition tracking platform designed around event schedules, teams, divisions, and performance data.",
     description:
-      "Cheer competition tracking platform for event schedules, teams, divisions, and performance data.",
+      "Competition management platform for cheer events — schedules, divisions, teams, and live performance data.",
+    storyHook:
+      "Built for the complexity of live cheer competitions — not spreadsheets.",
     featured: false,
     technologies: ["Next.js", "Cloud Run", "Data Ingestion", "Automation"],
     result: "Streamlined competition management from event ingestion through reporting.",
@@ -193,10 +248,13 @@ export const projects: Project[] = [
     title: "OnDeck Reps",
     category: "Marketplaces",
     categories: ["Marketplace", "Youth Sports"],
+    industry: "Youth Sports",
     summary:
       "Marketplace concept for youth baseball players to find live reps, including request posting, availability, player profiles, and interest workflows.",
     description:
-      "Marketplace for youth baseball players to find live reps with profiles, requests, and availability workflows.",
+      "Marketplace connecting youth baseball players who need live reps with teammates who are available.",
+    storyHook:
+      "A marketplace concept built with real authentication, profiles, and secure data.",
     featured: false,
     technologies: ["Next.js", "Supabase", "TypeScript", "Tailwind", "RLS"],
     result: "A connected marketplace concept linking players who need reps with available teammates.",

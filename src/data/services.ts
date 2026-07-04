@@ -38,7 +38,7 @@ export const services: Service[] = [
       {
         question: "How much does a custom website cost?",
         answer:
-          "Custom business websites typically start at $3,500 for a focused 5–7 page site and $6,500 for a comprehensive 10–20 page site with service landing pages, blog setup, and advanced SEO/AEO structure. Final pricing depends on scope, content needs, and integrations.",
+          "Custom business websites typically start at $3,500+ for a focused 5–7 page Professional Website and $6,500+ for a Growth Platform with service landing pages, blog setup, and advanced SEO/AEO structure. Final pricing depends on scope, content needs, and integrations.",
       },
     ],
   },
@@ -79,7 +79,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-automation",
-    title: "AI Tools & Automation",
+    title: "AI & Business Automation",
     shortDescription:
       "Practical AI integrations and automation systems that save time and reduce manual work.",
     description:
@@ -146,9 +146,9 @@ export const services: Service[] = [
 ];
 
 export const carePlanService = {
-  title: "Website Care Plans",
+  title: "Ongoing Partnership",
   shortDescription:
-    "Ongoing hosting, updates, SEO maintenance, and performance monitoring for businesses that want continuous improvement.",
+    "Hosting, updates, SEO maintenance, and performance monitoring for businesses that want a long-term digital partner.",
   includes: [
     "Hosting coordination",
     "Small content updates",

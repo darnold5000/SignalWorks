@@ -9,7 +9,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Work",
   description:
-    "Case studies and portfolio of websites, custom applications, AI tools, and sports technology platforms built by Signal Works.",
+    "Case studies from Signal Works — premium websites, custom applications, and AI tools built for financial services, youth sports, and growing businesses.",
   path: "/work",
 });
 
@@ -32,8 +32,8 @@ export default function WorkPage() {
 
       <Hero
         eyebrow="Case Studies"
-        title="Work that speaks for itself"
-        description="Websites, custom applications, AI tools, and sports platforms — each built with clarity and purpose."
+        title="Real businesses using real software"
+        description="Financial advisors, baseball facilities, gymnastics clubs, and cheer competitions — each project tells a story of a business that needed more than a template."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
       />
 
@@ -54,8 +54,10 @@ export default function WorkPage() {
             <ProjectCard
               key={project.slug}
               title={project.title}
+              industry={project.industry}
               category={project.category}
               description={project.description}
+              storyHook={project.storyHook}
               technologies={project.technologies}
               result={project.result}
               href={`/work/${project.slug}`}

@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Signal Works",
-  tagline: "Modern websites. Custom software. AI-powered solutions.",
+  tagline: "Websites that win business. Software that saves time.",
   description:
-    "Modern websites, custom software, and AI-powered solutions built with clarity. Signal Works helps businesses cut through the noise with high-performance digital products.",
+    "Signal Works designs and builds custom digital products — from premium marketing websites to AI-powered business software — for growing businesses.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://signalworks.dev",
   author: "Dave Arnold",
   company: "Arnold Digital",

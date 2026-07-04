@@ -4,8 +4,10 @@ import { ScreenshotFrame } from "./ScreenshotFrame";
 
 type ProjectCardProps = {
   title: string;
+  industry: string;
   category: string;
   description: string;
+  storyHook: string;
   technologies: string[];
   result: string;
   href: string;
@@ -14,8 +16,10 @@ type ProjectCardProps = {
 
 export function ProjectCard({
   title,
+  industry,
   category,
   description,
+  storyHook,
   technologies,
   result,
   href,
@@ -29,10 +33,14 @@ export function ProjectCard({
         className="rounded-none border-0 border-b border-border"
       />
       <div className="flex flex-1 flex-col p-8">
-        <p className="text-xs font-semibold tracking-wider uppercase text-muted">
-          {category}
-        </p>
-        <h3 className="mt-2 text-xl font-semibold">{title}</h3>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded-sm bg-foreground px-2.5 py-1 text-xs font-medium text-background">
+            {industry}
+          </span>
+          <span className="text-xs text-muted">{category}</span>
+        </div>
+        <h3 className="mt-3 text-xl font-semibold">{title}</h3>
+        <p className="mt-2 text-sm font-medium leading-relaxed">{storyHook}</p>
         <p className="mt-3 flex-1 text-sm text-muted leading-relaxed">
           {description}
         </p>
@@ -41,12 +49,12 @@ export function ProjectCard({
             <TechBadge key={tech} label={tech} />
           ))}
         </div>
-        <p className="mt-4 text-sm font-medium">{result}</p>
+        <p className="mt-4 text-sm text-muted">{result}</p>
         <Link
           href={href}
           className="mt-6 text-sm font-medium group-hover:underline"
         >
-          View Case Study →
+          Read the case study →
         </Link>
       </div>
     </article>

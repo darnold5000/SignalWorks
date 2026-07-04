@@ -33,10 +33,18 @@ export default function ContactPage() {
       <Hero
         eyebrow="Contact"
         title="Start a project"
-        description="Tell me about your goals, timeline, and budget. I'll respond within one business day."
+        description="Tell me about your goals, timeline, and budget. Typical response time: within one business day."
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-20 lg:px-8 lg:pb-28">
+        <div className="mb-10 rounded-sm border border-border bg-neutral-50 px-6 py-4">
+          <p className="text-sm text-muted">
+            <span className="font-medium text-foreground">Typical response time:</span>{" "}
+            within one business day. You&apos;ll hear directly from {siteConfig.author} — no
+            account managers, no hand-offs.
+          </p>
+        </div>
+
         <div className="grid gap-16 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <ContactForm />
@@ -61,8 +69,9 @@ export default function ContactPage() {
                 <p className="mt-1">Working with clients nationwide</p>
               </div>
               <div>
-                <p className="font-medium text-foreground">Response time</p>
+                <p className="font-medium text-foreground">Typical response time</p>
                 <p>Within one business day</p>
+                <p className="mt-1 text-xs">Direct reply from {siteConfig.author}</p>
               </div>
             </div>
           </div>

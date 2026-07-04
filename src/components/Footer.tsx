@@ -5,7 +5,7 @@ const footerLinks = {
   services: [
     { label: "Business Websites", href: "/services/business-websites" },
     { label: "Custom Apps", href: "/services/custom-apps" },
-    { label: "AI Automation", href: "/services/ai-automation" },
+    { label: "AI & Automation", href: "/services/ai-automation" },
     { label: "SEO + AEO", href: "/services/seo-aeo" },
   ],
   work: [
