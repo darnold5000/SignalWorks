@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { SubscriptionPartnershipCard } from "@/components/SubscriptionPartnershipCard";
 import { EngagementModelCard } from "@/components/EngagementModelCard";
 import { WhichOptionSection } from "@/components/WhichOptionSection";
 import { OngoingPartnershipSection } from "@/components/OngoingPartnershipSection";
@@ -19,14 +20,11 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Professional websites and software without enterprise pricing. Flexible engagement models including subscription partnerships, ownership, and custom software.",
+    "Website Launch starting at $750, Ongoing Partnership at $149/month, or traditional projects from $3,500+. Professional websites without enterprise pricing.",
   path: "/pricing",
 });
 
 export default function PricingPage() {
-  const featured = engagementModels.find((m) => m.featured);
-  const others = engagementModels.filter((m) => !m.featured);
-
   return (
     <>
       <JsonLd
@@ -53,20 +51,13 @@ export default function PricingPage() {
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-8 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-3 lg:items-start">
-          {featured && (
-            <div className="lg:col-span-1">
-              <EngagementModelCard {...featured} />
-              <p className="mt-4 text-center text-xs text-muted">
-                {subscriptionTermsNote}
-              </p>
-            </div>
-          )}
-          <div className="grid gap-8 lg:col-span-2">
-            {others.map((model) => (
-              <EngagementModelCard key={model.id} {...model} />
-            ))}
-          </div>
+        <SubscriptionPartnershipCard />
+        <p className="mt-4 text-center text-xs text-muted">{subscriptionTermsNote}</p>
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+          {engagementModels.map((model) => (
+            <EngagementModelCard key={model.id} {...model} />
+          ))}
         </div>
 
         <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-muted leading-relaxed">

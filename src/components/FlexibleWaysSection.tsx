@@ -7,8 +7,8 @@ const options = [
     href: "/pricing#subscription-partnership",
   },
   {
-    label: "Own Your Website",
-    href: "/pricing#own-your-website",
+    label: "Traditional Project",
+    href: "/pricing#traditional-project",
   },
   {
     label: "Custom Software",

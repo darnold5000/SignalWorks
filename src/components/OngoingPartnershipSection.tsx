@@ -9,7 +9,10 @@ export function OngoingPartnershipSection() {
         title={ongoingPartnership.title}
         description={ongoingPartnership.description}
       />
-      <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <p className="mt-4 text-sm font-medium">
+        Starting at {ongoingPartnership.price}
+      </p>
+      <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {ongoingPartnership.includes.map((item) => (
           <li
             key={item}
