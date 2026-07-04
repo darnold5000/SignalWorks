@@ -103,7 +103,15 @@ export default function AboutPage() {
                 <p className="mt-2 text-sm text-muted leading-relaxed">
                   {item.description}
                 </p>
-                <p className="mt-3 text-xs text-muted">{item.example}</p>
+                {item.clients && item.clients.length > 0 && (
+                  <ul className="mt-4 flex flex-wrap gap-2 border-t border-border pt-4">
+                    {item.clients.map((client) => (
+                      <li key={client.name} className="text-xs text-muted">
+                        {client.name}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

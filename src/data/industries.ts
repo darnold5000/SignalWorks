@@ -5,25 +5,32 @@ export const trustedIndustries = [
   "Local Businesses",
 ] as const;
 
-export const industryExperience = [
+export type IndustryExperience = {
+  industry: string;
+  description: string;
+  /** Reserved for future client logos, testimonials, or case study links. */
+  clients?: { name: string; href?: string }[];
+};
+
+export const industryExperience: IndustryExperience[] = [
   {
     industry: "Financial Services",
-    description: "Premium websites and client-facing platforms for advisors and professional firms.",
-    example: "Market Street Wealth Management",
+    description:
+      "Premium websites and client-facing platforms for advisors, wealth managers, and professional firms.",
   },
   {
     industry: "Youth Sports",
-    description: "Facility websites, meet trackers, scouting tools, and competition platforms.",
-    example: "Zero Limits Baseball, Dugout Intel, Gymnastics Meet Tracker",
+    description:
+      "Facility websites, scheduling systems, scouting platforms, registration tools, and competition software.",
   },
   {
     industry: "Professional Services",
-    description: "Credibility-focused sites built to convert visitors and rank in search.",
-    example: "Service businesses nationwide",
+    description:
+      "Credibility-focused websites designed to generate leads, build trust, and rank well in search.",
   },
   {
     industry: "AI & Automation",
-    description: "Practical AI tools that replace manual work — not demos that never ship.",
-    example: "Dugout Intel scouting platform",
+    description:
+      "Practical AI tools and workflow automation that eliminate repetitive work and improve operations.",
   },
-] as const;
+];

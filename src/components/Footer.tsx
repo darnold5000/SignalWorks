@@ -107,13 +107,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-2 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 border-t border-border pt-8">
           <p className="text-sm text-muted">
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p className="text-sm text-muted">
-            Built by {siteConfig.company}
-          </p>
+          <p className="mt-2 text-sm text-muted">{siteConfig.brandStatement}</p>
         </div>
       </div>
     </footer>
