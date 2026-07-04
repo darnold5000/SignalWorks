@@ -1,0 +1,74 @@
+import { Hero } from "@/components/Hero";
+import { ProjectCard } from "@/components/ProjectCard";
+import { CTASection } from "@/components/CTASection";
+import { projects, projectCategories } from "@/data/projects";
+import { createPageMetadata } from "@/lib/metadata";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = createPageMetadata({
+  title: "Work",
+  description:
+    "Case studies and portfolio of websites, custom applications, AI tools, and sports technology platforms built by Signal Works.",
+  path: "/work",
+});
+
+export default function WorkPage() {
+  return (
+    <>
+      <JsonLd
+        data={[
+          webPageSchema(
+            "Work",
+            "Portfolio of digital products built by Signal Works",
+            "/work",
+          ),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Work", path: "/work" },
+          ]),
+        ]}
+      />
+
+      <Hero
+        eyebrow="Case Studies"
+        title="Work that speaks for itself"
+        description="Websites, custom applications, AI tools, and sports platforms — each built with clarity and purpose."
+        primaryCta={{ label: "Start a Project", href: "/contact" }}
+      />
+
+      <section className="mx-auto max-w-6xl px-6 pb-20 lg:px-8 lg:pb-28">
+        <div className="mb-12 flex flex-wrap gap-3">
+          {projectCategories.map((category) => (
+            <span
+              key={category}
+              className="rounded-full border border-border px-4 py-1.5 text-xs font-medium text-muted"
+            >
+              {category}
+            </span>
+          ))}
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              category={project.category}
+              description={project.description}
+              technologies={project.technologies}
+              result={project.result}
+              href={`/work/${project.slug}`}
+              accent={project.accent}
+            />
+          ))}
+        </div>
+      </section>
+
+      <CTASection
+        title="Want something like this?"
+        description="Let's discuss your project and build something tailored to your business."
+      />
+    </>
+  );
+}
