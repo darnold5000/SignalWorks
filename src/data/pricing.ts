@@ -1,149 +1,168 @@
-export type EngagementPhase = {
-  title: string;
-  price: string;
-  priceLabel: string;
-  sublabel?: string;
-  includes: string[];
-};
-
-export type EngagementModel = {
+export type WebsiteOffering = {
   id: string;
   name: string;
-  subtitle?: string;
-  headline: string;
-  copy: string;
   price: string;
   priceLabel?: string;
-  includes?: string[];
-  optional?: string;
-  ownershipNote?: string;
-  note?: string;
-  examples?: string[];
-  featured?: boolean;
+  description: string;
+  examples: string[];
+  features: string[];
+};
+
+export type PaymentModel = {
+  id: string;
+  name: string;
   badge?: string;
+  headline: string;
+  copy: string;
+  launchPrice?: string;
+  monthlyPrice?: string;
+  monthlyNote?: string;
+  upfrontPrice?: string;
+  upfrontLabel?: string;
+  includes: string[];
+  ownershipNote?: string;
+  optional?: string;
   cta: string;
   ctaHref: string;
 };
 
-export const growthPartnership = {
-  id: "growth-partnership",
-  name: "Growth Partnership",
-  headline:
-    "Launch your website with a smaller initial investment and continue improving it over time.",
-  copy: "Designed as a long-term partnership. A smaller Website Launch investment is possible because we commit to hosting, maintaining, and improving your site together over time.",
-  badge: "Most Popular",
-  phases: [
-    {
-      title: "Website Launch",
-      price: "$750",
-      priceLabel: "starting at",
-      sublabel: "Smaller initial investment.",
-      includes: [
-        "Strategy session",
-        "Custom design",
-        "Professional website",
-        "Launch",
-      ],
-    },
-    {
-      title: "Ongoing Partnership",
-      price: "$149",
-      priceLabel: "per month",
-      sublabel: "24-month minimum partnership.",
-      includes: [
-        "Hosting",
-        "Security",
-        "Monitoring",
-        "Updates",
-        "Technical SEO",
-        "AI optimization",
-        "Monthly improvements",
-        "Support",
-      ],
-    },
-  ] satisfies EngagementPhase[],
-  flowSteps: [
-    "Website Launch",
-    "Ongoing Partnership",
-    "Continuous Improvements",
-  ],
-  ownershipCallout:
-    "You'll receive a fully custom website immediately. Ownership transfers to you after successfully completing the 24-month partnership — at no additional cost.",
-  closingNote:
-    "Most clients choose this option because it spreads the investment over time while ensuring their website never becomes outdated.",
-  cta: "Let's Talk",
-  ctaHref: "/contact",
-};
+export const websiteOfferings: WebsiteOffering[] = [
+  {
+    id: "starter-website",
+    name: "Starter Website",
+    price: "$995",
+    priceLabel: "starting at",
+    description:
+      "Designed for businesses that primarily need a professional online presence.",
+    examples: [
+      "Hair salons",
+      "Barbers",
+      "Restaurants",
+      "Contractors",
+      "Realtors",
+      "Local service businesses",
+    ],
+    features: [
+      "1–3 pages",
+      "Mobile responsive",
+      "Contact form",
+      "Google Maps",
+      "Reviews",
+      "Booking or calendar integration",
+      "Basic SEO",
+    ],
+  },
+  {
+    id: "business-website",
+    name: "Business Website",
+    price: "$3,500",
+    priceLabel: "starting at",
+    description: "For businesses actively trying to grow.",
+    examples: [
+      "Financial firms",
+      "Sports organizations",
+      "Professional services",
+      "Medical offices",
+      "Growing companies",
+    ],
+    features: [
+      "Multiple service pages",
+      "SEO architecture",
+      "AI-ready structure",
+      "Lead generation",
+      "Blog and resources",
+      "Strong content strategy",
+      "Custom design",
+    ],
+  },
+  {
+    id: "custom-software",
+    name: "Custom Software",
+    price: "Custom quote",
+    description: "For organizations that need more than a website.",
+    examples: [
+      "Client portals",
+      "Dashboards",
+      "AI tools",
+      "Automation",
+      "Marketplaces",
+      "Internal software",
+    ],
+    features: [
+      "Discovery and scoping",
+      "Custom architecture",
+      "Authentication and workflows",
+      "AI integrations",
+      "Deployment and support",
+    ],
+  },
+];
 
-export const engagementModels: EngagementModel[] = [
+export const whichWebsiteCards = [
+  {
+    title: "I just need a professional website.",
+    offering: "Starter Website",
+    href: "/pricing#starter-website",
+  },
+  {
+    title: "My business is growing.",
+    offering: "Business Website",
+    href: "/pricing#business-website",
+  },
+  {
+    title: "I need custom software.",
+    offering: "Custom Software",
+    href: "/pricing#custom-software",
+  },
+] as const;
+
+export const paymentModels: PaymentModel[] = [
+  {
+    id: "growth-partnership",
+    name: "Growth Partnership",
+    badge: "Recommended",
+    headline: "Lower upfront investment.",
+    copy: "Ideal for businesses that want predictable monthly costs, ongoing support, and continuous improvements after launch.",
+    launchPrice: "$750",
+    monthlyPrice: "$149",
+    monthlyNote: "24-month minimum partnership",
+    includes: [
+      "Website Launch investment",
+      "Hosting and security",
+      "Software updates",
+      "Technical SEO",
+      "AI optimization",
+      "Monthly improvements",
+      "Priority support",
+    ],
+    ownershipNote:
+      "You'll receive a fully custom website immediately. Ownership transfers to you after successfully completing the 24-month partnership.",
+    cta: "Let's Talk",
+    ctaHref: "/contact",
+  },
   {
     id: "traditional-project",
     name: "Traditional Project",
-    subtitle: "One-time investment with optional ongoing support.",
-    headline: "Pay for the full website build upfront.",
-    copy: "Ideal for businesses that prefer to pay for the full website build upfront, then choose whether to continue with ongoing support after launch.",
-    price: "$3,500+",
-    priceLabel: "starting at",
-    ownershipNote: "You own your website from day one.",
+    headline: "Pay for the website upfront.",
+    copy: "Ideal when you prefer a one-time investment and full ownership from day one.",
+    upfrontPrice: "$3,500+",
+    upfrontLabel: "starting at",
     includes: [
       "Complete custom website",
       "Mobile-first design",
       "Technical SEO",
       "AI-search optimization",
-      "Analytics",
-      "CMS where appropriate",
-      "Vercel deployment",
-      "Launch support",
+      "Analytics and launch support",
     ],
+    ownershipNote: "You own your website from day one.",
     optional: "Ongoing Partnership available after launch — $149/month.",
     cta: "Request Proposal",
     ctaHref: "/contact",
   },
-  {
-    id: "professional-services",
-    name: "Professional Services",
-    headline: "For organizations needing more than a website.",
-    copy: "Every project begins with discovery and is scoped specifically around your business goals.",
-    price: "Custom quote",
-    examples: [
-      "Financial firms",
-      "Medical practices",
-      "Professional services",
-      "Custom dashboards",
-      "AI tools",
-      "Internal business software",
-      "Customer portals",
-      "Automation",
-      "Marketplaces",
-    ],
-    cta: "Schedule Consultation",
-    ctaHref: "/contact",
-  },
 ];
 
-export const whichOptionCards = [
-  {
-    title: "Small Business",
-    description: "Want a smaller initial investment with ongoing support built in?",
-    model: "Growth Partnership",
-    href: "/pricing#growth-partnership",
-  },
-  {
-    title: "Growing Business",
-    description: "Prefer to pay upfront and own your website immediately?",
-    model: "Traditional Project",
-    href: "/pricing#traditional-project",
-  },
-  {
-    title: "Established Organization",
-    description: "Need custom software, AI, or complex integrations?",
-    model: "Professional Services",
-    href: "/pricing#professional-services",
-  },
-] as const;
-
 export const pricingComparison = {
-  note: "Both options deliver a custom website built for your business. The difference is payment structure, ongoing support, and when ownership transfers.",
+  note: "Both paths deliver a custom website. The difference is how you invest — spread over a long-term partnership, or upfront with optional ongoing support.",
   rows: [
     { feature: "Upfront investment", growth: "Lower", traditional: "Higher" },
     { feature: "Monthly partnership", growth: "Included", traditional: "Optional" },
@@ -153,54 +172,40 @@ export const pricingComparison = {
   ],
 } as const;
 
-export const ongoingPartnership = {
-  title: "Ongoing Partnership",
-  price: "$149/month",
-  description:
-    "Available after a Traditional Project launch, or included in a Growth Partnership. Your site keeps improving long after go-live.",
-  includes: [
-    "Hosting",
-    "Security",
-    "Monitoring",
-    "Updates",
-    "Technical SEO",
-    "AI optimization",
-    "Monthly improvements",
-    "Support",
-  ],
-};
-
 export const pricingPhilosophy =
-  "Professional websites without the big upfront investment.";
+  "Professional websites without agency pricing.";
 
-export const pricingPhilosophyExtended =
-  "Professional websites and software without agency pricing.";
+export const pricingSubtext =
+  "You don't need a $30,000 agency website to look like a million-dollar company.";
+
+export const pricingAudience =
+  "Built for Midwest businesses — and growing companies nationwide that want professional quality without agency complexity.";
 
 export const pricingReassurance =
   "Not sure which option fits? We'll recommend the right approach after a short conversation.";
 
-export const growthPartnershipTermsNote =
-  "Final pricing depends on project scope and complexity. Website Launch typically starts at $750; Ongoing Partnership at $149/month with a 24-month minimum.";
+export const pricingTermsNote =
+  "Final pricing depends on project scope and complexity. Growth Partnership Website Launch typically starts around $750; Ongoing Partnership around $149/month.";
 
 export const pricingFaqs = [
   {
+    question: "What's the difference between Starter and Business websites?",
+    answer:
+      "Starter Websites (starting at $995) are focused 1–3 page sites for local businesses that need a credible online presence — salons, restaurants, contractors, and similar. Business Websites (starting at $3,500) are built for companies actively trying to grow, with service pages, SEO architecture, AI-ready structure, blogs, and a stronger content strategy.",
+  },
+  {
     question: "Do I own my website?",
     answer:
-      "Yes. With a Traditional Project, you own it immediately. With a Growth Partnership, ownership transfers to you after completing the 24-month partnership. This approach allows us to significantly reduce the upfront investment while continuing to improve and support your website over time.",
+      "With a Traditional Project, you own it immediately. With a Growth Partnership, ownership transfers to you after completing the 24-month partnership. This allows a smaller initial Website Launch investment while we continue improving and supporting your site over time.",
   },
   {
     question: "What is the difference between Growth Partnership and Traditional Project?",
     answer:
-      "Both options include a custom website. Growth Partnership starts with a smaller Website Launch investment and includes ongoing monthly support — ownership transfers after the partnership term. Traditional Project is a larger upfront investment with full ownership from day one and optional ongoing support after launch.",
+      "These are payment models, not different websites. Growth Partnership spreads the investment with a smaller Website Launch plus monthly Ongoing Partnership. Traditional Project is a larger upfront payment with optional ongoing support after launch. We'll help you choose based on your business and goals.",
   },
   {
-    question: "How does the Growth Partnership work?",
+    question: "How are custom software projects priced?",
     answer:
-      "It's two phases — a partnership, not a rental. Phase one is Website Launch (starting at $750), covering strategy, custom design, your professional website, and launch. Phase two is Ongoing Partnership (starting at $149/month) with hosting, security, monitoring, updates, technical SEO, AI optimization, and continuous improvements over a 24-month minimum partnership.",
-  },
-  {
-    question: "How are professional services and custom software priced?",
-    answer:
-      "Professional Services are scoped through discovery based on your business goals — whether that's custom dashboards, AI tools, portals, automation, or marketplaces. Every engagement starts with a conversation, not a fixed package.",
+      "Custom software is scoped through discovery based on your business goals — dashboards, AI tools, portals, automation, marketplaces, and internal applications. Every project starts with a conversation.",
   },
 ];

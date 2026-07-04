@@ -38,7 +38,7 @@ export const services: Service[] = [
       {
         question: "How much does a custom website cost?",
         answer:
-          "Signal Works offers flexible engagement models. A Growth Partnership includes Website Launch (starting at $750) plus Ongoing Partnership (starting at $149/month over 24 months), with ownership transferring after the partnership term. A Traditional Project starts at $3,500+ with immediate ownership. Professional Services are custom-scoped through discovery.",
+          "Signal Works builds Starter Websites (from $995), Business Websites (from $3,500), and custom software. You can invest through a Growth Partnership (smaller Website Launch plus monthly Ongoing Partnership) or a Traditional Project (upfront payment with optional ongoing support). We'll help you choose based on your business.",
       },
     ],
   },

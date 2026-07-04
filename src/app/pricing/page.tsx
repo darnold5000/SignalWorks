@@ -1,19 +1,18 @@
 import { Hero } from "@/components/Hero";
-import { GrowthPartnershipCard } from "@/components/GrowthPartnershipCard";
-import { EngagementModelCard } from "@/components/EngagementModelCard";
+import { WebsiteOfferingsSection } from "@/components/WebsiteOfferingsSection";
+import { WhichWebsiteSection } from "@/components/WhichWebsiteSection";
+import { EngagementModelsSection } from "@/components/EngagementModelsSection";
 import { PricingComparison } from "@/components/PricingComparison";
-import { WhichOptionSection } from "@/components/WhichOptionSection";
-import { OngoingPartnershipSection } from "@/components/OngoingPartnershipSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
-  engagementModels,
   pricingFaqs,
   pricingPhilosophy,
-  pricingPhilosophyExtended,
+  pricingSubtext,
+  pricingAudience,
   pricingReassurance,
-  growthPartnershipTermsNote,
+  pricingTermsNote,
 } from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
@@ -22,7 +21,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Growth Partnership from $750 launch + $149/month, or Traditional Projects from $3,500+. Professional websites without the big upfront investment.",
+    "Starter websites from $995, business websites from $3,500, and custom software. Professional websites without agency pricing.",
   path: "/pricing",
 });
 
@@ -33,7 +32,7 @@ export default function PricingPage() {
         data={[
           webPageSchema(
             "Pricing",
-            "Flexible pricing for websites and custom software by Signal Works",
+            "Website and software pricing by Signal Works",
             "/pricing",
           ),
           faqSchema(pricingFaqs),
@@ -48,32 +47,25 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title={pricingPhilosophy}
         tagline="Modern websites backed by real software engineering."
-        description={`${pricingPhilosophyExtended} Flexible pricing that grows with your business — build once, improve continuously.`}
+        description={`${pricingSubtext} ${pricingAudience}`}
         primaryCta={{ label: "Let's Talk", href: "/contact" }}
       />
 
-      <section className="mx-auto max-w-6xl px-6 pb-8 lg:px-8">
-        <GrowthPartnershipCard />
-        <p className="mt-4 text-center text-xs text-muted">
-          {growthPartnershipTermsNote}
-        </p>
+      <WhichWebsiteSection />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          {engagementModels.map((model) => (
-            <EngagementModelCard key={model.id} {...model} />
-          ))}
-        </div>
+      <WebsiteOfferingsSection />
 
-        <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-muted leading-relaxed">
-          {pricingReassurance}
-        </p>
-      </section>
+      <EngagementModelsSection />
+
+      <p className="mx-auto max-w-2xl px-6 pb-8 text-center text-xs text-muted lg:px-8">
+        {pricingTermsNote}
+      </p>
 
       <PricingComparison />
 
-      <WhichOptionSection />
-
-      <OngoingPartnershipSection />
+      <p className="mx-auto max-w-2xl px-6 pb-16 text-center text-sm text-muted leading-relaxed lg:px-8">
+        {pricingReassurance}
+      </p>
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
@@ -86,7 +78,7 @@ export default function PricingPage() {
 
       <CTASection
         title="Ready for a conversation?"
-        description="Tell us about your business. We'll recommend the right engagement model — no pressure, no packages to decode."
+        description="Tell us about your business. We'll recommend the right website and the right way to get started."
         buttonLabel="Let's Talk"
       />
     </>

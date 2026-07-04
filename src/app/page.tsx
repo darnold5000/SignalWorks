@@ -16,7 +16,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Signal Works",
   description:
-    "Professional websites without the big upfront investment. Modern websites, custom software, and AI solutions backed by real software engineering.",
+    "Professional websites without agency pricing. Modern websites, custom software, and AI solutions backed by real software engineering.",
   path: "/",
 });
 
@@ -68,7 +68,7 @@ export default function HomePage() {
         eyebrow="Better signal. Less noise."
         title="Websites that win business. Software that saves time. AI that actually gets used."
         tagline="Modern websites backed by real software engineering."
-        description="Professional websites without the big upfront investment. Flexible pricing that grows with your business — build once, improve continuously."
+        description="Professional websites without agency pricing. You don't need a $30,000 agency website to look like a million-dollar company — build once, improve continuously."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
         size="large"
@@ -143,7 +143,7 @@ export default function HomePage() {
 
       <CTASection
         title="Ready to build something that works?"
-        description="Whether you want a Growth Partnership with ongoing support, a Traditional Project with upfront ownership, or custom software — we'll find the right approach for your business."
+        description="Whether you need a Starter Website, a Business Website, or custom software — we'll help you choose the right path and the right way to invest."
       />
     </>
   );
