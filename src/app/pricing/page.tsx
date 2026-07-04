@@ -11,7 +11,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Outcome-focused pricing for professional websites, growth platforms, custom software, and ongoing partnerships. Starting at $3,500+.",
+    "Outcome-focused pricing for professional websites, growth platforms, custom software, and ongoing partnerships. Starting at $4,500+.",
   path: "/pricing",
 });
 
@@ -19,12 +19,12 @@ const pricingFaqs = [
   {
     question: "How much does a professional website cost?",
     answer:
-      "Professional websites start at $3,500+ for a focused 5–7 page site. Growth Platforms start at $6,500+ for 10–20 pages with service landing pages, blog setup, SEO/AEO structure, and AI-ready content. Final pricing depends on scope, content needs, and integrations.",
+      "Professional websites start at $4,500+ for a focused 5–7 page site. Growth Platforms start at $7,500+ for 10–20 pages with service landing pages, blog setup, SEO/AEO structure, and AI-ready content. Final pricing depends on scope, content needs, and integrations.",
   },
   {
     question: "What's included in an ongoing partnership?",
     answer:
-      "Ongoing partnerships include hosting coordination, small content updates, blog publishing support, analytics review, SEO/AEO health checks, performance monitoring, security checks, and priority support starting at $199/month.",
+      "Ongoing partnerships include hosting coordination, small content updates, blog publishing support, analytics review, SEO/AEO health checks, performance monitoring, security checks, and priority support starting at $199–299/month.",
   },
   {
     question: "How are custom applications priced?",

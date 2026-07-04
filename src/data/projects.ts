@@ -23,6 +23,11 @@ export type Project = {
   results: string[];
   before?: string[];
   after?: string[];
+  workStory: {
+    challenge: string;
+    solution: string;
+    results: string[];
+  };
   accent: string;
 };
 
@@ -75,6 +80,18 @@ export const projects: Project[] = [
       "SEO and AEO optimized with FAQ schema",
       "Client portal integration and blog architecture",
     ],
+    workStory: {
+      challenge:
+        "Modernize an outdated WordPress site while improving SEO, trust, and lead generation.",
+      solution:
+        "Rebuilt in Next.js with structured SEO, AI-ready content, advisor profiles, client login, and a modern design system.",
+      results: [
+        "Faster website",
+        "Modern brand",
+        "Better search structure",
+        "Easier content publishing",
+      ],
+    },
     accent: "from-neutral-800 to-neutral-600",
   },
   {
@@ -122,6 +139,18 @@ export const projects: Project[] = [
       "Clear program pages and strong CTAs",
       "Easy content updates on modern hosting",
     ],
+    workStory: {
+      challenge:
+        "Replace an outdated youth sports website with poor mobile experience and weak conversion paths.",
+      solution:
+        "Built a modern, mobile-first site with program pages, strong CTAs, and fast performance on Vercel.",
+      results: [
+        "Dramatically improved mobile experience",
+        "Clear program discovery for athletes",
+        "Professional brand matching facility quality",
+        "Parents noticed the difference immediately",
+      ],
+    },
     accent: "from-neutral-700 to-neutral-500",
   },
   {
@@ -165,6 +194,18 @@ export const projects: Project[] = [
       "Automated opponent scouting reports",
       "Pitching ledger and exportable reports",
     ],
+    workStory: {
+      challenge:
+        "Coaches spent hours manually extracting stats from GameChanger screenshots before every game.",
+      solution:
+        "Built a custom AI platform with screenshot upload, vision extraction, player tables, and automated scouting reports.",
+      results: [
+        "Hours of manual entry eliminated weekly",
+        "Consistent, structured scouting reports",
+        "Faster game preparation",
+        "AI that coaches actually use",
+      ],
+    },
     accent: "from-neutral-900 to-neutral-700",
   },
   {
@@ -206,6 +247,18 @@ export const projects: Project[] = [
       "Meet scheduling and athlete management",
       "Rankings and reporting dashboards",
     ],
+    workStory: {
+      challenge:
+        "Meet data spread across spreadsheets and paper — no single way for parents to follow live results.",
+      solution:
+        "Built a custom meet tracking platform with live scores, schedules, athlete data, and reporting.",
+      results: [
+        "Parents follow meets live",
+        "Automatic results and rankings",
+        "Centralized scheduling",
+        "Single source of truth for meet data",
+      ],
+    },
     accent: "from-neutral-800 to-neutral-600",
   },
   {
@@ -241,6 +294,18 @@ export const projects: Project[] = [
       "Clear division and team visibility",
       "Automated data workflows reducing manual work",
     ],
+    workStory: {
+      challenge:
+        "Live cheer competitions with complex schedules across divisions — tracked manually with bottlenecks and errors.",
+      solution:
+        "Built a platform with event ingestion, schedule tracking, team organization, and cloud-based reporting.",
+      results: [
+        "Organized competition data in one place",
+        "Faster updates during live events",
+        "Clear division and team visibility",
+        "Reduced manual coordination",
+      ],
+    },
     accent: "from-neutral-700 to-neutral-500",
   },
   {
@@ -276,6 +341,18 @@ export const projects: Project[] = [
       "Secure data access with RLS policies",
       "Foundation for community-driven sports networking",
     ],
+    workStory: {
+      challenge:
+        "Youth players needed live reps but coordination happened through scattered group texts and word of mouth.",
+      solution:
+        "Built a marketplace with player profiles, rep requests, availability postings, and secure Supabase backend.",
+      results: [
+        "Structured rep coordination",
+        "Player profiles for trust and discovery",
+        "Secure data with RLS policies",
+        "Foundation for community networking",
+      ],
+    },
     accent: "from-neutral-900 to-neutral-700",
   },
 ];

@@ -1,9 +1,11 @@
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import { FounderIntro } from "@/components/FounderIntro";
 import { WhySignalWorks } from "@/components/WhySignalWorks";
+import { Testimonials } from "@/components/Testimonials";
 import { industryExperience } from "@/data/industries";
+import { testimonials } from "@/data/testimonials";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -12,7 +14,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "Signal Works is a digital product studio founded by Dave Arnold — building premium websites, custom software, and AI-powered business tools.",
+    "Signal Works is a boutique digital product studio founded by Dave Arnold — premium websites, custom software, and AI-powered business tools.",
   path: "/about",
 });
 
@@ -35,45 +37,21 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About"
-        title="A digital product studio — not a web design shop"
-        description="Signal Works designs and builds custom digital products for businesses that need more than a template. Premium websites. Custom software. AI that actually gets used."
+        title="A boutique studio — not a web design shop"
+        tagline="Built by a software engineer — not a marketing agency."
+        description="Signal Works designs and builds custom digital products for businesses that need more than a template. You work directly with the person writing the software."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
       />
 
-      <section className="mx-auto max-w-6xl px-6 pb-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
-          <div className="lg:col-span-2">
-            <PhotoPlaceholder />
-          </div>
-          <div className="lg:col-span-3">
-            <SectionHeading title="Better signal. Less noise." />
-            <p className="mt-6 text-muted leading-relaxed">
-              Every business is competing with noise. My job is to make your
-              business the signal people notice — whether that&apos;s a premium
-              website for a financial advisor, a meet tracker for a gymnastics
-              club, or an AI scouting tool for a baseball coach.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              I&apos;m {siteConfig.author}, founder of {siteConfig.name}. Based
-              in {siteConfig.location.city}, {siteConfig.location.region}, I work
-              with businesses across the country to build digital products that
-              look polished, perform well, and solve real problems.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              People hire people. When you work with Signal Works, you work
-              directly with me — from discovery through launch and beyond.
-            </p>
-          </div>
-        </div>
-      </section>
+      <FounderIntro variant="about" />
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
           <SectionHeading
             eyebrow="Experience"
-            title="Built for real industries"
-            description="Not generic portfolios — software for organizations that depend on it."
+            title="Better signal. Less noise."
+            description="Built for real industries — financial services, youth sports, and growing businesses that depend on software working."
           />
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {industryExperience.map((item) => (
@@ -90,6 +68,8 @@ export default function AboutPage() {
       </section>
 
       <WhySignalWorks />
+
+      <Testimonials items={testimonials} />
 
       <CTASection
         title="Let's build something together"

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 type HeroProps = {
   eyebrow?: string;
   title: string;
+  tagline?: string;
   description: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
@@ -14,6 +15,7 @@ type HeroProps = {
 export function Hero({
   eyebrow,
   title,
+  tagline,
   description,
   primaryCta,
   secondaryCta,
@@ -43,6 +45,11 @@ export function Hero({
         >
           {title}
         </h1>
+        {tagline && (
+          <p className="animate-fade-up animate-delay-100 mt-5 text-base font-medium text-foreground sm:text-lg">
+            {tagline}
+          </p>
+        )}
         <p className="animate-fade-up animate-delay-200 mt-6 text-lg text-muted leading-relaxed sm:text-xl">
           {description}
         </p>

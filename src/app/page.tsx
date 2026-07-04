@@ -3,13 +3,17 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PricingCard } from "@/components/PricingCard";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { CTASection } from "@/components/CTASection";
-import { TrustIndustries } from "@/components/TrustIndustries";
+import { LogoCloud } from "@/components/LogoCloud";
+import { FounderIntro } from "@/components/FounderIntro";
 import { WhySignalWorks } from "@/components/WhySignalWorks";
+import { HowWeWork } from "@/components/HowWeWork";
+import { Testimonials } from "@/components/Testimonials";
+import { RecentExperiments } from "@/components/RecentExperiments";
+import { WhatIDontDo } from "@/components/WhatIDontDo";
 import { getFeaturedProjects } from "@/data/projects";
 import { homepagePricingPreview, pricingDisclaimer } from "@/data/pricing";
-import { processSteps } from "@/data/process";
+import { testimonials } from "@/data/testimonials";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -66,23 +70,19 @@ export default function HomePage() {
       <Hero
         eyebrow="Better signal. Less noise."
         title="Websites that win business. Software that saves time. AI that actually gets used."
+        tagline="Modern websites backed by real software engineering."
         description="Signal Works designs and builds custom digital products — from premium marketing websites to AI-powered business software — for financial advisors, sports organizations, and growing businesses."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
-        pills={[
-          "Financial Services",
-          "Youth Sports",
-          "Professional Services",
-          "Custom Software",
-        ]}
         size="large"
       />
 
-      <TrustIndustries />
+      <FounderIntro />
+
+      <LogoCloud />
 
       <WhySignalWorks />
 
-      {/* Featured Work — lead with stories */}
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <SectionHeading
@@ -109,7 +109,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
+      <HowWeWork />
+
+      <RecentExperiments />
+
+      <Testimonials items={testimonials} />
+
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
           eyebrow="Services"
@@ -123,7 +128,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Philosophy */}
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -151,7 +155,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing Preview */}
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
           eyebrow="Pricing"
@@ -171,19 +174,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Process */}
-      <section className="border-t border-border bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <SectionHeading
-            eyebrow="Process"
-            title="How projects work"
-            description="A structured approach from discovery through launch and ongoing improvement."
-          />
-          <div className="mt-12">
-            <ProcessTimeline steps={processSteps} />
-          </div>
-        </div>
-      </section>
+      <WhatIDontDo />
 
       <CTASection
         title="Ready to build something that works?"

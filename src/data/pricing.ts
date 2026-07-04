@@ -12,7 +12,7 @@ export type PricingTier = {
 export const pricingTiers: PricingTier[] = [
   {
     name: "Professional Website",
-    price: "$3,500+",
+    price: "$4,500+",
     description:
       "A credible, fast, conversion-focused website for businesses ready to win online.",
     includes: [
@@ -28,7 +28,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Growth Platform",
-    price: "$6,500+",
+    price: "$7,500+",
     description:
       "Website + SEO + blog + AI-ready content structure for businesses that need to grow.",
     includes: [
@@ -61,7 +61,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Ongoing Partnership",
-    price: "$199",
+    price: "$199–299",
     period: "per month",
     description:
       "Hosting, updates, SEO, monitoring, and priority support — launch is just the beginning.",
@@ -82,7 +82,7 @@ export const pricingTiers: PricingTier[] = [
 export const homepagePricingPreview: PricingTier[] = [
   {
     name: "Professional Website",
-    price: "$3,500+",
+    price: "$4,500+",
     description: "A credible, fast website built to win business and convert visitors.",
     includes: [
       "Custom design",
@@ -96,7 +96,7 @@ export const homepagePricingPreview: PricingTier[] = [
   },
   {
     name: "Growth Platform",
-    price: "$6,500+",
+    price: "$7,500+",
     description: "Website + SEO + blog + AI-ready content for businesses ready to grow.",
     includes: [
       "10–20 custom pages",
