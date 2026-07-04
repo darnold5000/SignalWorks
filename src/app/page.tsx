@@ -1,7 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
-import { PricingCard } from "@/components/PricingCard";
 import { CTASection } from "@/components/CTASection";
 import { WhySignalWorksIntro } from "@/components/WhySignalWorksIntro";
 import { ProjectPreviewCard } from "@/components/ProjectPreviewCard";
@@ -9,15 +8,15 @@ import { HowWeWork } from "@/components/HowWeWork";
 import { Testimonials } from "@/components/Testimonials";
 import { RecentExperiments } from "@/components/RecentExperiments";
 import { WhatIDontDo } from "@/components/WhatIDontDo";
+import { FlexibleWaysSection } from "@/components/FlexibleWaysSection";
 import { getHomepagePreviewProjects } from "@/data/projects";
-import { homepagePricingPreview, pricingDisclaimer } from "@/data/pricing";
 import { testimonials } from "@/data/testimonials";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
   title: "Signal Works",
   description:
-    "Software engineering for growing businesses. Modern websites, custom software, and AI solutions built with clarity.",
+    "Enterprise-quality websites without enterprise pricing. Modern websites, custom software, and AI solutions backed by real software engineering.",
   path: "/",
 });
 
@@ -69,7 +68,7 @@ export default function HomePage() {
         eyebrow="Better signal. Less noise."
         title="Websites that win business. Software that saves time. AI that actually gets used."
         tagline="Modern websites backed by real software engineering."
-        description="Software engineering for growing businesses — modern websites, custom applications, and AI tools for organizations that have outgrown templates."
+        description="Enterprise-quality websites without enterprise pricing. Flexible pricing that grows with your business — build once, improve continuously."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Work", href: "/work" }}
         size="large"
@@ -102,7 +101,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="What we build"
-          description="Not just pages — technology built for real businesses."
+          description="Technology built for real businesses — professional quality without enterprise complexity."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whatIBuild.map((item) => (
@@ -117,51 +116,34 @@ export default function HomePage() {
             <div>
               <SectionHeading
                 eyebrow="Philosophy"
-                title="Websites are only the starting point."
+                title="Build once. Improve continuously."
               />
             </div>
             <div>
               <p className="text-lg text-muted leading-relaxed">
                 There are thousands of people who build websites. There are far
                 fewer who can build a polished marketing site{" "}
-                <em>and</em> a custom application — and stand behind both long
-                after launch.
+                <em>and</em> a custom application — and stand behind both as a
+                long-term partner.
               </p>
               <p className="mt-6 text-lg text-muted leading-relaxed">
-                Every project starts with the same goal: remove complexity.
-                Whether it&apos;s a financial advisor website, a gymnastics meet
-                tracker, or an AI scouting platform, the objective isn&apos;t to
-                add features — it&apos;s to make the important things obvious.
+                Every project starts with solving the business problem — not
+                adding features. Whether it&apos;s a financial advisor website, a
+                gymnastics meet tracker, or an AI scouting platform, the goal is
+                clarity, quality, and software that grows with you.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="Invest in outcomes, not page counts"
-          description="Professional websites, growth platforms, custom software, and ongoing partnerships — priced for the value they deliver."
-        />
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {homepagePricingPreview.map((tier) => (
-            <PricingCard key={tier.name} {...tier} />
-          ))}
-        </div>
-        <p className="mt-8 text-center text-sm text-muted">
-          {pricingDisclaimer}{" "}
-          <a href="/pricing" className="font-medium text-foreground hover:underline">
-            View full pricing →
-          </a>
-        </p>
-      </section>
+      <FlexibleWaysSection />
 
       <WhatIDontDo />
 
       <CTASection
         title="Ready to build something that works?"
-        description="Whether it's a website, a custom app, or an AI tool — let's talk about what your business actually needs."
+        description="Whether it's a subscription partnership, outright ownership, or custom software — let's find the right approach for your business."
       />
     </>
   );

@@ -38,7 +38,7 @@ export const services: Service[] = [
       {
         question: "How much does a custom website cost?",
         answer:
-          "Custom business websites typically start at $4,500+ for a Professional Website and $7,500+ for a Growth Platform with service landing pages, blog setup, and advanced SEO/AEO structure. Final pricing depends on scope, content needs, and integrations.",
+          "Signal Works offers flexible engagement models. A Subscription Partnership starts at $99–199/month with no large upfront investment. Own Your Website starts at $3,500+ for businesses that prefer full ownership from day one. Professional Services are custom-scoped through discovery.",
       },
     ],
   },
@@ -148,16 +148,18 @@ export const services: Service[] = [
 export const carePlanService = {
   title: "Ongoing Partnership",
   shortDescription:
-    "Hosting, updates, SEO maintenance, and performance monitoring for businesses that want a long-term digital partner.",
+    "A long-term partnership for security, performance, improvements, and priority support — so your digital presence keeps getting better.",
   includes: [
-    "Hosting coordination",
-    "Small content updates",
-    "Blog publishing support",
+    "Security",
+    "Monitoring",
+    "Performance",
+    "Small updates",
+    "Monthly improvements",
     "Analytics review",
-    "SEO/AEO health checks",
-    "Performance monitoring",
-    "Security checks",
+    "SEO health checks",
+    "AI optimization",
     "Priority support",
+    "Hosting",
   ],
 };
 

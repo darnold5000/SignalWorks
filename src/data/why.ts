@@ -22,6 +22,6 @@ export const whySignalWorks: WhyCard[] = [
   {
     title: "Long-term partner",
     description:
-      "Launch is just the beginning. Hosting, SEO, AI, automation, and ongoing improvements keep your digital products working for you.",
+      "Launch is just the beginning. Security, performance, SEO, AI optimization, and ongoing improvements keep your digital products working for you.",
   },
 ];

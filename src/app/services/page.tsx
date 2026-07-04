@@ -79,7 +79,7 @@ export default function ServicesPage() {
           </ul>
           <p className="mt-8">
             <Link href="/pricing" className="text-sm font-medium hover:underline">
-              View care plan pricing →
+              View partnership options →
             </Link>
           </p>
         </div>

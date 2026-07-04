@@ -1,9 +1,17 @@
 import { Hero } from "@/components/Hero";
-import { PricingCard } from "@/components/PricingCard";
+import { EngagementModelCard } from "@/components/EngagementModelCard";
+import { WhichOptionSection } from "@/components/WhichOptionSection";
+import { OngoingPartnershipSection } from "@/components/OngoingPartnershipSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
-import { pricingTiers, pricingDisclaimer } from "@/data/pricing";
+import {
+  engagementModels,
+  pricingFaqs,
+  pricingPhilosophy,
+  pricingReassurance,
+  subscriptionTermsNote,
+} from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
@@ -11,36 +19,21 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Outcome-focused pricing for professional websites, growth platforms, custom software, and ongoing partnerships. Starting at $4,500+.",
+    "Professional websites and software without enterprise pricing. Flexible engagement models including subscription partnerships, ownership, and custom software.",
   path: "/pricing",
 });
 
-const pricingFaqs = [
-  {
-    question: "How much does a professional website cost?",
-    answer:
-      "Professional websites start at $4,500+ for a focused 5–7 page site. Growth Platforms start at $7,500+ for 10–20 pages with service landing pages, blog setup, SEO/AEO structure, and AI-ready content. Final pricing depends on scope, content needs, and integrations.",
-  },
-  {
-    question: "What's included in an ongoing partnership?",
-    answer:
-      "Ongoing partnerships include hosting coordination, small content updates, blog publishing support, analytics review, SEO/AEO health checks, performance monitoring, security checks, and priority support starting at $199–299/month.",
-  },
-  {
-    question: "How are custom applications priced?",
-    answer:
-      "Custom software is quoted based on discovery, database design, authentication requirements, workflows, AI integrations, and ongoing support needs. Every project starts with a conversation to understand scope and goals.",
-  },
-];
-
 export default function PricingPage() {
+  const featured = engagementModels.find((m) => m.featured);
+  const others = engagementModels.filter((m) => !m.featured);
+
   return (
     <>
       <JsonLd
         data={[
           webPageSchema(
             "Pricing",
-            "Pricing for websites, growth platforms, custom software, and ongoing partnerships",
+            "Flexible pricing for websites and custom software by Signal Works",
             "/pricing",
           ),
           faqSchema(pricingFaqs),
@@ -53,23 +46,41 @@ export default function PricingPage() {
 
       <Hero
         eyebrow="Pricing"
-        title="Invest in outcomes, not page counts"
-        description="Professional websites, growth platforms, custom software, and ongoing partnerships — priced for the value they deliver."
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
+        title={pricingPhilosophy}
+        tagline="Modern websites backed by real software engineering."
+        description="Flexible pricing that grows with your business. Enterprise-quality work without enterprise pricing — build once, improve continuously."
+        primaryCta={{ label: "Let's Talk", href: "/contact" }}
       />
 
-      <section className="mx-auto max-w-6xl px-6 pb-12 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          {pricingTiers.map((tier) => (
-            <PricingCard key={tier.name} {...tier} />
-          ))}
+      <section className="mx-auto max-w-6xl px-6 pb-8 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-3 lg:items-start">
+          {featured && (
+            <div className="lg:col-span-1">
+              <EngagementModelCard {...featured} />
+              <p className="mt-4 text-center text-xs text-muted">
+                {subscriptionTermsNote}
+              </p>
+            </div>
+          )}
+          <div className="grid gap-8 lg:col-span-2">
+            {others.map((model) => (
+              <EngagementModelCard key={model.id} {...model} />
+            ))}
+          </div>
         </div>
-        <p className="mt-8 text-center text-sm text-muted">{pricingDisclaimer}</p>
+
+        <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-muted leading-relaxed">
+          {pricingReassurance}
+        </p>
       </section>
+
+      <WhichOptionSection />
+
+      <OngoingPartnershipSection />
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
-          <SectionHeading title="Pricing questions" />
+          <SectionHeading title="Common questions" />
           <div className="mt-8">
             <FAQAccordion faqs={pricingFaqs} />
           </div>
@@ -77,8 +88,9 @@ export default function PricingPage() {
       </section>
 
       <CTASection
-        title="Need a custom quote?"
-        description="Every project is different. Let's talk through your requirements and find the right fit."
+        title="Ready for a conversation?"
+        description="Tell us about your business. We'll recommend the right engagement model — no pressure, no packages to decode."
+        buttonLabel="Let's Talk"
       />
     </>
   );

@@ -8,6 +8,7 @@ export const whatIDontDo = [
 export const whatIDo = [
   "Modern web technologies",
   "Direct communication",
-  "Transparent pricing",
+  "Predictable monthly investment",
+  "Long-term partnership",
   "Software built to evolve",
 ] as const;
