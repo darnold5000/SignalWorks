@@ -1,3 +1,5 @@
+import { SHOW_WORK } from "./flags";
+
 export const siteConfig = {
   name: "Signal Works",
   tagline: "Professional websites without agency pricing.",
@@ -14,11 +16,15 @@ export const siteConfig = {
   },
 } as const;
 
-export const navLinks = [
-  { label: "Work", href: "/work" },
-  { label: "Services", href: "/services" },
-  { label: "Process", href: "/process" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+const allNavLinks = [
+  { label: "Work", href: "/work", show: SHOW_WORK },
+  { label: "Services", href: "/services", show: true },
+  { label: "Process", href: "/process", show: true },
+  { label: "Pricing", href: "/pricing", show: true },
+  { label: "About", href: "/about", show: true },
+  { label: "Contact", href: "/contact", show: true },
 ] as const;
+
+export const navLinks = allNavLinks
+  .filter((link) => link.show)
+  .map(({ label, href }) => ({ label, href }));

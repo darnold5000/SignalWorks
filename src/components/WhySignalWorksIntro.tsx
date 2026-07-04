@@ -1,5 +1,6 @@
 import { Button } from "./Button";
 import { SectionHeading } from "./SectionHeading";
+import { SHOW_FOUNDER } from "@/lib/flags";
 
 const capabilities = [
   "Modern websites",
@@ -33,9 +34,15 @@ export function WhySignalWorksIntro() {
               ))}
             </ul>
             <div className="mt-10">
-              <Button href="/about" variant="secondary">
-                Meet Dave →
-              </Button>
+              {SHOW_FOUNDER ? (
+                <Button href="/about" variant="secondary">
+                  Meet Dave →
+                </Button>
+              ) : (
+                <Button href="/about" variant="secondary">
+                  About Signal Works →
+                </Button>
+              )}
             </div>
           </div>
         </div>

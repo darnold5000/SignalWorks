@@ -2,19 +2,17 @@ import { partnershipPhilosophy } from "@/data/pricing";
 
 export function PricingPhilosophySection() {
   return (
-    <section className="border-t border-border bg-neutral-50">
-      <div className="mx-auto max-w-3xl px-6 py-20 text-center lg:px-8 lg:py-28">
-        <h2 className="font-display text-3xl tracking-tight sm:text-4xl lg:text-5xl">
+    <section className="border-t border-border">
+      <div className="mx-auto max-w-3xl px-6 py-16 text-center lg:px-8 lg:py-24">
+        <h2 className="font-display text-3xl tracking-tight sm:text-4xl">
           {partnershipPhilosophy.title}
         </h2>
-        <div className="mt-8 space-y-4 text-lg text-muted leading-relaxed">
-          {partnershipPhilosophy.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-        <div className="mt-12 space-y-2">
+        <p className="mt-6 text-lg text-muted leading-relaxed">
+          {partnershipPhilosophy.copy}
+        </p>
+        <div className="mt-10 space-y-2">
           {partnershipPhilosophy.principles.map((principle) => (
-            <p key={principle} className="text-base font-medium text-foreground">
+            <p key={principle} className="font-medium">
               {principle}
             </p>
           ))}

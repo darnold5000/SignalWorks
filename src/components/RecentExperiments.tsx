@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { recentExperiments } from "@/data/experiments";
+import { SHOW_WORK } from "@/lib/flags";
 import { SectionHeading } from "./SectionHeading";
 
 export function RecentExperiments() {
@@ -24,13 +25,13 @@ export function RecentExperiments() {
                 <p className="mt-2 flex-1 text-sm text-muted leading-relaxed">
                   {experiment.description}
                 </p>
-                {experiment.href && (
+                {experiment.href && SHOW_WORK && (
                   <span className="mt-4 text-sm font-medium">Learn more →</span>
                 )}
               </div>
             );
 
-            return experiment.href ? (
+            return experiment.href && SHOW_WORK ? (
               <Link key={experiment.title} href={experiment.href} className="block">
                 {card}
               </Link>

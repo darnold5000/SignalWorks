@@ -1,19 +1,12 @@
 import { Hero } from "@/components/Hero";
 import { PricingPhilosophySection } from "@/components/PricingPhilosophySection";
 import { WebsiteOfferingsSection } from "@/components/WebsiteOfferingsSection";
-import { PartnershipVariesSection } from "@/components/PartnershipVariesSection";
-import { EverythingIncludedSection } from "@/components/EverythingIncludedSection";
 import { GrowthOptionsSection } from "@/components/GrowthOptionsSection";
 import { TraditionalOwnershipSection } from "@/components/TraditionalOwnershipSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
-import {
-  pricingFaqs,
-  pricingHero,
-  pricingReassurance,
-  pricingPhilosophyLines,
-} from "@/data/pricing";
+import { pricingFaqs, pricingHero, pricingReassurance } from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
@@ -46,45 +39,28 @@ export default function PricingPage() {
       <Hero
         title={pricingHero.title}
         description={pricingHero.description}
-        descriptionSecondary={pricingHero.descriptionSecondary}
         primaryCta={pricingHero.primaryCta}
         secondaryCta={pricingHero.secondaryCta}
-        size="large"
+        size="compact"
       />
-
-      <PricingPhilosophySection />
 
       <WebsiteOfferingsSection />
 
-      <PartnershipVariesSection />
-
-      <EverythingIncludedSection />
+      <PricingPhilosophySection />
 
       <GrowthOptionsSection />
-
-      <section className="border-t border-border bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-2xl space-y-2">
-            {pricingPhilosophyLines.map((line) => (
-              <p key={line} className="font-display text-2xl tracking-tight sm:text-3xl">
-                {line}
-              </p>
-            ))}
-          </div>
-          <p className="mx-auto mt-10 max-w-xl text-muted leading-relaxed">
-            {pricingReassurance}
-          </p>
-        </div>
-      </section>
 
       <TraditionalOwnershipSection />
 
       <section className="border-t border-border bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
           <SectionHeading title="Common questions" />
-          <div className="mt-12">
+          <div className="mt-10">
             <FAQAccordion faqs={pricingFaqs} />
           </div>
+          <p className="mx-auto mt-10 max-w-xl text-center text-sm text-muted">
+            {pricingReassurance}
+          </p>
         </div>
       </section>
 

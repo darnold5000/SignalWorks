@@ -2,35 +2,33 @@ export type WebsiteOffering = {
   id: string;
   name: string;
   description: string;
-  examples: string[];
-  features: string[];
-  launchPrice: string;
-  monthlyPrice: string;
+  launchPrice?: string;
+  monthlyPrice?: string;
   monthlyNote?: string;
+  customQuote?: boolean;
 };
 
 export const pricingHero = {
   title: "Professional websites backed by a long-term technology partnership.",
   description:
-    "Launch with a predictable monthly partnership that includes hosting, security, updates, technical support, and continuous improvements.",
-  descriptionSecondary:
-    "Whether you're a one-person business or an established company, Signal Works grows with you.",
+    "Launch with a predictable monthly partnership that includes hosting, security, updates, support, and continuous improvements.",
   primaryCta: { label: "Start Your Project", href: "/contact" },
   secondaryCta: { label: "Schedule a Conversation", href: "/contact" },
 } as const;
 
 export const partnershipPhilosophy = {
   title: "Build once. Improve continuously.",
-  paragraphs: [
-    "Your website shouldn't become outdated six months after launch.",
-    "Every Signal Works partnership includes everything required to keep your website online, secure, fast, and improving over time.",
-  ],
+  copy: "Your website should not become outdated six months after launch. Every Signal Works partnership includes what most businesses normally manage separately: hosting, security, monitoring, updates, support, performance optimization, and ongoing improvements.",
   principles: [
     "No juggling hosting companies.",
-    "No hiring freelancers every time you need a change.",
+    "No hiring freelancers every time something changes.",
     "One partner.",
     "One monthly investment.",
   ],
+} as const;
+
+export const websiteOfferingsSection = {
+  title: "Choose the website that fits your business.",
 } as const;
 
 export const websiteOfferings: WebsiteOffering[] = [
@@ -38,135 +36,45 @@ export const websiteOfferings: WebsiteOffering[] = [
     id: "launch-website",
     name: "Launch Website",
     description:
-      "For businesses that need a clean, professional online presence.",
-    examples: [
-      "Hair salons",
-      "Barbers",
-      "Restaurants",
-      "Contractors",
-      "Local service businesses",
-    ],
+      "For local businesses that need a clean, professional online presence.",
     launchPrice: "$500",
     monthlyPrice: "$99",
-    features: [
-      "1–5 pages",
-      "Responsive design",
-      "Contact form",
-      "Maps",
-      "Reviews",
-      "Calendar or booking integration",
-      "Basic Local SEO",
-      "AI-ready structure",
-    ],
   },
   {
     id: "growth-website",
     name: "Growth Website",
     description:
       "For businesses where the website actively generates leads.",
-    examples: [
-      "Financial advisors",
-      "Medical practices",
-      "Gyms",
-      "Professional services",
-      "Multi-location businesses",
-    ],
     launchPrice: "$995",
     monthlyPrice: "$199",
     monthlyNote:
-      "Most Growth Website partnerships range between $199–399/month, depending on the level of ongoing support and business needs.",
-    features: [
-      "Multi-page architecture",
-      "Blog and resources",
-      "Advanced SEO",
-      "AI optimization",
-      "Analytics",
-      "Landing pages",
-      "Lead generation",
-      "CRM integrations",
-      "Scheduling integrations",
-      "Priority support",
-    ],
+      "Most Growth Website partnerships range between $199–399/month depending on content, SEO, integrations, AI optimization, and ongoing support needs.",
+  },
+  {
+    id: "custom-software",
+    name: "Custom Software",
+    description:
+      "For dashboards, portals, automation, AI tools, scheduling systems, internal software, and custom integrations.",
+    customQuote: true,
   },
 ];
 
-export const partnershipVaries = {
-  title: "Your business determines the partnership—not the website.",
-  intro:
-    "Every client receives the same engineering quality. The difference is the amount of ongoing work.",
-  examples: [
-    {
-      label: "A hair salon may simply need",
-      items: [
-        "Hosting",
-        "Security",
-        "Minor updates",
-        "Booking integration",
-      ],
-    },
-    {
-      label: "A financial advisor may require",
-      items: [
-        "Regular content publishing",
-        "SEO improvements",
-        "AI optimization",
-        "Landing pages",
-        "Analytics reviews",
-        "Compliance-related updates",
-        "CRM integrations",
-      ],
-    },
-  ],
-  closing:
-    "Both receive professional engineering. One simply requires significantly more ongoing attention.",
-} as const;
-
-export const everythingIncluded = {
-  title: "Everything included",
-  emphasis:
-    "This replaces multiple subscriptions and vendors with one predictable monthly partnership.",
-  items: [
-    "Hosting",
-    "SSL",
-    "Security",
-    "Monitoring",
-    "Daily backups",
-    "Software updates",
-    "Technical support",
-    "Performance optimization",
-    "Minor content updates",
-    "Technical SEO foundation",
-    "AI-ready structure",
-  ],
-} as const;
-
 export const growthOptions = {
-  title: "Grow your website over time.",
+  title: "Grow when you're ready.",
   intro:
     "Most businesses don't need everything on day one. Every Signal Works website is built to expand as your business grows.",
   options: [
-    "Advanced SEO campaigns",
-    "AI Search Optimization",
-    "Blog writing and publishing",
-    "Customer portals",
-    "Online payments",
-    "Appointment scheduling",
+    "Online scheduling",
+    "Payments",
+    "SEO campaigns",
+    "AI optimization",
+    "Blog publishing",
     "CRM integrations",
-    "Email marketing",
+    "Customer portals",
     "Membership areas",
     "Automation",
-    "AI assistants",
     "Custom software",
-    "API integrations",
-    "Additional landing pages",
   ],
-  closing: {
-    lines: [
-      "Start with what you need today.",
-      "Expand when your business is ready.",
-      "No rebuild required.",
-    ],
-  },
 } as const;
 
 export const traditionalOwnership = {
@@ -176,13 +84,8 @@ export const traditionalOwnership = {
     { label: "Launch Website", price: "$995" },
     { label: "Growth Website", price: "$3,750" },
   ],
-  optional: "Optional Monthly Partnership available after launch.",
+  optional: "Optional monthly partnership available after launch.",
 } as const;
-
-export const pricingPhilosophyLines = [
-  "Build once. Improve continuously.",
-  "Better signal. Less noise.",
-] as const;
 
 export const pricingReassurance =
   "Not sure which option fits? We'll recommend the right approach after a short conversation.";
@@ -206,7 +109,7 @@ export const pricingFaqs = [
   {
     question: "What's the difference between Launch and Growth websites?",
     answer:
-      "Launch Websites are focused sites for local businesses that need a credible online presence — salons, restaurants, contractors, and similar. Growth Websites are built for companies where the website actively generates leads, with multi-page architecture, advanced SEO, AI optimization, blogs, landing pages, CRM integrations, and priority support.",
+      "Launch Websites are focused sites for local businesses that need a credible online presence. Growth Websites are built for companies where the website actively generates leads, with multi-page architecture, advanced SEO, AI optimization, blogs, landing pages, CRM integrations, and priority support.",
   },
   {
     question: "Do I own my website?",

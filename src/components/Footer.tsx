@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
+import { SHOW_WORK } from "@/lib/flags";
 
 const footerLinks = {
   services: [
@@ -27,7 +28,9 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          className={`grid gap-12 sm:grid-cols-2 ${SHOW_WORK ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}
+        >
           <div>
             <p className="text-sm font-semibold tracking-[0.2em] uppercase">
               {siteConfig.name}
@@ -55,23 +58,25 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-muted">
-              Work
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.work.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm hover:text-muted transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {SHOW_WORK && (
+            <div>
+              <h3 className="text-xs font-semibold tracking-wider uppercase text-muted">
+                Work
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {footerLinks.work.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm hover:text-muted transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div>
             <h3 className="text-xs font-semibold tracking-wider uppercase text-muted">

@@ -4,6 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 const offerings = [
   { label: "Launch Website", href: "/pricing#launch-website" },
   { label: "Growth Website", href: "/pricing#growth-website" },
+  { label: "Custom Software", href: "/pricing#custom-software" },
 ] as const;
 
 export function FlexibleWaysSection() {
@@ -23,7 +24,7 @@ export function FlexibleWaysSection() {
             </Button>
           ))}
           <Button href="/pricing" variant="primary">
-            View Pricing
+            See Pricing
           </Button>
         </div>
         <p className="mx-auto mt-10 max-w-xl text-center text-sm text-muted">

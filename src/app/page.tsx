@@ -11,6 +11,7 @@ import { WhatIDontDo } from "@/components/WhatIDontDo";
 import { FlexibleWaysSection } from "@/components/FlexibleWaysSection";
 import { getHomepagePreviewProjects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
+import { SHOW_WORK } from "@/lib/flags";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -70,32 +71,34 @@ export default function HomePage() {
         tagline="Modern websites backed by real software engineering."
         description="Professional websites without agency pricing. You don't need a $30,000 agency website to look like a million-dollar company — build once, improve continuously."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
-        secondaryCta={{ label: "View Work", href: "/work" }}
+        secondaryCta={{ label: "See Pricing", href: "/pricing" }}
         size="large"
       />
 
       <WhySignalWorksIntro />
 
-      <section className="border-t border-border bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <SectionHeading
-            eyebrow="Work"
-            title="Recent projects"
-            description="A sample of what we build — full stories on the Work page."
-          />
-          <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-8">
-            {previewProjects.map((project) => (
-              <ProjectPreviewCard key={project.slug} project={project} />
-            ))}
+      {SHOW_WORK && (
+        <section className="border-t border-border bg-neutral-50">
+          <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
+            <SectionHeading
+              eyebrow="Work"
+              title="Recent projects"
+              description="A sample of what we build — full stories on the Work page."
+            />
+            <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-8">
+              {previewProjects.map((project) => (
+                <ProjectPreviewCard key={project.slug} project={project} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <HowWeWork />
 
-      <RecentExperiments />
+      {SHOW_WORK && <RecentExperiments />}
 
-      <Testimonials items={testimonials} />
+      {SHOW_WORK && <Testimonials items={testimonials} />}
 
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
@@ -128,9 +131,8 @@ export default function HomePage() {
               </p>
               <p className="mt-6 text-lg text-muted leading-relaxed">
                 Every project starts with solving the business problem — not
-                adding features. Whether it&apos;s a financial advisor website, a
-                gymnastics meet tracker, or an AI scouting platform, the goal is
-                clarity, quality, and software that grows with you.
+                adding features. The goal is clarity, quality, and software that
+                grows with you.
               </p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Testimonial } from "@/data/testimonials";
+import { SHOW_WORK } from "@/lib/flags";
 import { SectionHeading } from "./SectionHeading";
 
 type TestimonialsProps = {
@@ -25,7 +26,7 @@ export function Testimonials({ items }: TestimonialsProps) {
                 &ldquo;{item.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-6">
-                {item.href ? (
+                {item.href && SHOW_WORK ? (
                   <Link href={item.href} className="text-sm font-semibold hover:underline">
                     {item.author}
                   </Link>

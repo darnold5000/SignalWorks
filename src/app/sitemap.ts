@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import { SHOW_WORK } from "@/lib/flags";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     "",
-    "/work",
+    ...(SHOW_WORK ? ["/work"] : []),
     "/services",
     "/pricing",
     "/process",
@@ -22,12 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.8,
   }));
 
-  const projectPages = projects.map((project) => ({
-    url: `${baseUrl}/work/${project.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const projectPages = SHOW_WORK
+    ? projects.map((project) => ({
+        url: `${baseUrl}/work/${project.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      }))
+    : [];
 
   const servicePages = services.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
