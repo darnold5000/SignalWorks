@@ -38,7 +38,7 @@ export const services: Service[] = [
       {
         question: "How much does a custom website cost?",
         answer:
-          "Signal Works builds Starter Websites (from $995), Business Websites (from $3,500), and custom software. You can invest through a Growth Partnership (smaller Website Launch plus monthly Ongoing Partnership) or a Traditional Project (upfront payment with optional ongoing support). We'll help you choose based on your business.",
+          "Signal Works builds Launch Websites (from $995+), Business Websites (from $3,500+), and custom software. You can invest through a Growth Partnership (lower Website Launch plus monthly engineering partnership) or a Traditional Project (upfront payment with ownership from day one). We'll help you choose based on your business.",
       },
     ],
   },

@@ -2,7 +2,7 @@ import { Button } from "./Button";
 import { SectionHeading } from "./SectionHeading";
 
 const offerings = [
-  { label: "Starter Website", href: "/pricing#starter-website" },
+  { label: "Launch Website", href: "/pricing#launch-website" },
   { label: "Business Website", href: "/pricing#business-website" },
   { label: "Custom Software", href: "/pricing#custom-software" },
 ] as const;
@@ -18,13 +18,13 @@ export function FlexibleWaysSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
           title="Flexible ways to work together"
-          description="Professional websites without agency pricing. Choose what you need, then how you'd like to invest."
+          description="Long-term digital partnerships that grow with your business. Choose what you're building, then how you'd like to invest."
           align="center"
           className="mx-auto"
         />
 
         <p className="mt-10 text-center text-xs font-semibold tracking-[0.2em] uppercase text-muted">
-          What we build
+          What are you building?
         </p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           {offerings.map((option) => (
@@ -35,7 +35,7 @@ export function FlexibleWaysSection() {
         </div>
 
         <p className="mt-10 text-center text-xs font-semibold tracking-[0.2em] uppercase text-muted">
-          Two ways to get started
+          How would you like to pay?
         </p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           {engagementModels.map((option) => (

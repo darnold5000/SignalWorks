@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { WebsiteOfferingsSection } from "@/components/WebsiteOfferingsSection";
-import { WhichWebsiteSection } from "@/components/WhichWebsiteSection";
 import { EngagementModelsSection } from "@/components/EngagementModelsSection";
+import { PartnershipLevelsSection } from "@/components/PartnershipLevelsSection";
 import { PricingComparison } from "@/components/PricingComparison";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
@@ -9,10 +9,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import {
   pricingFaqs,
   pricingPhilosophy,
-  pricingSubtext,
-  pricingAudience,
+  pricingHeroDescription,
   pricingReassurance,
-  pricingTermsNote,
+  pricingPhilosophyLines,
 } from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
@@ -21,7 +20,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
   description:
-    "Starter websites from $995, business websites from $3,500, and custom software. Professional websites without agency pricing.",
+    "Launch websites from $995, business websites from $3,500, and custom software. Long-term digital partnerships that grow with your business.",
   path: "/pricing",
 });
 
@@ -46,31 +45,38 @@ export default function PricingPage() {
       <Hero
         eyebrow="Pricing"
         title={pricingPhilosophy}
-        tagline="Modern websites backed by real software engineering."
-        description={`${pricingSubtext} ${pricingAudience}`}
+        description={pricingHeroDescription}
         primaryCta={{ label: "Let's Talk", href: "/contact" }}
+        size="large"
       />
-
-      <WhichWebsiteSection />
 
       <WebsiteOfferingsSection />
 
       <EngagementModelsSection />
 
-      <p className="mx-auto max-w-2xl px-6 pb-8 text-center text-xs text-muted lg:px-8">
-        {pricingTermsNote}
-      </p>
+      <PartnershipLevelsSection />
 
       <PricingComparison />
 
-      <p className="mx-auto max-w-2xl px-6 pb-16 text-center text-sm text-muted leading-relaxed lg:px-8">
-        {pricingReassurance}
-      </p>
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-6 py-20 text-center lg:px-8 lg:py-32">
+          <div className="mx-auto max-w-2xl space-y-2">
+            {pricingPhilosophyLines.map((line) => (
+              <p key={line} className="font-display text-2xl tracking-tight sm:text-3xl">
+                {line}
+              </p>
+            ))}
+          </div>
+          <p className="mx-auto mt-12 max-w-xl text-muted leading-relaxed">
+            {pricingReassurance}
+          </p>
+        </div>
+      </section>
 
       <section className="border-t border-border bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <SectionHeading title="Common questions" />
-          <div className="mt-8">
+          <div className="mt-12">
             <FAQAccordion faqs={pricingFaqs} />
           </div>
         </div>
@@ -78,7 +84,7 @@ export default function PricingPage() {
 
       <CTASection
         title="Ready for a conversation?"
-        description="Tell us about your business. We'll recommend the right website and the right way to get started."
+        description="Tell us about your business. We'll recommend the right build and the right level of partnership."
         buttonLabel="Let's Talk"
       />
     </>

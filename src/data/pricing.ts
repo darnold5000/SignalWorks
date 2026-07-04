@@ -2,10 +2,20 @@ export type WebsiteOffering = {
   id: string;
   name: string;
   price: string;
-  priceLabel?: string;
   description: string;
   examples: string[];
   features: string[];
+};
+
+export type PartnershipLevel = {
+  id: string;
+  name: string;
+  price: string;
+  priceLabel: string;
+  examples: string[];
+  includesIntro?: string;
+  includes: string[];
+  idealFor?: string;
 };
 
 export type PaymentModel = {
@@ -14,12 +24,13 @@ export type PaymentModel = {
   badge?: string;
   headline: string;
   copy: string;
+  partnershipValue?: string;
   launchPrice?: string;
+  launchLabel?: string;
   monthlyPrice?: string;
+  monthlyLabel?: string;
   monthlyNote?: string;
-  upfrontPrice?: string;
-  upfrontLabel?: string;
-  includes: string[];
+  traditionalPricing?: { label: string; price: string }[];
   ownershipNote?: string;
   optional?: string;
   cta: string;
@@ -28,66 +39,66 @@ export type PaymentModel = {
 
 export const websiteOfferings: WebsiteOffering[] = [
   {
-    id: "starter-website",
-    name: "Starter Website",
-    price: "$995",
-    priceLabel: "starting at",
+    id: "launch-website",
+    name: "Launch Website",
+    price: "$995+",
     description:
-      "Designed for businesses that primarily need a professional online presence.",
+      "For businesses that simply need a professional online presence.",
     examples: [
       "Hair salons",
       "Barbers",
       "Restaurants",
       "Contractors",
-      "Realtors",
       "Local service businesses",
     ],
     features: [
-      "1–3 pages",
+      "1–5 pages",
       "Mobile responsive",
       "Contact form",
       "Google Maps",
       "Reviews",
-      "Booking or calendar integration",
-      "Basic SEO",
-      "Fast turnaround",
+      "Booking or calendar integration (if needed)",
+      "Basic Local SEO",
+      "AI-ready structure",
     ],
   },
   {
     id: "business-website",
     name: "Business Website",
-    price: "$3,500",
-    priceLabel: "starting at",
+    price: "$3,500+",
     description: "For businesses actively trying to grow.",
     examples: [
-      "Financial firms",
-      "Sports organizations",
+      "Financial advisors",
+      "Gyms",
+      "Medical practices",
       "Professional services",
-      "Medical offices",
       "Growing companies",
     ],
     features: [
       "Multiple service pages",
-      "SEO architecture",
-      "AI-ready structure",
-      "Lead generation",
       "Blog and resources",
-      "Strong content strategy",
+      "Lead generation",
+      "Technical SEO",
+      "AI optimization",
+      "Content strategy",
       "Custom design",
+      "Analytics",
+      "Landing pages",
     ],
   },
   {
     id: "custom-software",
     name: "Custom Software",
     price: "Custom quote",
-    description: "For organizations that need more than a website.",
+    description: "For businesses needing more than a website.",
     examples: [
-      "Client portals",
       "Dashboards",
+      "Client portals",
+      "Membership sites",
+      "Scheduling systems",
       "AI tools",
-      "Automation",
-      "Marketplaces",
       "Internal software",
+      "Automation",
     ],
     features: [
       "Discovery and scoping",
@@ -99,114 +110,201 @@ export const websiteOfferings: WebsiteOffering[] = [
   },
 ];
 
-export const whichWebsiteCards = [
-  {
-    title: "I just need a professional website.",
-    offering: "Starter Website",
-    href: "/pricing#starter-website",
-  },
-  {
-    title: "My business is growing.",
-    offering: "Business Website",
-    href: "/pricing#business-website",
-  },
-  {
-    title: "I need custom software.",
-    offering: "Custom Software",
-    href: "/pricing#custom-software",
-  },
-] as const;
-
 export const paymentModels: PaymentModel[] = [
   {
     id: "growth-partnership",
     name: "Growth Partnership",
-    badge: "⭐ Recommended",
-    headline: "Lower upfront investment.",
-    copy: "Ideal for businesses that want predictable monthly costs, a long-term partnership, and continuous improvements — with professional support every step of the way.",
-    launchPrice: "$750",
-    monthlyPrice: "$149",
-    monthlyNote: "24-month minimum partnership",
-    includes: [
-      "Hosting",
-      "Security",
-      "Updates",
-      "SEO",
-      "AI optimization",
-      "Continuous improvements",
-      "Priority support",
-    ],
+    badge: "Recommended",
+    headline: "Lower upfront investment. Everything managed.",
+    copy: "Perfect for businesses that want predictable monthly costs instead of a large upfront investment.",
+    partnershipValue:
+      "The website is only one part of the partnership. You also receive ongoing engineering, hosting, monitoring, maintenance, security, SEO, AI optimization, and continuous improvements.",
+    launchPrice: "$750–995",
+    launchLabel: "Website Launch",
+    monthlyPrice: "$99",
+    monthlyLabel: "Monthly Partnership",
+    monthlyNote:
+      "Monthly pricing depends on business complexity and support requirements.",
     ownershipNote:
-      "You'll receive a fully custom website immediately. Ownership transfers to you after successfully completing the 24-month partnership.",
+      "Signal Works retains ownership during the partnership because the lower launch investment is subsidized by the ongoing agreement. After the minimum partnership term, ownership may transfer for a predefined buyout amount or according to the agreement.",
     cta: "Let's Talk",
     ctaHref: "/contact",
   },
   {
     id: "traditional-project",
     name: "Traditional Project",
-    headline: "Pay for the website upfront.",
-    copy: "Ideal when you prefer a one-time investment and full ownership from day one.",
-    upfrontPrice: "$3,500+",
-    upfrontLabel: "starting at",
-    includes: [
-      "Complete custom website",
-      "Mobile-first design",
-      "Technical SEO",
-      "AI-search optimization",
-      "Analytics and launch support",
+    headline: "Own your website from day one.",
+    copy: "Ideal for businesses that prefer a traditional one-time investment and complete ownership immediately.",
+    traditionalPricing: [
+      { label: "Launch Website", price: "$995+" },
+      { label: "Business Website", price: "$4,500+" },
     ],
     ownershipNote: "You own your website from day one.",
-    optional: "Ongoing Partnership available after launch — $149/month.",
+    optional: "Ongoing Partnership available after launch.",
     cta: "Request Proposal",
     ctaHref: "/contact",
   },
 ];
 
-export const pricingComparison = {
-  note: "Both paths deliver a custom website. The difference is how you invest — spread over a long-term partnership, or upfront with optional ongoing support.",
+export const partnershipLevels: PartnershipLevel[] = [
+  {
+    id: "local-business",
+    name: "Local Business",
+    price: "$99",
+    priceLabel: "starting around / month",
+    examples: [
+      "Hair salons",
+      "Restaurants",
+      "Contractors",
+      "Small local businesses",
+    ],
+    includes: [
+      "Hosting",
+      "SSL",
+      "Security",
+      "Monitoring",
+      "Software updates",
+      "Basic Local SEO",
+      "AI-ready structure",
+      "Minor content updates",
+      "Email support",
+    ],
+    idealFor: "websites that change only occasionally",
+  },
+  {
+    id: "growth-business",
+    name: "Growth Business",
+    price: "$199",
+    priceLabel: "starting around / month",
+    examples: [
+      "Gyms",
+      "Financial advisors",
+      "Medical offices",
+      "Professional services",
+    ],
+    includesIntro: "Everything in Local Business, plus:",
+    includes: [
+      "Technical SEO",
+      "Ongoing AI optimization",
+      "Monthly analytics review",
+      "Blog and content publishing",
+      "Landing page updates",
+      "Conversion improvements",
+      "Priority support",
+      "More monthly engineering time",
+    ],
+    idealFor: "businesses actively investing in growth",
+  },
+  {
+    id: "digital-partner",
+    name: "Digital Partner",
+    price: "$399–599+",
+    priceLabel: "starting around / month",
+    examples: [
+      "Membership platforms",
+      "Client portals",
+      "Custom integrations",
+      "Internal tools",
+      "Automation",
+      "AI products",
+    ],
+    includesIntro: "Everything in Growth Business, plus:",
+    includes: [
+      "Custom feature development",
+      "Workflow automation",
+      "Database changes",
+      "API integrations",
+      "AI enhancements",
+      "New functionality every month",
+      "Strategic consulting",
+      "Highest priority support",
+    ],
+    idealFor: "businesses that need ongoing engineering capacity",
+  },
+];
+
+export const monthlyPricingComparison = {
+  title: "Why monthly pricing changes",
+  description:
+    "Every client receives the same quality engineering. The difference is not hosting — it's how much ongoing work Signal Works performs. You're paying for ongoing engineering capacity, not hosting.",
+  columns: ["Local Business", "Growth Business", "Digital Partner"] as const,
   rows: [
-    { feature: "Upfront investment", growth: "Lower", traditional: "Higher" },
-    { feature: "Monthly partnership", growth: "Included", traditional: "Optional" },
-    { feature: "Continuous improvements", growth: "✓", traditional: "Optional" },
-    { feature: "Hosting & support", growth: "✓", traditional: "Optional" },
-    { feature: "Ownership", growth: "After partnership", traditional: "Immediately" },
+    { feature: "Hosting", local: "✓", growth: "✓", digital: "✓" },
+    { feature: "Security", local: "✓", growth: "✓", digital: "✓" },
+    { feature: "Updates", local: "✓", growth: "✓", digital: "✓" },
+    { feature: "SEO", local: "Basic", growth: "Advanced", digital: "Strategy" },
+    {
+      feature: "AI Optimization",
+      local: "Foundation",
+      growth: "Monthly",
+      digital: "Continuous",
+    },
+    {
+      feature: "Content Changes",
+      local: "Minor",
+      growth: "Regular",
+      digital: "Ongoing",
+    },
+    {
+      feature: "Analytics",
+      local: "Dashboard",
+      growth: "Monthly review",
+      digital: "Strategy",
+    },
+    {
+      feature: "Integrations",
+      local: "Basic",
+      growth: "Moderate",
+      digital: "Complex",
+    },
+    {
+      feature: "Monthly engineering time",
+      local: "Low",
+      growth: "Medium",
+      digital: "High",
+    },
   ],
 } as const;
 
 export const pricingPhilosophy =
   "Professional websites without agency pricing.";
 
-export const pricingSubtext =
-  "You don't need a $30,000 agency website to look like a million-dollar company.";
-
-export const pricingAudience =
-  "Built for Midwest businesses — and growing companies nationwide that want professional quality without agency complexity.";
+export const pricingHeroDescription =
+  "Every business deserves a professional online presence. Whether you want a simple marketing website or an evolving digital platform, there's a pricing model that fits your business.";
 
 export const pricingReassurance =
   "Not sure which option fits? We'll recommend the right approach after a short conversation.";
 
-export const pricingTermsNote =
-  "Final pricing depends on project scope and complexity. Growth Partnership Website Launch typically starts around $750; Ongoing Partnership around $149/month.";
+export const pricingPhilosophyLines = [
+  "Build once.",
+  "Improve continuously.",
+  "Better signal. Less noise.",
+] as const;
 
 export const pricingFaqs = [
   {
-    question: "What's the difference between Starter and Business websites?",
+    question: "What's the difference between Launch and Business websites?",
     answer:
-      "Starter Websites (starting at $995) are focused 1–3 page sites for local businesses that need a credible online presence — salons, restaurants, contractors, and similar. Business Websites (starting at $3,500) are built for companies actively trying to grow, with service pages, SEO architecture, AI-ready structure, blogs, and a stronger content strategy.",
+      "Launch Websites (starting around $995+) are focused sites for local businesses that need a credible online presence — salons, restaurants, contractors, and similar. Business Websites (starting around $3,500+) are built for companies actively trying to grow, with service pages, technical SEO, AI optimization, blogs, landing pages, and a stronger content strategy.",
   },
   {
     question: "Do I own my website?",
     answer:
-      "With a Traditional Project, you own it immediately. With a Growth Partnership, ownership transfers to you after completing the 24-month partnership. This allows a smaller initial Website Launch investment while we continue improving and supporting your site over time.",
+      "With a Traditional Project, you own your website immediately upon final payment. With a Growth Partnership, Signal Works retains ownership during the partnership because the lower launch investment is subsidized by the ongoing agreement. After the minimum partnership term, ownership may transfer for a predefined buyout amount or according to your agreement.",
   },
   {
     question: "What is the difference between Growth Partnership and Traditional Project?",
     answer:
-      "These are payment models, not different websites. Growth Partnership spreads the investment with a smaller Website Launch plus monthly Ongoing Partnership. Traditional Project is a larger upfront payment with optional ongoing support after launch. We'll help you choose based on your business and goals.",
+      "These are investment models, not different websites. Growth Partnership spreads the investment with a smaller Website Launch plus monthly partnership — ideal when you want predictable costs and continuous improvements. Traditional Project is a one-time upfront payment with full ownership from day one, with optional ongoing partnership after launch.",
+  },
+  {
+    question: "What do the partnership levels mean?",
+    answer:
+      "Local Business, Growth Business, and Digital Partner are levels of ongoing engineering partnership — not hosting tiers. Each level reflects how much ongoing work Signal Works performs each month: from keeping a local site fast and secure, to active growth and content work, to custom feature development and strategic consulting.",
   },
   {
     question: "How are custom software projects priced?",
     answer:
-      "Custom software is scoped through discovery based on your business goals — dashboards, AI tools, portals, automation, marketplaces, and internal applications. Every project starts with a conversation.",
+      "Custom software is scoped through discovery based on your business goals — dashboards, client portals, membership sites, AI tools, automation, and internal applications. Every project starts with a conversation.",
   },
 ];
