@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { PaymentModel } from "@/data/pricing";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";

@@ -9,7 +9,7 @@ export function EngagementModelsSection() {
         <SectionHeading
           eyebrow="How you pay"
           title="Two ways to get started"
-          description="Same professional quality — flexible pricing that fits how your business prefers to invest."
+          description="These are payment models — not different websites. Pick the approach that fits how your business prefers to invest."
         />
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           {paymentModels.map((model) => (
