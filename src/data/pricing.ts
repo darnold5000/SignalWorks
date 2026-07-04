@@ -9,11 +9,12 @@ export type WebsiteOffering = {
 };
 
 export const pricingHero = {
-  title: "Professional websites backed by a long-term technology partnership.",
+  title: "Professional websites without agency pricing.",
   description:
     "Launch with a predictable monthly partnership that includes hosting, security, updates, support, and continuous improvements.",
-  primaryCta: { label: "Start Your Project", href: "/contact" },
-  secondaryCta: { label: "Schedule a Conversation", href: "/contact" },
+  primaryCta: { label: "Get a Free Consultation", href: "/contact" },
+  ctaNote:
+    "We'll discuss your business, recommend the right website partnership, and provide a no-pressure estimate.",
 } as const;
 
 export const partnershipPhilosophy = {

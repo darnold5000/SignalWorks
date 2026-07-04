@@ -9,6 +9,7 @@ type HeroProps = {
   descriptionSecondary?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  ctaNote?: string;
   pills?: string[];
   size?: "default" | "large" | "compact";
 };
@@ -21,6 +22,7 @@ export function Hero({
   descriptionSecondary,
   primaryCta,
   secondaryCta,
+  ctaNote,
   pills,
   size = "default",
 }: HeroProps) {
@@ -71,19 +73,21 @@ export function Hero({
         )}
 
         {(primaryCta || secondaryCta) && (
-          <div
-            className={cn(
-              "animate-fade-up animate-delay-300 flex flex-wrap gap-4",
-              size === "compact" ? "mt-8" : "mt-10",
-            )}
-          >
-            {primaryCta && (
-              <Button href={primaryCta.href}>{primaryCta.label}</Button>
-            )}
-            {secondaryCta && (
-              <Button href={secondaryCta.href} variant="secondary">
-                {secondaryCta.label}
-              </Button>
+          <div className={cn("animate-fade-up animate-delay-300", size === "compact" ? "mt-8" : "mt-10")}>
+            <div className="flex flex-wrap gap-4">
+              {primaryCta && (
+                <Button href={primaryCta.href}>{primaryCta.label}</Button>
+              )}
+              {secondaryCta && (
+                <Button href={secondaryCta.href} variant="secondary">
+                  {secondaryCta.label}
+                </Button>
+              )}
+            </div>
+            {ctaNote && (
+              <p className="mt-4 max-w-lg text-sm text-muted leading-relaxed">
+                {ctaNote}
+              </p>
             )}
           </div>
         )}

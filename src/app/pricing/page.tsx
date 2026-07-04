@@ -13,8 +13,8 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = createPageMetadata({
   title: "Pricing",
-  description:
-    "Professional websites backed by a long-term technology partnership. Launch from $500 with monthly partnerships starting at $99/month.",
+    description:
+    "Professional websites without agency pricing. Launch from $500 with monthly partnerships starting at $99/month.",
   path: "/pricing",
 });
 
@@ -40,7 +40,7 @@ export default function PricingPage() {
         title={pricingHero.title}
         description={pricingHero.description}
         primaryCta={pricingHero.primaryCta}
-        secondaryCta={pricingHero.secondaryCta}
+        ctaNote={pricingHero.ctaNote}
         size="compact"
       />
 
