@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { siteConfig } from "@/lib/site";
 
 type ContactPayload = {
   name: string;
@@ -32,9 +31,10 @@ export async function POST(request: Request) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const contactEmail = process.env.CONTACT_EMAIL ?? siteConfig.email;
-    const fromAddress =
-      process.env.RESEND_FROM ?? `${siteConfig.name} <onboarding@resend.dev>`;
+    const fromEmail =
+      process.env.RESEND_FROM_EMAIL || "Signal Works <hello@hiresignalworks.com>";
+    const contactEmail =
+      process.env.CONTACT_EMAIL || "hello@hiresignalworks.com";
 
     if (!resendApiKey) {
       return NextResponse.json(
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     `;
 
     await resend.emails.send({
-      from: fromAddress,
+      from: fromEmail,
       to: contactEmail,
       replyTo: body.email,
       subject: `New inquiry: ${body.projectType} — ${body.name}`,
