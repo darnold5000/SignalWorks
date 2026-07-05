@@ -3,6 +3,7 @@
 import { useState } from "react";
 import {
   buildOptions,
+  contactFormReassurance,
   contactSuccessMessage,
   engagementOptions,
   launchTimeframeOptions,
@@ -11,29 +12,11 @@ import {
 } from "@/data/contact";
 import { siteConfig } from "@/lib/site";
 import { Button } from "./Button";
+import { FormSelect } from "./FormSelect";
 import { cn } from "@/lib/utils";
 
 function requiresPhone(method: PreferredContact) {
   return method === "Phone Call" || method === "Text Message";
-}
-
-function SegmentCheck() {
-  return (
-    <svg
-      className="h-3.5 w-3.5 shrink-0"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M3 8.5L6.5 12L13 4"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
 }
 
 export function ContactForm() {
@@ -87,7 +70,7 @@ export function ContactForm() {
 
   const labelClasses = "mb-1.5 block text-sm text-foreground";
   const inputClasses =
-    "w-full rounded-sm border border-border/70 bg-background px-3.5 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/80 focus:border-neutral-400";
+    "w-full rounded-sm border border-neutral-300 bg-background px-3.5 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/80 focus:border-neutral-500";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -162,11 +145,11 @@ export function ContactForm() {
                 key={option}
                 htmlFor={inputId}
                 className={cn(
-                  "flex cursor-pointer items-center justify-center gap-1.5 rounded-sm border px-3 py-2.5 text-sm transition-colors",
+                  "flex cursor-pointer items-center gap-2 rounded-sm border px-3 py-2.5 text-sm transition-all",
                   "focus-within:ring-2 focus-within:ring-foreground focus-within:ring-offset-2",
                   selected
-                    ? "border-neutral-300 bg-neutral-50 text-foreground"
-                    : "border-border/70 bg-background text-muted hover:border-neutral-300 hover:bg-neutral-50/60",
+                    ? "border-neutral-400 bg-neutral-100 font-semibold text-foreground shadow-sm"
+                    : "border-neutral-300 bg-background font-normal text-muted hover:border-neutral-400 hover:bg-neutral-50",
                 )}
               >
                 <input
@@ -179,8 +162,14 @@ export function ContactForm() {
                   onChange={() => setPreferredContact(option)}
                   className="sr-only"
                 />
-                {selected && <SegmentCheck />}
-                <span className="text-center leading-snug">{option}</span>
+                <span
+                  className={cn(
+                    "h-1.5 w-1.5 shrink-0 rounded-full transition-colors",
+                    selected ? "bg-foreground" : "bg-transparent",
+                  )}
+                  aria-hidden="true"
+                />
+                <span className="leading-snug">{option}</span>
               </label>
             );
           })}
@@ -192,13 +181,7 @@ export function ContactForm() {
           <label htmlFor="buildType" className={labelClasses}>
             What are you looking to build? *
           </label>
-          <select
-            id="buildType"
-            name="buildType"
-            required
-            className={inputClasses}
-            defaultValue=""
-          >
+          <FormSelect id="buildType" name="buildType" required defaultValue="">
             <option value="" disabled>
               Select an option
             </option>
@@ -207,19 +190,13 @@ export function ContactForm() {
                 {option}
               </option>
             ))}
-          </select>
+          </FormSelect>
         </div>
         <div>
           <label htmlFor="engagementModel" className={labelClasses}>
             How would you like to get started? *
           </label>
-          <select
-            id="engagementModel"
-            name="engagementModel"
-            required
-            className={inputClasses}
-            defaultValue=""
-          >
+          <FormSelect id="engagementModel" name="engagementModel" required defaultValue="">
             <option value="" disabled>
               Select an option
             </option>
@@ -228,7 +205,7 @@ export function ContactForm() {
                 {option}
               </option>
             ))}
-          </select>
+          </FormSelect>
         </div>
       </div>
 
@@ -236,14 +213,14 @@ export function ContactForm() {
         <label htmlFor="timeline" className={labelClasses}>
           Desired launch timeframe
         </label>
-        <select id="timeline" name="timeline" className={inputClasses} defaultValue="">
+        <FormSelect id="timeline" name="timeline" defaultValue="">
           <option value="">Select a timeframe</option>
           {launchTimeframeOptions.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>
           ))}
-        </select>
+        </FormSelect>
       </div>
 
       <div>
@@ -272,9 +249,12 @@ export function ContactForm() {
         </p>
       )}
 
-      <Button type="submit" disabled={status === "loading"}>
-        {status === "loading" ? "Sending..." : "Send Message"}
-      </Button>
+      <div>
+        <Button type="submit" disabled={status === "loading"}>
+          {status === "loading" ? "Sending..." : "Start My Project"}
+        </Button>
+        <p className="mt-3 text-sm text-muted">{contactFormReassurance}</p>
+      </div>
     </form>
   );
 }

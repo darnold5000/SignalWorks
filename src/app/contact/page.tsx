@@ -1,6 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { ContactForm } from "@/components/ContactForm";
-import { contactNextSteps } from "@/data/contact";
+import { contactFormIntro, contactNextSteps } from "@/data/contact";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -52,14 +52,18 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Start a project"
         description="Tell us about your business and what you're hoping to build. Most inquiries receive a personal reply within one business day."
+        size="compact"
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-20 lg:px-8 lg:pb-28">
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-3">
+            <p className="mb-8 max-w-2xl text-muted leading-relaxed">
+              {contactFormIntro}
+            </p>
             <ContactForm />
           </div>
-          <aside className="lg:col-span-2 lg:border-l lg:border-border/60 lg:pl-10">
+          <aside className="lg:col-span-2 lg:border-l lg:border-neutral-300 lg:pl-10">
             <h2 className="font-display text-2xl tracking-tight sm:text-3xl">
               What happens next?
             </h2>
