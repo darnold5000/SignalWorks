@@ -33,6 +33,8 @@ export async function POST(request: Request) {
 
     const resendApiKey = process.env.RESEND_API_KEY;
     const contactEmail = process.env.CONTACT_EMAIL ?? siteConfig.email;
+    const fromAddress =
+      process.env.RESEND_FROM ?? `${siteConfig.name} <onboarding@resend.dev>`;
 
     if (!resendApiKey) {
       return NextResponse.json(
@@ -59,7 +61,7 @@ export async function POST(request: Request) {
     `;
 
     await resend.emails.send({
-      from: `${siteConfig.name} <onboarding@resend.dev>`,
+      from: fromAddress,
       to: contactEmail,
       replyTo: body.email,
       subject: `New inquiry: ${body.projectType} — ${body.name}`,
