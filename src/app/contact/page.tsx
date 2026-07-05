@@ -1,6 +1,5 @@
 import { Hero } from "@/components/Hero";
 import { ContactForm } from "@/components/ContactForm";
-import { SectionHeading } from "@/components/SectionHeading";
 import { contactNextSteps } from "@/data/contact";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
@@ -16,7 +15,7 @@ export const metadata = createPageMetadata({
 function CheckIcon() {
   return (
     <svg
-      className="mt-0.5 h-4 w-4 shrink-0 text-foreground"
+      className="mt-0.5 h-3.5 w-3.5 shrink-0 text-foreground/70"
       viewBox="0 0 16 16"
       fill="none"
       aria-hidden="true"
@@ -56,21 +55,23 @@ export default function ContactPage() {
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-20 lg:px-8 lg:pb-28">
-        <div className="grid gap-16 lg:grid-cols-5">
+        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-3">
             <ContactForm />
           </div>
-          <div className="lg:col-span-2">
-            <SectionHeading title="What happens next?" />
-            <ul className="mt-6 space-y-4">
+          <aside className="lg:col-span-2 lg:border-l lg:border-border/60 lg:pl-10">
+            <h2 className="font-display text-2xl tracking-tight sm:text-3xl">
+              What happens next?
+            </h2>
+            <ul className="mt-5 space-y-3.5">
               {contactNextSteps.map((step) => (
-                <li key={step} className="flex items-start gap-3 text-sm text-muted">
+                <li key={step} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted">
                   <CheckIcon />
                   {step}
                 </li>
               ))}
             </ul>
-          </div>
+          </aside>
         </div>
       </section>
     </>

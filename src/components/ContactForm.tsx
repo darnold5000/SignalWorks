@@ -17,6 +17,25 @@ function requiresPhone(method: PreferredContact) {
   return method === "Phone Call" || method === "Text Message";
 }
 
+function SegmentCheck() {
+  return (
+    <svg
+      className="h-3.5 w-3.5 shrink-0"
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 8.5L6.5 12L13 4"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [feedback, setFeedback] = useState("");
@@ -66,13 +85,14 @@ export function ContactForm() {
     }
   }
 
+  const labelClasses = "mb-1.5 block text-sm text-foreground";
   const inputClasses =
-    "w-full border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-foreground";
+    "w-full rounded-sm border border-border/70 bg-background px-3.5 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/80 focus:border-neutral-400";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="mb-2 block text-sm font-medium">
+        <label htmlFor="name" className={labelClasses}>
           Name *
         </label>
         <input
@@ -86,7 +106,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="company" className="mb-2 block text-sm font-medium">
+        <label htmlFor="company" className={labelClasses}>
           Company
         </label>
         <input
@@ -98,9 +118,9 @@ export function ContactForm() {
         />
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="email" className="mb-2 block text-sm font-medium">
+          <label htmlFor="email" className={labelClasses}>
             Email *
           </label>
           <input
@@ -113,8 +133,8 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="phone" className="mb-2 block text-sm font-medium">
-            Phone{phoneRequired ? " *" : ""}
+          <label htmlFor="phone" className={labelClasses}>
+            {phoneRequired ? "Phone *" : "Phone"}
           </label>
           <input
             id="phone"
@@ -123,42 +143,53 @@ export function ContactForm() {
             required={phoneRequired}
             className={inputClasses}
             autoComplete="tel"
-            placeholder={phoneRequired ? "Required for call or text" : "Optional"}
+            placeholder={phoneRequired ? undefined : "Optional"}
           />
         </div>
       </div>
 
-      <fieldset>
-        <legend className="mb-3 block text-sm font-medium">
+      <fieldset className="min-w-0">
+        <legend className={cn(labelClasses, "mb-2.5")}>
           How would you like me to contact you? *
         </legend>
-        <div className="space-y-2">
-          {preferredContactOptions.map((option) => (
-            <label
-              key={option}
-              className={cn(
-                "flex cursor-pointer items-center gap-3 border border-border px-4 py-3 text-sm transition-colors",
-                preferredContact === option && "border-foreground",
-              )}
-            >
-              <input
-                type="radio"
-                name="preferredContact"
-                value={option}
-                required
-                checked={preferredContact === option}
-                onChange={() => setPreferredContact(option)}
-                className="h-4 w-4 accent-foreground"
-              />
-              {option}
-            </label>
-          ))}
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+          {preferredContactOptions.map((option) => {
+            const selected = preferredContact === option;
+            const inputId = `preferred-contact-${option.toLowerCase().replace(/\s+/g, "-")}`;
+
+            return (
+              <label
+                key={option}
+                htmlFor={inputId}
+                className={cn(
+                  "flex cursor-pointer items-center justify-center gap-1.5 rounded-sm border px-3 py-2.5 text-sm transition-colors",
+                  "focus-within:ring-2 focus-within:ring-foreground focus-within:ring-offset-2",
+                  selected
+                    ? "border-neutral-300 bg-neutral-50 text-foreground"
+                    : "border-border/70 bg-background text-muted hover:border-neutral-300 hover:bg-neutral-50/60",
+                )}
+              >
+                <input
+                  id={inputId}
+                  type="radio"
+                  name="preferredContact"
+                  value={option}
+                  required
+                  checked={selected}
+                  onChange={() => setPreferredContact(option)}
+                  className="sr-only"
+                />
+                {selected && <SegmentCheck />}
+                <span className="text-center leading-snug">{option}</span>
+              </label>
+            );
+          })}
         </div>
       </fieldset>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="buildType" className="mb-2 block text-sm font-medium">
+          <label htmlFor="buildType" className={labelClasses}>
             What are you looking to build? *
           </label>
           <select
@@ -179,7 +210,7 @@ export function ContactForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="engagementModel" className="mb-2 block text-sm font-medium">
+          <label htmlFor="engagementModel" className={labelClasses}>
             How would you like to get started? *
           </label>
           <select
@@ -202,7 +233,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="timeline" className="mb-2 block text-sm font-medium">
+        <label htmlFor="timeline" className={labelClasses}>
           Desired launch timeframe
         </label>
         <select id="timeline" name="timeline" className={inputClasses} defaultValue="">
@@ -216,7 +247,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-medium">
+        <label htmlFor="message" className={labelClasses}>
           Tell me about your project *
         </label>
         <textarea
@@ -224,7 +255,7 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
-          className={inputClasses}
+          className={cn(inputClasses, "resize-y")}
           placeholder="Tell me about your business, what you're hoping to accomplish, and any features you already know you need."
         />
       </div>
