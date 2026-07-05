@@ -135,22 +135,15 @@ export function ContactForm() {
         <legend className={cn(labelClasses, "mb-2.5")}>
           How would you like me to contact you? *
         </legend>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-8">
           {preferredContactOptions.map((option) => {
-            const selected = preferredContact === option;
             const inputId = `preferred-contact-${option.toLowerCase().replace(/\s+/g, "-")}`;
 
             return (
               <label
                 key={option}
                 htmlFor={inputId}
-                className={cn(
-                  "flex cursor-pointer items-center gap-2 rounded-sm border px-3 py-2.5 text-sm transition-all",
-                  "focus-within:ring-2 focus-within:ring-foreground focus-within:ring-offset-2",
-                  selected
-                    ? "border-neutral-400 bg-neutral-100 font-semibold text-foreground shadow-sm"
-                    : "border-neutral-300 bg-background font-normal text-muted hover:border-neutral-400 hover:bg-neutral-50",
-                )}
+                className="flex cursor-pointer items-center gap-2.5 text-sm text-foreground"
               >
                 <input
                   id={inputId}
@@ -158,18 +151,11 @@ export function ContactForm() {
                   name="preferredContact"
                   value={option}
                   required
-                  checked={selected}
+                  checked={preferredContact === option}
                   onChange={() => setPreferredContact(option)}
-                  className="sr-only"
+                  className="h-3.5 w-3.5 shrink-0 accent-foreground"
                 />
-                <span
-                  className={cn(
-                    "h-1.5 w-1.5 shrink-0 rounded-full transition-colors",
-                    selected ? "bg-foreground" : "bg-transparent",
-                  )}
-                  aria-hidden="true"
-                />
-                <span className="leading-snug">{option}</span>
+                {option}
               </label>
             );
           })}
@@ -251,7 +237,7 @@ export function ContactForm() {
 
       <div>
         <Button type="submit" disabled={status === "loading"}>
-          {status === "loading" ? "Sending..." : "Start My Project"}
+          {status === "loading" ? "Sending..." : "Let's Talk"}
         </Button>
         <p className="mt-3 text-sm text-muted">{contactFormReassurance}</p>
       </div>

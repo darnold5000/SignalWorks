@@ -50,7 +50,7 @@ export default function ContactPage() {
 
       <Hero
         eyebrow="Contact"
-        title="Start a project"
+        title="Lets talk about your project"
         description="Tell us about your business and what you're hoping to build. Most inquiries receive a personal reply within one business day."
         size="compact"
       />
