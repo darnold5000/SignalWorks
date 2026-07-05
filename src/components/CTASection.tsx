@@ -10,7 +10,7 @@ type CTASectionProps = {
 export function CTASection({
   title,
   description,
-  buttonLabel = "Start a Project",
+  buttonLabel = "Let's Talk",
   buttonHref = "/contact",
 }: CTASectionProps) {
   return (
