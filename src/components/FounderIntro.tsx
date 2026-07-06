@@ -14,16 +14,17 @@ export function FounderIntro() {
               Hi, I&apos;m {siteConfig.author.split(" ")[0]}.
             </h2>
             <p className="mt-6 text-lg text-muted leading-relaxed">
-              I build software and websites for businesses that have outgrown
-              templates. My background is software engineering, so every project
-              starts with solving the business problem — not just making something
-              look better.
+              I build websites, custom software, and AI tools for businesses that
+              have outgrown templates. My background is software engineering, so
+              every project starts with solving the business problem — reducing
+              manual work, surfacing useful data, and building something that
+              actually gets used.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               Based in {siteConfig.location.city}, {siteConfig.location.region},
               I work with businesses across the country — financial advisors,
-              sports organizations, and growing companies that need more than a
-              basic online presence.
+              sports organizations, and growing companies that need technology
+              built around how they operate.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               People hire people. When you work with {siteConfig.name}, you work

@@ -4,9 +4,10 @@ import { SHOW_FOUNDER } from "@/lib/flags";
 
 const capabilities = [
   "Professional websites",
-  "Hosting & updates included",
-  "Booking, forms & maps",
-  "Ongoing partnership",
+  "Custom web apps & client portals",
+  "AI tools & workflow automation",
+  "Dashboards & business insights",
+  "Ongoing technology partnership",
 ];
 
 export function WhySignalWorksIntro() {
@@ -20,7 +21,7 @@ export function WhySignalWorksIntro() {
               <p>Not a big agency.</p>
               <p>Not a DIY template.</p>
               <p className="font-medium text-foreground">
-                A real partner for your online presence.
+                A real partner for websites, software, and AI.
               </p>
             </div>
           </div>

@@ -17,46 +17,46 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Signal Works",
   description:
-    "Professional websites without agency pricing. Built for salons, gyms, contractors, and growing local businesses.",
+    "Websites, custom software, AI tools, and automation — built to reduce manual work, surface customer insights, and grow your business.",
   path: "/",
 });
 
 const whatIBuild = [
   {
     title: "Business Websites",
-    description: "Professional sites that look great on phones and help customers find you.",
+    description: "Professional sites that build trust, convert visitors, and stay maintained for you.",
     href: "/services/business-websites",
     icon: "globe",
   },
   {
     title: "Custom Web Apps",
-    description: "Booking systems, client portals, and tools built for how you work.",
+    description: "Portals, dashboards, and tools built around how your team actually works.",
     href: "/services/custom-apps",
     icon: "code",
   },
   {
-    title: "AI & Business Automation",
-    description: "Practical tools that save time on repetitive tasks.",
+    title: "AI Tools & Automation",
+    description: "Practical AI and automated workflows that cut hours of manual work every week.",
     href: "/services/ai-automation",
     icon: "sparkles",
   },
   {
+    title: "Business Insights",
+    description: "Dashboards and reporting that turn customer and operational data into clear decisions.",
+    href: "/services/custom-apps",
+    icon: "chart",
+  },
+  {
     title: "SEO + Search",
-    description: "Help customers find you on Google and local search.",
+    description: "Help customers find you on Google, AI search, and answer engines.",
     href: "/services/seo-aeo",
     icon: "search",
   },
   {
-    title: "Automation Systems",
-    description: "Connect your tools and cut down on manual work.",
+    title: "Integrations & Workflows",
+    description: "Connect your tools so data flows automatically — fewer spreadsheets, fewer handoffs.",
     href: "/services/ai-automation",
     icon: "automation",
-  },
-  {
-    title: "Dashboards & Portals",
-    description: "Client-facing portals and internal tools for your team.",
-    href: "/services/custom-apps",
-    icon: "chart",
   },
 ];
 
@@ -67,8 +67,8 @@ export default function HomePage() {
     <>
       <Hero
         eyebrow="Better signal. Less noise."
-        title="Professional websites without agency pricing."
-        description="Whether you run a salon, a gym, or a growing local business — get a website that looks great, works on every phone, and stays updated without you thinking about it."
+        title="Websites, software, and AI — without agency pricing."
+        description="We build digital products that win customers online, automate repetitive work, and turn your data into insight — so your team spends less time on manual tasks and more time growing the business."
         primaryCta={{ label: "Let's Talk", href: "/contact" }}
         secondaryCta={{ label: "See Pricing", href: "/pricing" }}
         size="large"
@@ -103,7 +103,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="What we build"
-          description="Websites and online tools for businesses that want to look professional and grow."
+          description="Websites, custom software, AI tools, and automation — scoped to the problems your business actually needs solved."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whatIBuild.map((item) => (
@@ -123,13 +123,14 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-lg text-muted leading-relaxed">
-                Most business owners don&apos;t want to think about hosting,
-                plugins, or security updates. You want a website that looks
-                professional, brings in customers, and just works.
+                Most teams don&apos;t want to juggle hosting, plugins, spreadsheets,
+                and one-off freelancers. You want technology that looks professional,
+                saves time, and gives you a clearer picture of your customers.
               </p>
               <p className="mt-6 text-lg text-muted leading-relaxed">
-                That&apos;s what we do — build it, launch it, and keep it
-                running. As your business grows, your website grows with you.
+                That&apos;s what we build — websites, software, and AI tools that
+                launch fast and keep improving. As your needs grow, your digital
+                products grow with you.
               </p>
             </div>
           </div>
@@ -142,7 +143,7 @@ export default function HomePage() {
 
       <CTASection
         title="Ready to build something that works?"
-        description="Whether you need a Launch Website or a Growth Website — we'll recommend the right partnership for your business."
+        description="Whether you need a website, custom software, AI automation, or an ongoing technology partnership — we'll recommend the right approach."
       />
     </>
   );

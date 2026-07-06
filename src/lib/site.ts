@@ -2,9 +2,9 @@ import { SHOW_WORK } from "./flags";
 
 export const siteConfig = {
   name: "Signal Works",
-  tagline: "Professional websites without agency pricing.",
+  tagline: "Modern websites. Custom software. AI-powered tools.",
   description:
-    "Professional websites without agency pricing. Websites, ongoing support, and custom tools for salons, gyms, contractors, and growing local businesses.",
+    "Websites, custom software, AI tools, and automation — built to reduce manual work, surface customer insights, and grow your business without agency overhead.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://signalworks.dev",
   author: "Dave Arnold",
   // company: "Arnold Digital", // internal use only — not shown on public site

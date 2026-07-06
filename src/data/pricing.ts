@@ -5,16 +5,19 @@ export type WebsiteOffering = {
   launchPrice?: string;
   monthlyPrice?: string;
   monthlyNote?: string;
+  outrightPrice?: string;
+  outrightIncludes?: string[];
+  partnershipIncludes?: string[];
   customQuote?: boolean;
 };
 
 export const pricingHero = {
-  title: "Professional websites without agency pricing.",
+  title: "Clear pricing for websites and custom software.",
   description:
-    "Launch with a predictable monthly partnership that includes hosting, security, updates, support, and continuous improvements.",
+    "Website partnerships start predictably. Custom software, AI tools, and automation are scoped to your project — we'll recommend the right investment after understanding your goals.",
   primaryCta: { label: "Get a Free Consultation", href: "/contact" },
   ctaNote:
-    "We'll discuss your business, recommend the right website partnership, and provide a no-pressure estimate.",
+    "We'll discuss your goals — whether that's a website, a custom app, or automation — and provide a clear estimate with no pressure.",
 } as const;
 
 export const partnershipPhilosophy = {
@@ -30,6 +33,7 @@ export const partnershipPhilosophy = {
 
 export const websiteOfferingsSection = {
   title: "Choose the website that fits your business.",
+  note: "Optional monthly partnership available after an outright purchase for hosting, updates, and ongoing improvements.",
 } as const;
 
 export const websiteOfferings: WebsiteOffering[] = [
@@ -37,25 +41,51 @@ export const websiteOfferings: WebsiteOffering[] = [
     id: "launch-website",
     name: "Launch Website",
     description:
-      "For local businesses that need a clean, professional online presence.",
+      "A polished, credible web presence for businesses launching or refreshing their brand online.",
     launchPrice: "$500",
     monthlyPrice: "$99",
+    outrightPrice: "$995",
+    partnershipIncludes: [
+      "Hosting, security, and updates included",
+      "Ongoing support and performance monitoring",
+    ],
+    outrightIncludes: [
+      "Custom 3–5 page website",
+      "Mobile-responsive design",
+      "Contact form and location integration",
+      "Basic SEO foundation",
+      "Fast, secure hosting setup",
+      "You own the site upon final payment",
+    ],
   },
   {
     id: "growth-website",
     name: "Growth Website",
     description:
-      "For businesses where the website actively generates leads.",
+      "A lead-generating website built to grow traffic, trust, and inquiries over time.",
     launchPrice: "$995",
     monthlyPrice: "$199",
+    outrightPrice: "$3,750",
     monthlyNote:
       "Most Growth Website partnerships range between $199–399/month depending on content, SEO, integrations, AI optimization, and ongoing support needs.",
+    partnershipIncludes: [
+      "Everything in Launch, plus priority support",
+      "Ongoing SEO, content, and conversion improvements",
+    ],
+    outrightIncludes: [
+      "6–10 page custom site architecture",
+      "Advanced SEO and AI-search structure",
+      "Blog or resources section",
+      "Service and landing pages",
+      "Analytics and conversion tracking",
+      "You own the site upon final payment",
+    ],
   },
   {
     id: "custom-software",
     name: "Custom Software",
     description:
-      "For dashboards, portals, automation, AI tools, scheduling systems, internal software, and custom integrations.",
+      "Dashboards, portals, automation, AI tools, and custom integrations — scoped to cut manual work and surface the customer and operational data your team needs.",
     customQuote: true,
   },
 ];
@@ -76,16 +106,6 @@ export const growthOptions = {
     "Automation",
     "Custom software",
   ],
-} as const;
-
-export const traditionalOwnership = {
-  title: "Prefer to purchase your website outright?",
-  copy: "Some businesses prefer a traditional one-time investment. Signal Works offers that too.",
-  pricing: [
-    { label: "Launch Website", price: "$995" },
-    { label: "Growth Website", price: "$3,750" },
-  ],
-  optional: "Optional monthly partnership available after launch.",
 } as const;
 
 export const pricingReassurance =
@@ -110,11 +130,11 @@ export const pricingFaqs = [
   {
     question: "What's the difference between Launch and Growth websites?",
     answer:
-      "Launch Websites are focused sites for local businesses that need a credible online presence. Growth Websites are built for companies where the website actively generates leads, with multi-page architecture, advanced SEO, AI optimization, blogs, landing pages, CRM integrations, and priority support.",
+      "Launch Websites are focused sites for businesses that need a credible, professional online presence. Growth Websites are built for companies where the website actively generates leads — with multi-page architecture, advanced SEO, AI optimization, blogs, landing pages, CRM integrations, and priority support.",
   },
   {
     question: "Do I own my website?",
     answer:
-      "With a traditional purchase, you own your website upon final payment. With a monthly partnership, Signal Works manages and improves your site as your long-term technology partner. We'll explain ownership options clearly before you start.",
+      "With an outright purchase, you own your website upon final payment. With a monthly partnership, Signal Works manages and improves your site as your long-term technology partner. We'll explain ownership options clearly before you start.",
   },
 ];

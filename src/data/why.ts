@@ -7,17 +7,17 @@ export const whySignalWorks: WhyCard[] = [
   {
     title: "Built for real businesses",
     description:
-      "Salons, gyms, contractors, advisors, and growing local companies — not generic templates.",
+      "Custom digital products for companies that have outgrown templates — not one-size-fits-all solutions.",
   },
   {
     title: "Direct communication",
     description:
-      "You work directly with the person building your website. No account managers. No runaround.",
+      "You work directly with the person building your product. No account managers. No runaround.",
   },
   {
     title: "Grows with you",
     description:
-      "Start with a professional website. Add booking, payments, or custom tools later — without starting over.",
+      "Start with a website. Add portals, automation, AI tools, or dashboards later — without starting over.",
   },
   {
     title: "We're here after launch",

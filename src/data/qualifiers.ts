@@ -6,9 +6,9 @@ export const whatIDontDo = [
 ] as const;
 
 export const whatIDo = [
-  "Professional websites built for your business",
+  "Websites, web apps, and AI tools built for your business",
+  "Automation that cuts repetitive manual work",
+  "Dashboards and reporting that surface customer insights",
   "Direct communication — no middlemen",
-  "Predictable monthly pricing",
-  "Hosting, updates, and support included",
-  "A partner that grows with you",
+  "A long-term partner that grows with you",
 ] as const;

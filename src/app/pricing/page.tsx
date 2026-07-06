@@ -2,7 +2,6 @@ import { Hero } from "@/components/Hero";
 import { PricingPhilosophySection } from "@/components/PricingPhilosophySection";
 import { WebsiteOfferingsSection } from "@/components/WebsiteOfferingsSection";
 import { GrowthOptionsSection } from "@/components/GrowthOptionsSection";
-import { TraditionalOwnershipSection } from "@/components/TraditionalOwnershipSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -14,7 +13,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
     description:
-    "Professional websites without agency pricing. Launch from $500 with monthly partnerships starting at $99/month.",
+    "Website partnerships and custom software pricing. Launch from $500 with monthly partnerships starting at $99/month.",
   path: "/pricing",
 });
 
@@ -49,8 +48,6 @@ export default function PricingPage() {
       <PricingPhilosophySection />
 
       <GrowthOptionsSection />
-
-      <TraditionalOwnershipSection />
 
       <section className="border-t border-border bg-neutral-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">

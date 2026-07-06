@@ -16,7 +16,7 @@ export const services: Service[] = [
     shortDescription:
       "Professional websites that look great on phones, help customers find you, and build trust.",
     description:
-      "Custom-designed websites built for salons, gyms, contractors, advisors, and growing local businesses. Mobile-friendly, easy to contact you, and set up to be found on Google — with hosting and updates handled for you.",
+      "Custom-designed websites built to establish credibility, convert visitors, and stay maintained — mobile-friendly, search-ready, with hosting and updates handled for you.",
     icon: "globe",
     includes: [
       "Custom design tailored to your brand",
@@ -81,9 +81,9 @@ export const services: Service[] = [
     slug: "ai-automation",
     title: "AI & Business Automation",
     shortDescription:
-      "Practical AI integrations and automation systems that save time and reduce manual work.",
+      "Practical AI, automation, and integrations that save time and surface business insight.",
     description:
-      "AI works best when it solves real problems — not when it's added for novelty. Signal Works builds AI-powered tools, document extraction, vision workflows, report generation, and automated processes that deliver measurable time savings.",
+      "AI works best when it solves real problems — not when it's added for novelty. Signal Works builds AI-powered tools, automated workflows, document processing, and data pipelines that cut manual work and help you understand your customers better.",
     icon: "sparkles",
     includes: [
       "AI workflow discovery and planning",
@@ -92,6 +92,8 @@ export const services: Service[] = [
       "Data cleanup and enrichment",
       "Internal copilots and assistants",
       "Automated email and notification workflows",
+      "Customer data aggregation and reporting",
+      "Business insight dashboards",
       "Integration with existing tools",
       "Monitoring and iteration",
     ],
@@ -101,6 +103,7 @@ export const services: Service[] = [
       "Vision AI workflows",
       "Automated report generation",
       "Data cleanup pipelines",
+      "Customer insight dashboards",
       "Internal business copilots",
       "Automated email workflows",
     ],
@@ -148,7 +151,7 @@ export const services: Service[] = [
 export const carePlanService = {
   title: "Ongoing Partnership",
   shortDescription:
-    "A long-term partnership for security, performance, improvements, and priority support — so your digital presence keeps getting better.",
+    "A long-term partnership for security, performance, improvements, and priority support — so your websites, apps, and tools keep getting better.",
   includes: [
     "Security",
     "Monitoring",
