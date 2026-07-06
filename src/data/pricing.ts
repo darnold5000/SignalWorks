@@ -70,18 +70,6 @@ export const pricingPlans: PricingPlan[] = [
     ],
   },
   {
-    id: "custom-software",
-    name: "Custom Software",
-    description:
-      "Dashboards, portals, automation, AI tools, and custom integrations — scoped to your business.",
-    type: "custom",
-    includes: [
-      "Discovery and scoping",
-      "Custom build for your workflow",
-      "Clear estimate before work begins",
-    ],
-  },
-  {
     id: "purchase-outright",
     name: "Purchase Outright",
     description:
@@ -95,6 +83,18 @@ export const pricingPlans: PricingPlan[] = [
       "Custom website built and delivered to you",
       "You manage hosting, security, and updates",
       "Optional monthly partnership available after launch",
+    ],
+  },
+  {
+    id: "custom-software",
+    name: "Custom Software",
+    description:
+      "Dashboards, portals, automation, AI tools, and custom integrations — scoped to your business.",
+    type: "custom",
+    includes: [
+      "Discovery and scoping",
+      "Custom build for your workflow",
+      "Clear estimate before work begins",
     ],
   },
 ];

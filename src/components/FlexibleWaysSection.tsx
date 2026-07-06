@@ -4,8 +4,8 @@ import { SectionHeading } from "./SectionHeading";
 const offerings = [
   { label: "Launch Website", href: "/pricing#launch-partnership" },
   { label: "Growth Website", href: "/pricing#growth-partnership" },
-  { label: "Custom Software", href: "/pricing#custom-software" },
   { label: "Purchase Outright", href: "/pricing#purchase-outright" },
+  { label: "Custom Software", href: "/pricing#custom-software" },
 ] as const;
 
 export function FlexibleWaysSection() {
