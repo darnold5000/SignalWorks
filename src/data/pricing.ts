@@ -5,6 +5,7 @@ export type PricingPlan = {
   type: "partnership" | "outright" | "custom";
   launchPrice?: string;
   monthlyPrice?: string;
+  monthlyPriceLabel?: string;
   monthlyNote?: string;
   outrightTiers?: { label: string; price: string }[];
   includes: string[];
@@ -32,6 +33,7 @@ export const partnershipPhilosophy = {
 
 export const websiteOfferingsSection = {
   title: "Choose the website that fits your business.",
+  note: "Monthly partnership pricing is based on the level of ongoing work required — not hosting alone. A simple local business website may only need occasional updates, while a growth-focused business may need SEO, content publishing, integrations, analytics, and regular improvements.",
 } as const;
 
 export const pricingPlans: PricingPlan[] = [
@@ -42,7 +44,10 @@ export const pricingPlans: PricingPlan[] = [
       "A polished, credible web presence for businesses launching or refreshing their brand online.",
     type: "partnership",
     launchPrice: "$500",
-    monthlyPrice: "$99",
+    monthlyPrice: "$99/month",
+    monthlyPriceLabel: "Starting at",
+    monthlyNote:
+      "Best for local businesses with a smaller website and occasional updates.",
     includes: [
       "Hosting, security, and updates included",
       "Ongoing support and performance monitoring",
@@ -58,9 +63,10 @@ export const pricingPlans: PricingPlan[] = [
       "A lead-generating website built to grow traffic, trust, and inquiries over time.",
     type: "partnership",
     launchPrice: "$995",
-    monthlyPrice: "$199",
+    monthlyPrice: "$199–399/month",
+    monthlyPriceLabel: "Typically",
     monthlyNote:
-      "Most partnerships range between $199–399/month depending on content, SEO, integrations, and ongoing support needs.",
+      "Final monthly pricing depends on content updates, SEO/AEO needs, integrations, analytics, and ongoing support requirements.",
     includes: [
       "Everything in Launch, plus priority support",
       "Ongoing SEO, content, and conversion improvements",

@@ -13,7 +13,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
     description:
-    "Website partnerships from $500 launch + $99/month. Purchase outright from $1,499. Custom software quoted per project.",
+    "Launch partnerships from $500 + $99/month. Growth partnerships typically $199–399/month. Purchase outright from $1,499.",
   path: "/pricing",
 });
 

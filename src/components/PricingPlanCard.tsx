@@ -9,6 +9,7 @@ export function PricingPlanCard({
   type,
   launchPrice,
   monthlyPrice,
+  monthlyPriceLabel,
   monthlyNote,
   outrightTiers,
   includes,
@@ -33,15 +34,18 @@ export function PricingPlanCard({
       {type === "partnership" && launchPrice && monthlyPrice && (
         <div className="mt-6 space-y-4">
           <div>
-            <p className="text-xs text-muted">Website launch from</p>
-            <p className="mt-1 font-display text-2xl tracking-tight">{launchPrice}</p>
+            <p className="text-xs font-semibold tracking-[0.15em] uppercase text-muted">
+              Website Launch
+            </p>
+            <p className="mt-1 text-xs text-muted">Starting at</p>
+            <p className="mt-0.5 font-display text-2xl tracking-tight">{launchPrice}</p>
           </div>
           <div>
-            <p className="text-xs text-muted">Then from</p>
-            <p className="mt-1 font-display text-2xl tracking-tight">
-              {monthlyPrice}
-              <span className="text-sm text-muted">/month</span>
+            <p className="text-xs font-semibold tracking-[0.15em] uppercase text-muted">
+              Monthly Partnership
             </p>
+            <p className="mt-1 text-xs text-muted">{monthlyPriceLabel ?? "Starting at"}</p>
+            <p className="mt-0.5 font-display text-2xl tracking-tight">{monthlyPrice}</p>
           </div>
         </div>
       )}

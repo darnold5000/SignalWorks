@@ -12,6 +12,9 @@ export function WebsiteOfferingsSection() {
             <PricingPlanCard key={plan.id} {...plan} />
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm text-muted leading-relaxed">
+          {websiteOfferingsSection.note}
+        </p>
       </div>
     </section>
   );
