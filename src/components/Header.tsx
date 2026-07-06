@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,12 +15,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="group flex flex-col gap-0.5">
-          <span className="text-sm font-semibold tracking-[0.2em] uppercase">
-            {siteConfig.name}
-          </span>
-          <span className="hidden text-xs text-muted sm:block">
-            Built with clarity.
+        <Link href="/" className="group flex items-center gap-3">
+          <Image
+            src="/icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8 shrink-0"
+            priority
+          />
+          <span className="flex flex-col gap-0.5">
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase">
+              {siteConfig.name}
+            </span>
+            <span className="hidden text-xs text-muted sm:block">
+              Built with clarity.
+            </span>
           </span>
         </Link>
 
