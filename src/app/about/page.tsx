@@ -15,30 +15,30 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "Signal Works is a software-first digital partner for growing businesses — professional websites, custom software, and AI-powered tools.",
+    "Signal Works builds professional websites and online tools for salons, gyms, contractors, and growing local businesses.",
   path: "/about",
 });
 
 const companyThemes = [
   {
-    title: "Software engineering first",
-    description:
-      "Every project is built with clarity, performance, and long-term maintainability — not shortcuts or bloated page builders.",
-  },
-  {
     title: "Built for real businesses",
     description:
-      "From local service companies to growing professional firms, Signal Works builds technology that fits how your business actually operates.",
+      "Salons, gyms, contractors, advisors, and growing local companies — not one-size-fits-all templates.",
+  },
+  {
+    title: "We handle the technical stuff",
+    description:
+      "Hosting, security, updates, and performance — so you can focus on running your business, not your website.",
   },
   {
     title: "Long-term partnership",
     description:
-      "We don't disappear after launch. Hosting, security, updates, and continuous improvements are part of how we work.",
+      "We don't disappear after launch. Ongoing support and improvements are part of how we work.",
   },
   {
     title: "Better signal. Less noise.",
     description:
-      "Clear positioning, fast performance, and software that does its job without unnecessary complexity.",
+      "A clear, professional online presence that helps customers find you and trust you.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
         data={[
           webPageSchema(
             "About",
-            `About ${siteConfig.name} — software engineering for growing businesses`,
+            `About ${siteConfig.name} — professional websites for growing businesses`,
             "/about",
           ),
           breadcrumbSchema([
@@ -61,8 +61,8 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About"
-        title="A software-first digital partner for growing businesses."
-        description="Signal Works builds professional websites, custom software, and AI-powered tools for businesses that need more than templates. Every project is built with clarity, performance, and long-term maintainability in mind."
+        title="A digital partner for growing businesses."
+        description="Signal Works builds professional websites for businesses that need more than a template — salons, gyms, contractors, advisors, and local companies that want to look credible and grow online."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "See Pricing", href: "/pricing" }}
       />

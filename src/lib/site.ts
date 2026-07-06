@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Signal Works",
   tagline: "Professional websites without agency pricing.",
   description:
-    "Professional websites without agency pricing. Modern websites, custom software, and AI solutions backed by real software engineering.",
+    "Professional websites without agency pricing. Websites, ongoing support, and custom tools for salons, gyms, contractors, and growing local businesses.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://signalworks.dev",
   author: "Dave Arnold",
   // company: "Arnold Digital", // internal use only — not shown on public site

@@ -5,28 +5,18 @@ export type HowWeWorkStep = {
 
 export const howWeWorkSteps: HowWeWorkStep[] = [
   {
-    title: "Discovery",
+    title: "Quick conversation",
     description:
-      "We learn your business, your goals, and what success looks like — before anything gets designed.",
+      "Tell us about your business and what you need. We'll recommend the right website and pricing — no pressure.",
   },
   {
-    title: "Design",
+    title: "We build your site",
     description:
-      "We map structure, user flows, and visual direction so every page has a clear purpose.",
+      "We handle the design, content, and setup. You review along the way and approve before launch.",
   },
   {
-    title: "Build",
+    title: "Launch — we handle the rest",
     description:
-      "We develop with modern tools, SEO, and performance built in from day one — not bolted on later.",
-  },
-  {
-    title: "Launch",
-    description:
-      "We deploy, verify analytics and search structure, and make sure everything works across devices.",
-  },
-  {
-    title: "Grow",
-    description:
-      "We monitor, improve, and evolve your platform as your business needs change.",
+      "Your site goes live. We take care of hosting, security, updates, and ongoing improvements.",
   },
 ];

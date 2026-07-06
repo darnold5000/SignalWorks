@@ -6,8 +6,8 @@ export function HowWeWork() {
     <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
       <SectionHeading
         eyebrow="How we work"
-        title="What happens after you contact us"
-        description="A clear path from first conversation to launch — and beyond."
+        title="What happens after you reach out"
+        description="Three simple steps — no complicated process."
       />
       <div className="mt-12">
         <div className="hidden lg:flex lg:items-start lg:justify-between lg:gap-4">

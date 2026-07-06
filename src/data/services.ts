@@ -14,9 +14,9 @@ export const services: Service[] = [
     slug: "business-websites",
     title: "Business Websites",
     shortDescription:
-      "Modern websites for businesses that need to look credible, load fast, rank well, and convert visitors.",
+      "Professional websites that look great on phones, help customers find you, and build trust.",
     description:
-      "Custom-designed, mobile-first business websites built for performance, credibility, and conversion. Every site includes technical SEO, AEO-ready structure, and analytics — not bolted on as an afterthought.",
+      "Custom-designed websites built for salons, gyms, contractors, advisors, and growing local businesses. Mobile-friendly, easy to contact you, and set up to be found on Google — with hosting and updates handled for you.",
     icon: "globe",
     includes: [
       "Custom design tailored to your brand",
@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Contact forms with email delivery",
       "Blog and resource page setup",
       "Analytics integration",
-      "Vercel hosting and deployment",
+      "Reliable hosting and deployment",
       "Performance optimization",
     ],
     faqs: [

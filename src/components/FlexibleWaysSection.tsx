@@ -12,8 +12,8 @@ export function FlexibleWaysSection() {
     <section className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
-          title="Your long-term technology partner"
-          description="Professional websites backed by a monthly partnership — hosting, security, updates, and continuous improvements included."
+          title="Your long-term website partner"
+          description="One monthly partnership covers your website, hosting, security, updates, and ongoing improvements."
           align="center"
           className="mx-auto"
         />

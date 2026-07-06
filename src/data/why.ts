@@ -5,23 +5,23 @@ export type WhyCard = {
 
 export const whySignalWorks: WhyCard[] = [
   {
-    title: "Real software engineering",
+    title: "Built for real businesses",
     description:
-      "Not page builders. Not templates. Real applications with architecture, databases, authentication, and workflows — built to last.",
+      "Salons, gyms, contractors, advisors, and growing local companies — not generic templates.",
   },
   {
-    title: "Direct access",
+    title: "Direct communication",
     description:
-      "You work directly with the person designing and writing the software. No account managers. No hand-offs.",
+      "You work directly with the person building your website. No account managers. No runaround.",
   },
   {
-    title: "Built to grow",
+    title: "Grows with you",
     description:
-      "Every website is designed to evolve into a platform — apps, portals, dashboards, and automations — when your business needs it.",
+      "Start with a professional website. Add booking, payments, or custom tools later — without starting over.",
   },
   {
-    title: "Long-term partner",
+    title: "We're here after launch",
     description:
-      "Launch is just the beginning. Security, performance, SEO, AI optimization, and ongoing improvements keep your digital products working for you.",
+      "Hosting, security, updates, and improvements are part of the partnership — not a one-time handoff.",
   },
 ];

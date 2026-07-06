@@ -1,14 +1,14 @@
 export const whatIDontDo = [
-  "Cookie-cutter WordPress themes",
-  "Offshore development",
-  "Lock you into proprietary platforms",
-  "Long-term contracts",
+  "Cookie-cutter templates that look like everyone else",
+  "Disappearing after launch",
+  "Locking you into platforms you can't leave",
+  "Long-term contracts you didn't ask for",
 ] as const;
 
 export const whatIDo = [
-  "Modern web technologies",
-  "Direct communication",
-  "Predictable monthly investment",
-  "Long-term partnership",
-  "Software built to evolve",
+  "Professional websites built for your business",
+  "Direct communication — no middlemen",
+  "Predictable monthly pricing",
+  "Hosting, updates, and support included",
+  "A partner that grows with you",
 ] as const;

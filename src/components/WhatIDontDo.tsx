@@ -6,7 +6,7 @@ export function WhatIDontDo() {
     <section className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
         <SectionHeading
-          title="What I don't do"
+          title="What we don't do"
           description="Clear boundaries help us both — here's how Signal Works works differently."
           align="center"
           className="mx-auto"

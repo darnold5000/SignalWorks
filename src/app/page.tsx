@@ -17,44 +17,44 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Signal Works",
   description:
-    "Professional websites without agency pricing. Modern websites, custom software, and AI solutions backed by real software engineering.",
+    "Professional websites without agency pricing. Built for salons, gyms, contractors, and growing local businesses.",
   path: "/",
 });
 
 const whatIBuild = [
   {
     title: "Business Websites",
-    description: "Premium sites that win business, load fast, and convert visitors.",
+    description: "Professional sites that look great on phones and help customers find you.",
     href: "/services/business-websites",
     icon: "globe",
   },
   {
     title: "Custom Web Apps",
-    description: "Dashboards, portals, and tools with real software architecture.",
+    description: "Booking systems, client portals, and tools built for how you work.",
     href: "/services/custom-apps",
     icon: "code",
   },
   {
     title: "AI & Business Automation",
-    description: "Practical automation and AI workflows that save time every week.",
+    description: "Practical tools that save time on repetitive tasks.",
     href: "/services/ai-automation",
     icon: "sparkles",
   },
   {
-    title: "SEO + AEO Platforms",
-    description: "Structured for Google ranking and AI answer engine discovery.",
+    title: "SEO + Search",
+    description: "Help customers find you on Google and local search.",
     href: "/services/seo-aeo",
     icon: "search",
   },
   {
     title: "Automation Systems",
-    description: "Workflows that eliminate repetitive tasks and connect your tools.",
+    description: "Connect your tools and cut down on manual work.",
     href: "/services/ai-automation",
     icon: "automation",
   },
   {
     title: "Dashboards & Portals",
-    description: "Internal tools and client-facing portals for data and workflows.",
+    description: "Client-facing portals and internal tools for your team.",
     href: "/services/custom-apps",
     icon: "chart",
   },
@@ -67,10 +67,9 @@ export default function HomePage() {
     <>
       <Hero
         eyebrow="Better signal. Less noise."
-        title="Websites that win business. Software that saves time. AI that actually gets used."
-        tagline="Modern websites backed by real software engineering."
-        description="Professional websites without agency pricing. You don't need a $30,000 agency website to look like a million-dollar company — build once, improve continuously."
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
+        title="Professional websites without agency pricing."
+        description="Whether you run a salon, a gym, or a growing local business — get a website that looks great, works on every phone, and stays updated without you thinking about it."
+        primaryCta={{ label: "Let's Talk", href: "/contact" }}
         secondaryCta={{ label: "See Pricing", href: "/pricing" }}
         size="large"
       />
@@ -104,7 +103,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="What we build"
-          description="Technology built for real businesses — professional quality without agency pricing."
+          description="Websites and online tools for businesses that want to look professional and grow."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whatIBuild.map((item) => (
@@ -124,15 +123,13 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-lg text-muted leading-relaxed">
-                There are thousands of people who build websites. There are far
-                fewer who can build a polished marketing site{" "}
-                <em>and</em> a custom application — and stand behind both as a
-                long-term partner.
+                Most business owners don&apos;t want to think about hosting,
+                plugins, or security updates. You want a website that looks
+                professional, brings in customers, and just works.
               </p>
               <p className="mt-6 text-lg text-muted leading-relaxed">
-                Every project starts with solving the business problem — not
-                adding features. The goal is clarity, quality, and software that
-                grows with you.
+                That&apos;s what we do — build it, launch it, and keep it
+                running. As your business grows, your website grows with you.
               </p>
             </div>
           </div>

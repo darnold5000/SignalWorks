@@ -7,38 +7,26 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "Discover",
+    title: "Conversation",
     description:
-      "Understand your business, audience, goals, and constraints. Identify what matters most and what can be simplified.",
+      "We learn about your business, your customers, and what you need from your website. Plain language — no jargon, no pressure.",
   },
   {
     number: "02",
-    title: "Plan",
+    title: "Design",
     description:
-      "Define scope, architecture, content structure, and success metrics. Create a clear roadmap before writing code.",
+      "We plan your pages, photos, and content — and share it with you for feedback before anything goes live.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Build",
     description:
-      "Craft the visual language, page layouts, and user flows. Focus on clarity, hierarchy, and conversion paths.",
+      "We create your website, set up contact forms, maps, booking, and anything else your business needs.",
   },
   {
     number: "04",
-    title: "Build",
+    title: "Launch & grow",
     description:
-      "Develop with modern tools — Next.js, TypeScript, Tailwind — with SEO, AEO, and performance built in from day one.",
-  },
-  {
-    number: "05",
-    title: "Launch",
-    description:
-      "Deploy to production, configure analytics, verify SEO structure, and ensure everything works across devices.",
-  },
-  {
-    number: "06",
-    title: "Improve",
-    description:
-      "Monitor performance, gather feedback, and iterate. Websites and applications should evolve with your business.",
+      "We go live, handle hosting and updates, and keep improving your site as your business grows.",
   },
 ];

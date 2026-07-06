@@ -10,7 +10,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Process",
   description:
-    "How Signal Works builds websites, applications, and AI tools — from discovery through launch and ongoing improvement.",
+    "How Signal Works builds your website — a simple four-step process from conversation to launch.",
   path: "/process",
 });
 
@@ -21,7 +21,7 @@ export default function ProcessPage() {
         data={[
           webPageSchema(
             "Process",
-            "Project process for Signal Works digital products",
+            "How Signal Works builds websites for growing businesses",
             "/process",
           ),
           breadcrumbSchema([
@@ -33,9 +33,9 @@ export default function ProcessPage() {
 
       <Hero
         eyebrow="Process"
-        title="Structured, transparent, collaborative"
-        description="Every project follows a clear path from understanding your business to launching a polished digital product — and improving it over time."
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
+        title="Simple from start to finish"
+        description="No confusing steps. No tech talk. Just a clear path from first conversation to a website you're proud of."
+        primaryCta={{ label: "Let's Talk", href: "/contact" }}
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-16 lg:px-8">
@@ -46,28 +46,28 @@ export default function ProcessPage() {
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <SectionHeading
             title="Better signal. Less noise."
-            description="The process isn't about adding features — it's about making the important things obvious. Whether it's a website, an internal dashboard, or an AI-powered application, clarity is the goal."
+            description="The goal isn't more features — it's a website that helps your business. Clear pages, easy contact, and a professional look that builds trust."
           />
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
             <div className="border border-border bg-background p-8">
-              <h3 className="font-semibold">Communication</h3>
+              <h3 className="font-semibold">Clear communication</h3>
               <p className="mt-2 text-sm text-muted leading-relaxed">
-                Regular updates, clear milestones, and direct access throughout
-                the project. No black boxes or surprise invoices.
+                Regular updates and direct access throughout your project. No
+                surprises, no jargon.
               </p>
             </div>
             <div className="border border-border bg-background p-8">
-              <h3 className="font-semibold">Quality</h3>
+              <h3 className="font-semibold">Built to last</h3>
               <p className="mt-2 text-sm text-muted leading-relaxed">
-                Modern tooling, performance optimization, accessibility
-                standards, and SEO/AEO structure built in from day one.
+                Fast on mobile, easy to find on Google, and designed to look
+                professional for years — not just on launch day.
               </p>
             </div>
             <div className="border border-border bg-background p-8">
-              <h3 className="font-semibold">Flexibility</h3>
+              <h3 className="font-semibold">Room to grow</h3>
               <p className="mt-2 text-sm text-muted leading-relaxed">
-                Start with a website and grow into apps, portals, dashboards,
-                and automations as your business evolves.
+                Start with a website. Add booking, payments, or custom tools
+                later — without starting from scratch.
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function ProcessPage() {
 
       <CTASection
         title="Ready to start?"
-        description="Tell me about your project and we'll map out the path forward."
+        description="Tell us about your business and we'll walk you through the next step."
       />
     </>
   );

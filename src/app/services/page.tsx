@@ -11,7 +11,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Services",
   description:
-    "Premium websites, custom software, AI automation, and SEO/AEO — built as digital products, not templates.",
+    "Professional websites, booking tools, and online support for salons, gyms, contractors, and growing local businesses.",
   path: "/services",
 });
 
@@ -41,8 +41,8 @@ export default function ServicesPage() {
 
       <Hero
         eyebrow="Services"
-        title="Digital products — not just websites"
-        description="Premium marketing sites, custom applications, business automation, and search optimization — built to grow with your business."
+        title="Websites and tools that help your business grow"
+        description="Professional websites, booking and contact tools, search visibility, and ongoing support — built for businesses that want to look credible online."
         primaryCta={{ label: "Start a Project", href: "/contact" }}
         secondaryCta={{ label: "View Pricing", href: "/pricing" }}
       />

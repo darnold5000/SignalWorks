@@ -3,9 +3,9 @@ import { SectionHeading } from "./SectionHeading";
 import { SHOW_FOUNDER } from "@/lib/flags";
 
 const capabilities = [
-  "Modern websites",
-  "Custom software",
-  "AI & automation",
+  "Professional websites",
+  "Hosting & updates included",
+  "Booking, forms & maps",
   "Ongoing partnership",
 ];
 
@@ -17,9 +17,11 @@ export function WhySignalWorksIntro() {
           <div>
             <SectionHeading eyebrow="Why Signal Works" title="Why Signal Works" />
             <div className="mt-8 space-y-3 text-lg leading-relaxed">
-              <p>Not an agency.</p>
-              <p>Not a template shop.</p>
-              <p className="font-medium text-foreground">Software engineering first.</p>
+              <p>Not a big agency.</p>
+              <p>Not a DIY template.</p>
+              <p className="font-medium text-foreground">
+                A real partner for your online presence.
+              </p>
             </div>
           </div>
           <div>
