@@ -62,8 +62,8 @@ export const pricingPlans: PricingPlan[] = [
     description:
       "A lead-generating website built to grow traffic, trust, and inquiries over time.",
     type: "partnership",
-    launchPrice: "$995",
-    monthlyPrice: "$199–399/month",
+    launchPrice: "$495",
+    monthlyPrice: "$99–399/month",
     monthlyPriceLabel: "Typically",
     monthlyNote:
       "Final monthly pricing depends on content updates, SEO/AEO needs, integrations, analytics, and ongoing support requirements.",
