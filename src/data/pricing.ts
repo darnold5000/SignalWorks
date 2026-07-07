@@ -43,8 +43,8 @@ export const pricingPlans: PricingPlan[] = [
     description:
       "A polished, credible web presence for businesses launching or refreshing their brand online.",
     type: "partnership",
-    launchPrice: "$500",
-    monthlyPrice: "$99/month",
+    launchPrice: "$295",
+    monthlyPrice: "$49/month",
     monthlyPriceLabel: "Starting at",
     monthlyNote:
       "Best for local businesses with a smaller website and occasional updates.",
