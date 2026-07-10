@@ -1,4 +1,5 @@
 export const buildOptions = [
+  "Personal Brand",
   "Launch Website",
   "Business Website",
   "Custom Software",

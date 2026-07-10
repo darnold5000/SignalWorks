@@ -2,13 +2,19 @@ export type PricingPlan = {
   id: string;
   name: string;
   description: string;
+  headline?: string;
   type: "partnership" | "outright" | "custom";
   launchPrice?: string;
+  noUpfrontFee?: boolean;
   monthlyPrice?: string;
   monthlyPriceLabel?: string;
   monthlyNote?: string;
   outrightTiers?: { label: string; price: string }[];
   includes: string[];
+  cardGrowthOptions?: {
+    intro: string;
+    options: string[];
+  };
 };
 
 export const pricingHero = {
@@ -37,6 +43,45 @@ export const websiteOfferingsSection = {
 } as const;
 
 export const pricingPlans: PricingPlan[] = [
+  {
+    id: "personal-brand",
+    name: "Personal Brand",
+    headline: "Your own professional website.",
+    description:
+      "Perfect for professionals who want a modern online presence without managing a website themselves.",
+    type: "partnership",
+    noUpfrontFee: true,
+    monthlyPrice: "$24.99/month",
+    includes: [
+      "One-page custom website",
+      "Hosting",
+      "SSL",
+      "Domain connection",
+      "Mobile-first design",
+      "Online booking integration — works with the scheduling platform of your choice",
+      "Contact information",
+      "Google Maps",
+      "Basic Local SEO",
+      "AI-ready structure",
+      "Minor text/photo updates",
+      "Technical support",
+    ],
+    cardGrowthOptions: {
+      intro: "As your business grows, your website can grow too.",
+      options: [
+        "Additional pages",
+        "Photo galleries",
+        "Blog",
+        "Advanced SEO",
+        "AI optimization",
+        "Email marketing",
+        "Online payments",
+        "Custom forms",
+        "Customer portal",
+        "CRM integrations",
+      ],
+    },
+  },
   {
     id: "launch-partnership",
     name: "Launch Website",
@@ -146,9 +191,9 @@ export const pricingFaqs = [
       "Everything required to keep your website online, secure, fast, and improving — hosting, security, updates, monitoring, backups, support, performance optimization, technical SEO, and AI-ready structure. Plus ongoing improvements based on your partnership level.",
   },
   {
-    question: "What's the difference between Launch and Growth websites?",
+    question: "What's the difference between Personal Brand, Launch, and Growth websites?",
     answer:
-      "Launch Websites are focused sites for businesses that need a credible, professional online presence. Growth Websites are built for companies where the website actively generates leads — with multi-page architecture, advanced SEO, blogs, landing pages, and priority support.",
+      "Personal Brand is a simple, professional one-page website for independent professionals — hair stylists, trainers, photographers, and similar — with no upfront website build fee. Launch Websites are focused multi-page sites for businesses that need a credible online presence. Growth Websites are built for companies where the website actively generates leads — with multi-page architecture, advanced SEO, blogs, landing pages, and priority support.",
   },
   {
     question: "What is Purchase Outright?",

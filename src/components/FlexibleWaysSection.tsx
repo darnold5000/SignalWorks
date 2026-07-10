@@ -2,6 +2,7 @@ import { Button } from "./Button";
 import { SectionHeading } from "./SectionHeading";
 
 const offerings = [
+  { label: "Personal Brand", href: "/pricing#personal-brand" },
   { label: "Launch Website", href: "/pricing#launch-partnership" },
   { label: "Growth Website", href: "/pricing#growth-partnership" },
   { label: "Purchase Outright", href: "/pricing#purchase-outright" },
@@ -28,7 +29,16 @@ export function FlexibleWaysSection() {
             See Pricing
           </Button>
         </div>
-        <p className="mx-auto mt-10 max-w-xl text-center text-sm text-muted">
+        <div className="mx-auto mt-10 max-w-xl text-center">
+          <p className="text-sm font-medium text-foreground">
+            Starting your own business?
+          </p>
+          <p className="mt-2 text-sm text-muted leading-relaxed">
+            Our Personal Brand partnership is designed specifically for independent
+            professionals who want an affordable, modern website with online booking.
+          </p>
+        </div>
+        <p className="mx-auto mt-8 max-w-xl text-center text-sm text-muted">
           Not sure which option fits? We&apos;ll recommend the right approach after
           a short conversation.
         </p>
