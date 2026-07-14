@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { growthOptions } from "@/data/pricing";
 import { SectionHeading } from "./SectionHeading";
 
@@ -16,6 +17,14 @@ export function GrowthOptionsSection() {
         <p className="mx-auto mt-12 max-w-xl text-center text-muted leading-relaxed">
           Start with what you need today. Expand when your business is ready. No
           rebuild required.
+        </p>
+        <p className="mt-6 text-center">
+          <Link
+            href="/capabilities"
+            className="text-sm font-medium hover:underline"
+          >
+            See all capabilities →
+          </Link>
         </p>
       </div>
     </section>

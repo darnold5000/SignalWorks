@@ -154,9 +154,9 @@ export const pricingPlans: PricingPlan[] = [
 export const websiteOfferings = pricingPlans;
 
 export const growthOptions = {
-  title: "Grow when you're ready.",
+  title: "Start simple. Grow over time.",
   intro:
-    "Most businesses don't need everything on day one. Every Signal Works website is built to expand as your business grows.",
+    "Most clients begin with a professional website. As your business grows, we can add online booking, payments, customer portals, AI assistants, automation, dashboards, memberships, and custom software — without rebuilding your website.",
   options: [
     "Online scheduling",
     "Payments",

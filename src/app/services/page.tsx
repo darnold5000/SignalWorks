@@ -77,7 +77,10 @@ export default function ServicesPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-8">
+          <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/capabilities" className="text-sm font-medium hover:underline">
+              See all capabilities →
+            </Link>
             <Link href="/pricing" className="text-sm font-medium hover:underline">
               View pricing options →
             </Link>

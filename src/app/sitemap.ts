@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     ...(SHOW_WORK ? ["/work"] : []),
     "/services",
+    "/capabilities",
     "/pricing",
     "/process",
     "/about",
