@@ -25,6 +25,7 @@ Add ideas here whenever something would be useful for a client. Six months from 
 - Employee portal
 - Customer portal
 - Coach portal
+- **Signal Works client portal** (`signalworks-clients` → `clients.hiresignalworks.com`) — branded status/requests/docs; Stripe Customer Portal for billing; admin ops view with MRR/margin
 
 ## Business
 
@@ -33,3 +34,4 @@ Add ideas here whenever something would be useful for a client. Six months from 
 - Membership billing
 - Analytics
 - Inventory
+- Client operating system (infra costs, domain renewals, failed payments)
