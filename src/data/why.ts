@@ -22,6 +22,6 @@ export const whySignalWorks: WhyCard[] = [
   {
     title: "We're here after launch",
     description:
-      "Hosting, security, updates, and improvements are part of the partnership — not a one-time handoff.",
+      "Hosting, security, updates, and improvements are part of the plan — not a one-time handoff.",
   },
 ];

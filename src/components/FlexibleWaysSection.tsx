@@ -3,8 +3,8 @@ import { SectionHeading } from "./SectionHeading";
 
 const offerings = [
   { label: "Personal Brand", href: "/pricing#personal-brand" },
-  { label: "Launch Website", href: "/pricing#launch-partnership" },
-  { label: "Growth Website", href: "/pricing#growth-partnership" },
+  { label: "Launch Website", href: "/pricing#launch-website" },
+  { label: "Growth Website", href: "/pricing#growth-website" },
   { label: "Purchase Outright", href: "/pricing#purchase-outright" },
   { label: "Custom Software", href: "/pricing#custom-software" },
 ] as const;
@@ -14,8 +14,8 @@ export function FlexibleWaysSection() {
     <section className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading
-          title="Your long-term website partner"
-          description="One monthly partnership covers your website, hosting, security, updates, and ongoing improvements."
+          title="Your website, handled"
+          description="One website and support plan covers your site, hosting, security, updates, and ongoing improvements."
           align="center"
           className="mx-auto"
         />
@@ -34,7 +34,7 @@ export function FlexibleWaysSection() {
             Starting your own business?
           </p>
           <p className="mt-2 text-sm text-muted leading-relaxed">
-            Our Personal Brand partnership is designed specifically for independent
+            Our Personal Brand plan is designed specifically for independent
             professionals who want an affordable, modern website with online booking.
           </p>
         </div>

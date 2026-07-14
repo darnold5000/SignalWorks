@@ -8,7 +8,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Get in touch with Signal Works to discuss your website, custom software, or ongoing technology partnership.",
+    "Get in touch with Signal Works to discuss your website, custom software, or website and support plan.",
   path: "/contact",
 });
 

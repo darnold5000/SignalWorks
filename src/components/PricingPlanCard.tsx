@@ -41,7 +41,7 @@ export function PricingPlanCard({
         </div>
       )}
 
-      {type === "partnership" && (noUpfrontFee || (launchPrice && monthlyPrice)) && (
+      {type === "plan" && (noUpfrontFee || (launchPrice && monthlyPrice)) && (
         <div className="mt-6 space-y-4">
           {noUpfrontFee ? (
             <div>
@@ -63,7 +63,7 @@ export function PricingPlanCard({
           {monthlyPrice && (
             <div>
               <p className="text-xs font-semibold tracking-[0.15em] uppercase text-muted">
-                Monthly Partnership
+                Website and Support Plan
               </p>
               {monthlyPriceLabel && (
                 <p className="mt-1 text-xs text-muted">{monthlyPriceLabel}</p>

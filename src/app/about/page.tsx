@@ -31,7 +31,7 @@ const companyThemes = [
       "Hosting, security, updates, and performance — so you can focus on running your business, not managing technology.",
   },
   {
-    title: "Long-term partnership",
+    title: "Here after launch",
     description:
       "We don't disappear after launch. Ongoing support, automation improvements, and iteration are part of how we work.",
   },
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       <CTASection
         title="Let's build something together"
-        description="Whether you need a website, custom software, or an ongoing technology partnership — we'd love to hear about your project."
+        description="Whether you need a website, custom software, or ongoing support — we'd love to hear about your project."
       />
     </>
   );

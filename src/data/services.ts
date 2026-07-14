@@ -38,7 +38,7 @@ export const services: Service[] = [
       {
         question: "How much does a custom website cost?",
         answer:
-          "Signal Works builds Launch Websites and Growth Websites backed by monthly technology partnerships — or traditional one-time purchases if you prefer. We'll help you choose based on your business.",
+          "Signal Works builds Launch Websites and Growth Websites with website and support plans — or traditional one-time purchases if you prefer. We'll help you choose based on your business.",
       },
     ],
   },
@@ -149,9 +149,9 @@ export const services: Service[] = [
 ];
 
 export const carePlanService = {
-  title: "Ongoing Partnership",
+  title: "Website and Support Plan",
   shortDescription:
-    "A long-term partnership for security, performance, improvements, and priority support — so your websites, apps, and tools keep getting better.",
+    "Ongoing security, performance, improvements, and priority support — so your websites, apps, and tools keep getting better.",
   includes: [
     "Security",
     "Monitoring",

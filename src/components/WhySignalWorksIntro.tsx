@@ -7,7 +7,7 @@ const capabilities = [
   "Custom web apps & client portals",
   "AI tools & workflow automation",
   "Dashboards & business insights",
-  "Ongoing technology partnership",
+  "Website and support plans",
 ];
 
 export function WhySignalWorksIntro() {
@@ -21,7 +21,7 @@ export function WhySignalWorksIntro() {
               <p>Not a big agency.</p>
               <p>Not a DIY template.</p>
               <p className="font-medium text-foreground">
-                A real partner for websites, software, and AI.
+                Real help for websites, software, and AI.
               </p>
             </div>
           </div>

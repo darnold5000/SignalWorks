@@ -13,7 +13,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 export const metadata = createPageMetadata({
   title: "Pricing",
     description:
-    "Personal Brand from $24.99/month with no upfront website build fee. Launch partnerships from $295 + $49/month. Growth partnerships from $495 + typically $99–399/month. Purchase outright from $1,499.",
+    "Personal Brand from $24.99/month with no upfront website build fee. Launch websites from $295 + $49/month. Growth websites from $495 + typically $99–399/month. Purchase outright from $1,499.",
   path: "/pricing",
 });
 
@@ -24,7 +24,7 @@ export default function PricingPage() {
         data={[
           webPageSchema(
             "Pricing",
-            "Website partnership pricing by Signal Works",
+            "Website and support plan pricing by Signal Works",
             "/pricing",
           ),
           faqSchema(pricingFaqs),

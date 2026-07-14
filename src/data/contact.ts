@@ -8,7 +8,7 @@ export const buildOptions = [
 ] as const;
 
 export const engagementOptions = [
-  "Growth Partnership",
+  "Website and Support Plan",
   "Ownership Project",
   "Not sure yet",
 ] as const;

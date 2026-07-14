@@ -3,7 +3,7 @@ export type PricingPlan = {
   name: string;
   description: string;
   headline?: string;
-  type: "partnership" | "outright" | "custom";
+  type: "plan" | "outright" | "custom";
   launchPrice?: string;
   noUpfrontFee?: boolean;
   monthlyPrice?: string;
@@ -20,26 +20,26 @@ export type PricingPlan = {
 export const pricingHero = {
   title: "Clear pricing for websites and custom software.",
   description:
-    "Website partnerships start predictably. Custom software, AI tools, and automation are scoped to your project — we'll recommend the right investment after understanding your goals.",
+    "Website and support plans start predictably. Custom software, AI tools, and automation are scoped to your project — we'll recommend the right investment after understanding your goals.",
   primaryCta: { label: "Get a Free Consultation", href: "/contact" },
   ctaNote:
     "We'll discuss your goals — whether that's a website, a custom app, or automation — and provide a clear estimate with no pressure.",
 } as const;
 
-export const partnershipPhilosophy = {
+export const planPhilosophy = {
   title: "Build once. Improve continuously.",
-  copy: "Your website should not become outdated six months after launch. Every Signal Works partnership includes what most businesses normally manage separately: hosting, security, monitoring, updates, support, performance optimization, and ongoing improvements.",
+  copy: "Your website should not become outdated six months after launch. Every Signal Works website and support plan includes what most businesses normally manage separately: hosting, security, monitoring, updates, support, performance optimization, and ongoing improvements.",
   principles: [
     "No juggling hosting companies.",
     "No hiring freelancers every time something changes.",
-    "One partner.",
+    "One team.",
     "One monthly investment.",
   ],
 } as const;
 
 export const websiteOfferingsSection = {
   title: "Choose the website that fits your business.",
-  note: "Monthly partnership pricing is based on the level of ongoing work required — not hosting alone. A simple local business website may only need occasional updates, while a growth-focused business may need SEO, content publishing, integrations, analytics, and regular improvements.",
+  note: "Website and support plan pricing is based on the level of ongoing work required — not hosting alone. A simple local business website may only need occasional updates, while a growth-focused business may need SEO, content publishing, integrations, analytics, and regular improvements.",
 } as const;
 
 export const pricingPlans: PricingPlan[] = [
@@ -49,7 +49,7 @@ export const pricingPlans: PricingPlan[] = [
     headline: "Your own professional website.",
     description:
       "Perfect for professionals who want a modern online presence without managing a website themselves.",
-    type: "partnership",
+    type: "plan",
     noUpfrontFee: true,
     monthlyPrice: "$24.99/month",
     includes: [
@@ -83,11 +83,11 @@ export const pricingPlans: PricingPlan[] = [
     },
   },
   {
-    id: "launch-partnership",
+    id: "launch-website",
     name: "Launch Website",
     description:
       "A polished, credible web presence for businesses launching or refreshing their brand online.",
-    type: "partnership",
+    type: "plan",
     launchPrice: "$295",
     monthlyPrice: "$49/month",
     monthlyPriceLabel: "Starting at",
@@ -102,11 +102,11 @@ export const pricingPlans: PricingPlan[] = [
     ],
   },
   {
-    id: "growth-partnership",
+    id: "growth-website",
     name: "Growth Website",
     description:
       "A lead-generating website built to grow traffic, trust, and inquiries over time.",
-    type: "partnership",
+    type: "plan",
     launchPrice: "$495",
     monthlyPrice: "$99–399/month",
     monthlyPriceLabel: "Typically",
@@ -133,7 +133,7 @@ export const pricingPlans: PricingPlan[] = [
     includes: [
       "Custom website built and delivered to you",
       "You manage hosting, security, and updates",
-      "Optional monthly partnership available after launch",
+      "Optional website and support plan available after launch",
     ],
   },
   {
@@ -176,7 +176,7 @@ export const pricingReassurance =
 
 export const pricingFaqs = [
   {
-    question: "Why does the monthly partnership cost vary?",
+    question: "Why does the website and support plan cost vary?",
     answer:
       "Because every business has different ongoing needs. Hosting is only a small part of what we provide. Some businesses simply need occasional updates. Others require ongoing SEO, AI optimization, content publishing, integrations, analytics, and strategic improvements.",
   },
@@ -188,7 +188,7 @@ export const pricingFaqs = [
   {
     question: "What's included every month?",
     answer:
-      "Everything required to keep your website online, secure, fast, and improving — hosting, security, updates, monitoring, backups, support, performance optimization, technical SEO, and AI-ready structure. Plus ongoing improvements based on your partnership level.",
+      "Everything required to keep your website online, secure, fast, and improving — hosting, security, updates, monitoring, backups, support, performance optimization, technical SEO, and AI-ready structure. Plus ongoing improvements based on your plan level.",
   },
   {
     question: "What's the difference between Personal Brand, Launch, and Growth websites?",
@@ -198,11 +198,11 @@ export const pricingFaqs = [
   {
     question: "What is Purchase Outright?",
     answer:
-      "Purchase Outright is for businesses that want a one-time website investment and prefer to handle hosting, security, and technical maintenance on their own. We build and deliver your site — you manage the ongoing technical side. A monthly partnership is still available afterward if you'd like us to take that over.",
+      "Purchase Outright is for businesses that want a one-time website investment and prefer to handle hosting, security, and technical maintenance on their own. We build and deliver your site — you manage the ongoing technical side. A website and support plan is still available afterward if you'd like us to take that over.",
   },
   {
     question: "Do I own my website?",
     answer:
-      "With Purchase Outright, the website is yours to manage and host as you choose. With a monthly partnership, Signal Works manages and improves your site as your long-term partner. We'll explain the options clearly before you start.",
+      "With Purchase Outright, the website is yours to manage and host as you choose. With a website and support plan, Signal Works manages and improves your site on an ongoing basis. We'll explain the options clearly before you start.",
   },
 ];

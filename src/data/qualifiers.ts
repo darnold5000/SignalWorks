@@ -10,5 +10,5 @@ export const whatIDo = [
   "Automation that cuts repetitive manual work",
   "Dashboards and reporting that surface customer insights",
   "Direct communication — no middlemen",
-  "A long-term partner that grows with you",
+  "Support that grows with you",
 ] as const;
