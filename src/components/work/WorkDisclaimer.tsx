@@ -15,10 +15,12 @@ export function WorkDisclaimer({ className, compact = false }: WorkDisclaimerPro
         className,
       )}
     >
-      Some projects shown are independent concepts created by Signal Works and
-      do not necessarily represent current or former clients. Business names,
-      details, services, and other information may have been modified for
-      demonstration purposes.
+      <span className="font-medium text-foreground/80">Portfolio Note:</span>{" "}
+      These projects are based on real businesses and real business challenges.
+      To respect privacy and demonstrate possibilities, some branding, content,
+      features, imagery, and other details may have been modified while
+      preserving the overall design approach, user experience, and business
+      goals behind each project.
     </p>
   );
 }
