@@ -601,26 +601,26 @@ export const projects: Project[] = [
   },
   {
     slug: "creator-platform",
-    name: "Creator Platform Concept",
+    name: "Maren Cole",
     category: "Creator & Sports Education",
     productType: "Digital Brand Platform",
     tagline:
       "A professional creator platform that consolidates educational content, partnerships, and community in one brand destination.",
     summary:
-      "A digital brand platform concept for sports education creators—built to organize content, resources, partnerships, and membership opportunities beyond a basic brochure site.",
+      "A digital brand platform for gymnastics education creator Maren Cole—built to organize content, resources, partnerships, and membership opportunities beyond a basic brochure site.",
     transformation:
       "Expanded a creator's online presence into a professional platform that brings educational content, resources, partnerships, and community together in one place.",
     before:
       "Content and resources were spread across social platforms and individual links, making it difficult for followers and brands to discover everything from a single destination.",
     whatWeBuilt:
-      "Designed a centralized platform where visitors can explore educational content, routine reviews, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
+      "Designed a centralized platform where visitors can explore educational content, Score Notes, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
     beforeLabel: "The Previous Experience",
     builtLabel: "The Signal Works Approach",
     demoCtaLabel: "Explore Live Platform",
     challenge:
       "Content and resources were spread across social platforms and individual links, making it difficult for followers and brands to discover everything from a single destination.",
     solution:
-      "Designed a centralized platform where visitors can explore educational content, routine reviews, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
+      "Designed a centralized platform where visitors can explore educational content, Score Notes, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
     impact:
       "Followers and brand partners can discover educational content, collaborations, and next steps from one professional destination instead of scattered social links.",
     features: [
@@ -649,7 +649,7 @@ export const projects: Project[] = [
       {
         name: "Video library",
         description:
-          "Routine reviews and educational videos are organized for easy exploration.",
+          "Score Notes and educational videos are organized for easy exploration.",
       },
       {
         name: "Membership-ready structure",
@@ -670,22 +670,22 @@ export const projects: Project[] = [
       {
         src: "/images/work/creator-platform/desktop.webp",
         label: "Homepage",
-        alt: "Creator platform concept homepage desktop screenshot",
+        alt: "Maren Cole creator platform homepage desktop screenshot",
       },
       {
         src: "/images/work/creator-platform/content.webp",
-        label: "Programs and Services",
-        alt: "Creator platform educational content hub",
+        label: "Learn Hub",
+        alt: "Maren Cole educational content and learn hub",
       },
       {
         src: "/images/work/creator-platform/partnerships.webp",
         label: "Brand Partnerships",
-        alt: "Creator platform brand partnerships page",
+        alt: "Maren Cole brand partnerships page",
       },
       {
         src: "/images/work/creator-platform/mobile.webp",
         label: "Mobile Experience",
-        alt: "Creator platform concept mobile homepage screenshot",
+        alt: "Maren Cole creator platform mobile homepage screenshot",
       },
     ],
     demoUrl: "https://influencer.hiresignalworks.com",
