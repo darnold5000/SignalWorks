@@ -69,11 +69,16 @@ export default async function ProjectPage({ params }: Props) {
         challenge={project.challenge}
         solution={project.solution}
         impact={project.impact}
+        challengeLabel={project.beforeLabel}
+        solutionLabel={project.builtLabel}
       />
       <ProjectGallery items={project.gallery} />
       <FeatureGrid features={project.featureDetails} />
       <GrowthOpportunities items={growthItems} />
-      <ProjectCTA demoUrl={project.demoUrl} />
+      <ProjectCTA
+        demoUrl={project.demoUrl}
+        demoCtaLabel={project.demoCtaLabel}
+      />
     </>
   );
 }

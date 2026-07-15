@@ -13,11 +13,19 @@ export type Project = {
   slug: string;
   name: string;
   category: string;
+  /** Optional product framing shown near the category (e.g. Digital Brand Platform) */
+  productType?: string;
   tagline: string;
   summary: string;
   transformation: string;
   before: string;
   whatWeBuilt: string;
+  /** Card section label override (default: Before) */
+  beforeLabel?: string;
+  /** Card section label override (default: What We Built) */
+  builtLabel?: string;
+  /** Live demo CTA label (default: Explore Live Website) */
+  demoCtaLabel?: string;
   challenge: string;
   solution: string;
   impact: string;
@@ -589,6 +597,98 @@ export const projects: Project[] = [
       },
     ],
     demoUrl: "https://hairbymaya.hiresignalworks.com",
+    featured: false,
+  },
+  {
+    slug: "creator-platform",
+    name: "Creator Platform Concept",
+    category: "Creator & Sports Education",
+    productType: "Digital Brand Platform",
+    tagline:
+      "A professional creator platform that consolidates educational content, partnerships, and community in one brand destination.",
+    summary:
+      "A digital brand platform concept for sports education creators—built to organize content, resources, partnerships, and membership opportunities beyond a basic brochure site.",
+    transformation:
+      "Expanded a creator's online presence into a professional platform that brings educational content, resources, partnerships, and community together in one place.",
+    before:
+      "Content and resources were spread across social platforms and individual links, making it difficult for followers and brands to discover everything from a single destination.",
+    whatWeBuilt:
+      "Designed a centralized platform where visitors can explore educational content, routine reviews, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
+    beforeLabel: "The Previous Experience",
+    builtLabel: "The Signal Works Approach",
+    demoCtaLabel: "Explore Live Platform",
+    challenge:
+      "Content and resources were spread across social platforms and individual links, making it difficult for followers and brands to discover everything from a single destination.",
+    solution:
+      "Designed a centralized platform where visitors can explore educational content, routine reviews, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
+    impact:
+      "Followers and brand partners can discover educational content, collaborations, and next steps from one professional destination instead of scattered social links.",
+    features: [
+      "Content hub",
+      "Brand partnerships",
+      "Product recommendations",
+      "Video library",
+      "Future membership platform",
+    ],
+    featureDetails: [
+      {
+        name: "Content hub",
+        description:
+          "Educational resources and creator content live in one discoverable place.",
+      },
+      {
+        name: "Brand partnerships",
+        description:
+          "Collaborations and sponsor relationships are presented as part of the brand story.",
+      },
+      {
+        name: "Product recommendations",
+        description:
+          "Trusted product picks support both audience value and partnership opportunities.",
+      },
+      {
+        name: "Video library",
+        description:
+          "Routine reviews and educational videos are organized for easy exploration.",
+      },
+      {
+        name: "Membership-ready structure",
+        description:
+          "The platform is structured to grow into memberships and deeper community offerings.",
+      },
+    ],
+    growthFeatures: [
+      "membership-management",
+      "recurring-payments",
+      "customer-portals",
+      "email-text-automation",
+      "custom-admin-tools",
+    ],
+    image: "/images/work/creator-platform/desktop.webp",
+    mobileImage: "/images/work/creator-platform/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/creator-platform/desktop.webp",
+        label: "Homepage",
+        alt: "Creator platform concept homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/creator-platform/content.webp",
+        label: "Programs and Services",
+        alt: "Creator platform educational content hub",
+      },
+      {
+        src: "/images/work/creator-platform/partnerships.webp",
+        label: "Brand Partnerships",
+        alt: "Creator platform brand partnerships page",
+      },
+      {
+        src: "/images/work/creator-platform/mobile.webp",
+        label: "Mobile Experience",
+        alt: "Creator platform concept mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://influencer.hiresignalworks.com",
     featured: false,
   },
   {

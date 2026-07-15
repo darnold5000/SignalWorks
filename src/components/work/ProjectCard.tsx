@@ -44,7 +44,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       <div className="relative mb-6">
         <BrowserPreview
           src={project.image}
-          alt={`${project.name} website preview`}
+          alt={`${project.name} preview`}
         />
         {project.mobileImage && (
           <div className="pointer-events-none absolute -bottom-4 -right-2 w-[28%] max-w-[110px] sm:-right-3 sm:w-[26%]">
@@ -60,6 +60,11 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       <p className="mt-2 text-xs font-semibold tracking-[0.18em] uppercase text-muted">
         {project.category}
       </p>
+      {project.productType && (
+        <p className="mt-1 text-xs font-medium tracking-wide text-foreground/70">
+          {project.productType}
+        </p>
+      )}
 
       <h2 className="mt-2 font-display text-2xl tracking-tight sm:text-3xl">
         {project.name}
@@ -72,7 +77,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       <div className="mt-6 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
         <div>
           <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
-            Before
+            {project.beforeLabel ?? "Before"}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             {project.before}
@@ -80,7 +85,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </div>
         <div>
           <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
-            What We Built
+            {project.builtLabel ?? "What We Built"}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             {project.whatWeBuilt}
@@ -106,7 +111,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-accent-hover"
         >
-          Explore Live Website
+          {project.demoCtaLabel ?? "Explore Live Website"}
           <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
           <span className="sr-only">(opens in a new tab)</span>
         </a>

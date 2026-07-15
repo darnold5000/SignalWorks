@@ -23,9 +23,13 @@ function ExternalLinkIcon() {
 
 type ProjectCTAProps = {
   demoUrl: string;
+  demoCtaLabel?: string;
 };
 
-export function ProjectCTA({ demoUrl }: ProjectCTAProps) {
+export function ProjectCTA({
+  demoUrl,
+  demoCtaLabel = "Explore Live Website",
+}: ProjectCTAProps) {
   return (
     <section className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-20 text-center lg:px-8 lg:py-28">
@@ -44,7 +48,7 @@ export function ProjectCTA({ demoUrl }: ProjectCTAProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide transition-all duration-200 hover:bg-neutral-50"
           >
-            Explore Live Website
+            {demoCtaLabel}
             <ExternalLinkIcon />
             <span className="sr-only">(opens in a new tab)</span>
           </a>

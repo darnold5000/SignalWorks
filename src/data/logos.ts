@@ -12,6 +12,7 @@ export const clientLogos: ClientLogo[] = [
   { name: "Willow & Mane", shortName: "Willow & Mane", href: "/work/luxury-salon" },
   { name: "D-BAT", shortName: "D-BAT", href: "/work/batting-academy" },
   { name: "Hair by Maya", shortName: "Hair by Maya", href: "/work/personal-stylist" },
+  { name: "Creator Platform Concept", shortName: "Creator Platform", href: "/work/creator-platform" },
   { name: "Oak Tree Golf Course", shortName: "Oak Tree", href: "/work/golf-course" },
   { name: "Zero Limits Baseball", shortName: "Zero Limits", href: "/work/baseball-facility" },
 ];

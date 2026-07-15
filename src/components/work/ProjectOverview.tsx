@@ -2,16 +2,20 @@ type ProjectOverviewProps = {
   challenge: string;
   solution: string;
   impact: string;
+  challengeLabel?: string;
+  solutionLabel?: string;
 };
 
 export function ProjectOverview({
   challenge,
   solution,
   impact,
+  challengeLabel = "The Challenge",
+  solutionLabel = "What We Built",
 }: ProjectOverviewProps) {
   const items = [
-    { title: "The Challenge", body: challenge },
-    { title: "What We Built", body: solution },
+    { title: challengeLabel, body: challenge },
+    { title: solutionLabel, body: solution },
     { title: "Why It Helps", body: impact },
   ];
 

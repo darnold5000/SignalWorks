@@ -62,6 +62,16 @@ const targets = [
     ],
   },
   {
+    id: "creator-platform",
+    url: process.env.CREATOR_URL ?? "https://influencer.hiresignalworks.com",
+    pages: [
+      { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
+      { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
+      { name: "content", path: "/learn", viewport: { width: 1440, height: 900 } },
+      { name: "partnerships", path: "/brands", viewport: { width: 1440, height: 900 } },
+    ],
+  },
+  {
     id: "zero-limits",
     url: "https://zerolimits.vercel.app",
     pages: [

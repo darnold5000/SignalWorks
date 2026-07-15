@@ -27,12 +27,19 @@ type ProjectHeroProps = {
 };
 
 export function ProjectHero({ project }: ProjectHeroProps) {
+  const demoLabel = project.demoCtaLabel ?? "Explore Live Website";
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
       <div className="max-w-3xl">
         <p className="text-xs font-semibold tracking-[0.18em] uppercase text-muted">
           {project.category}
         </p>
+        {project.productType && (
+          <p className="mt-2 text-sm font-medium tracking-wide text-foreground/70">
+            {project.productType}
+          </p>
+        )}
         <h1 className="mt-4 font-display text-4xl tracking-tight sm:text-5xl">
           {project.name}
         </h1>
@@ -46,7 +53,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-foreground px-6 py-3 text-sm font-medium tracking-wide text-background transition-colors hover:bg-accent-hover"
           >
-            Explore Live Website
+            {demoLabel}
             <ExternalLinkIcon />
             <span className="sr-only">(opens in a new tab)</span>
           </a>
@@ -56,7 +63,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
       <div className="relative mt-12">
         <BrowserPreview
           src={project.image}
-          alt={`${project.name} website homepage`}
+          alt={`${project.name} homepage`}
           priority
           className="shadow-sm"
         />
