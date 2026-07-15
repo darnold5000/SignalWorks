@@ -940,7 +940,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/northbridge-wealth/services.webp",
         label: "Services",
-        alt: "NorthBridge Wealth services section",
+        alt: "NorthBridge Wealth services page with how we help and process steps",
       },
       {
         src: "/images/work/northbridge-wealth/team.webp",
