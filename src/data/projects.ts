@@ -108,95 +108,96 @@ export const growthCapabilityCatalog: Record<
 
 export const projects: Project[] = [
   {
-    slug: "youth-basketball",
-    name: "Cornerstone Hoops",
-    category: "Youth Sports",
+    slug: "batting-academy",
+    name: "Batter Up",
+    category: "Athletic Training",
     tagline:
-      "A complete home for programs, schedules, registration, and parent information.",
+      "An indoor baseball and softball academy site built for lessons, cages, camps, and memberships.",
     summary:
-      "A high-energy youth basketball website designed to help families understand the program and register more easily.",
+      "A batting academy website designed to help families find coaches, book lessons, rent cages, and explore memberships.",
     transformation:
-      "Turned a registration-first online presence into a complete destination where families can learn about training, view schedules, and confidently choose the right opportunity.",
+      "Reimagined a conventional franchise website experience into a modern academy platform that makes training options, instructors, memberships, and next steps easier to understand.",
     before:
-      "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
+      "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     whatWeBuilt:
-      "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
+      "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
     cardBefore:
-      "Registration lived in SignUpGenius while schedules and updates were scattered across other channels.",
+      "Families had to work harder to compare instructors and choose the right training path.",
     cardBuilt:
-      "One site for programs, schedules, coaching details, FAQs, and registration.",
-    metrics: ["Scheduling", "Registration", "Parent Portal"],
-    badge: "Registration Platform",
+      "An academy platform for coaches, lessons, cages, camps, and memberships.",
+    metrics: ["Lesson Booking", "Coach Profiles", "Memberships"],
+    badge: "AI Features",
     cardLine:
-      "A complete home for youth basketball programs, schedules, and registration.",
+      "An academy platform for coaches, lessons, cages, and memberships.",
     challenge:
-      "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
+      "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     solution:
-      "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
+      "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
     impact:
-      "Families can learn about the program and decide whether it is a good fit before reaching the registration process.",
+      "Parents can match a coach, compare memberships, and take the next booking step without hunting across third-party tools.",
     features: [
-      "Program pages",
-      "Training schedules",
-      "Registration links",
-      "Parent information",
-      "Mobile-first design",
+      "Instructor directory",
+      "AI coach finder",
+      "Lessons and cage rentals",
+      "Membership pricing",
+      "Camps and facility tour",
     ],
     featureDetails: [
       {
-        name: "Clear program paths",
+        name: "Coach discovery",
         description:
-          "Visitors can quickly understand training options and who each session is for.",
+          "Parents can filter instructors by sport and booking availability.",
       },
       {
-        name: "Integrated scheduling",
+        name: "AI coach finder",
         description:
-          "Families move from interest to available sessions with fewer unnecessary steps.",
+          "A guided quiz recommends instructors matched to an athlete’s goals.",
       },
       {
-        name: "Coach credibility",
+        name: "Clear training paths",
         description:
-          "Parents see who leads the program before they commit.",
+          "Lessons, cages, camps, and memberships are separated into obvious next steps.",
       },
       {
         name: "Mobile-first experience",
         description:
-          "Every major action remains easy to complete from a phone.",
+          "Busy parents can explore coaches and book from a phone.",
       },
     ],
     growthFeatures: [
       "online-scheduling",
+      "membership-management",
       "parent-dashboards",
-      "digital-forms",
-      "email-text-automation",
       "recurring-payments",
+      "email-text-automation",
+      "staff-management",
     ],
-    image: "/images/work/cornerstone-hoops/desktop.webp",
-    mobileImage: "/images/work/cornerstone-hoops/mobile.webp",
+    image: "/images/work/dbat/desktop.webp",
+    mobileImage: "/images/work/dbat/mobile.webp",
     gallery: [
       {
-        src: "/images/work/cornerstone-hoops/desktop.webp",
+        src: "/images/work/dbat/desktop.webp",
         label: "Homepage",
-        alt: "Cornerstone Hoops homepage desktop screenshot",
+        alt: "Batter Up homepage desktop screenshot",
       },
       {
-        src: "/images/work/cornerstone-hoops/programs.webp",
+        src: "/images/work/dbat/instructors.webp",
         label: "Programs and Services",
-        alt: "Cornerstone Hoops training programs section",
+        alt: "Batter Up instructor directory page",
       },
       {
-        src: "/images/work/cornerstone-hoops/schedule.webp",
-        label: "Scheduling Experience",
-        alt: "Cornerstone Hoops schedule and registration page",
+        src: "/images/work/dbat/memberships.webp",
+        label: "Membership Options",
+        alt: "Batter Up memberships and pricing page",
       },
       {
-        src: "/images/work/cornerstone-hoops/mobile.webp",
+        src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
-        alt: "Cornerstone Hoops mobile homepage screenshot",
+        alt: "Batter Up mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://cornerstonehoops.vercel.app",
-    featured: true,
+    demoUrl: "https://battingcages.hiresignalworks.com",
+    featured: false,
   },
   {
     slug: "athletic-training",
@@ -475,96 +476,95 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "batting-academy",
-    name: "Batter Up",
-    category: "Athletic Training",
+    slug: "youth-basketball",
+    name: "Cornerstone Hoops",
+    category: "Youth Sports",
     tagline:
-      "An indoor baseball and softball academy site built for lessons, cages, camps, and memberships.",
+      "A complete home for programs, schedules, registration, and parent information.",
     summary:
-      "A batting academy website designed to help families find coaches, book lessons, rent cages, and explore memberships.",
+      "A high-energy youth basketball website designed to help families understand the program and register more easily.",
     transformation:
-      "Reimagined a conventional franchise website experience into a modern academy platform that makes training options, instructors, memberships, and next steps easier to understand.",
+      "Turned a registration-first online presence into a complete destination where families can learn about training, view schedules, and confidently choose the right opportunity.",
     before:
-      "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
+      "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     whatWeBuilt:
-      "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
+      "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
     cardBefore:
-      "Families had to work harder to compare instructors and choose the right training path.",
+      "Registration lived in SignUpGenius while schedules and updates were scattered across other channels.",
     cardBuilt:
-      "An academy platform for coaches, lessons, cages, camps, and memberships.",
-    metrics: ["Lesson Booking", "Coach Profiles", "Memberships"],
-    badge: "AI Features",
+      "One site for programs, schedules, coaching details, FAQs, and registration.",
+    metrics: ["Scheduling", "Registration", "Parent Portal"],
+    badge: "Registration Platform",
     cardLine:
-      "An academy platform for coaches, lessons, cages, and memberships.",
+      "A complete home for youth basketball programs, schedules, and registration.",
     challenge:
-      "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
+      "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     solution:
-      "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
+      "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
     impact:
-      "Parents can match a coach, compare memberships, and take the next booking step without hunting across third-party tools.",
+      "Families can learn about the program and decide whether it is a good fit before reaching the registration process.",
     features: [
-      "Instructor directory",
-      "AI coach finder",
-      "Lessons and cage rentals",
-      "Membership pricing",
-      "Camps and facility tour",
+      "Program pages",
+      "Training schedules",
+      "Registration links",
+      "Parent information",
+      "Mobile-first design",
     ],
     featureDetails: [
       {
-        name: "Coach discovery",
+        name: "Clear program paths",
         description:
-          "Parents can filter instructors by sport and booking availability.",
+          "Visitors can quickly understand training options and who each session is for.",
       },
       {
-        name: "AI coach finder",
+        name: "Integrated scheduling",
         description:
-          "A guided quiz recommends instructors matched to an athlete’s goals.",
+          "Families move from interest to available sessions with fewer unnecessary steps.",
       },
       {
-        name: "Clear training paths",
+        name: "Coach credibility",
         description:
-          "Lessons, cages, camps, and memberships are separated into obvious next steps.",
+          "Parents see who leads the program before they commit.",
       },
       {
         name: "Mobile-first experience",
         description:
-          "Busy parents can explore coaches and book from a phone.",
+          "Every major action remains easy to complete from a phone.",
       },
     ],
     growthFeatures: [
       "online-scheduling",
-      "membership-management",
       "parent-dashboards",
-      "recurring-payments",
+      "digital-forms",
       "email-text-automation",
-      "staff-management",
+      "recurring-payments",
     ],
-    image: "/images/work/dbat/desktop.webp",
-    mobileImage: "/images/work/dbat/mobile.webp",
+    image: "/images/work/cornerstone-hoops/desktop.webp",
+    mobileImage: "/images/work/cornerstone-hoops/mobile.webp",
     gallery: [
       {
-        src: "/images/work/dbat/desktop.webp",
+        src: "/images/work/cornerstone-hoops/desktop.webp",
         label: "Homepage",
-        alt: "Batter Up homepage desktop screenshot",
+        alt: "Cornerstone Hoops homepage desktop screenshot",
       },
       {
-        src: "/images/work/dbat/instructors.webp",
+        src: "/images/work/cornerstone-hoops/programs.webp",
         label: "Programs and Services",
-        alt: "Batter Up instructor directory page",
+        alt: "Cornerstone Hoops training programs section",
       },
       {
-        src: "/images/work/dbat/memberships.webp",
-        label: "Membership Options",
-        alt: "Batter Up memberships and pricing page",
+        src: "/images/work/cornerstone-hoops/schedule.webp",
+        label: "Scheduling Experience",
+        alt: "Cornerstone Hoops schedule and registration page",
       },
       {
-        src: "/images/work/dbat/mobile.webp",
+        src: "/images/work/cornerstone-hoops/mobile.webp",
         label: "Mobile Experience",
-        alt: "Batter Up mobile homepage screenshot",
+        alt: "Cornerstone Hoops mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://battingcages.hiresignalworks.com",
-    featured: false,
+    demoUrl: "https://cornerstonehoops.vercel.app",
+    featured: true,
   },
   {
     slug: "personal-stylist",

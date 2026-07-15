@@ -7,10 +7,10 @@ export type ClientLogo = {
 };
 
 export const clientLogos: ClientLogo[] = [
-  { name: "Cornerstone Hoops", shortName: "Cornerstone", href: "/work/youth-basketball" },
+  { name: "Batter Up", shortName: "Batter Up", href: "/work/batting-academy" },
   { name: "DAWGZ Youth Training", shortName: "DAWGZ", href: "/work/athletic-training" },
   { name: "Willow & Mane", shortName: "Willow & Mane", href: "/work/luxury-salon" },
-  { name: "Batter Up", shortName: "Batter Up", href: "/work/batting-academy" },
+  { name: "Cornerstone Hoops", shortName: "Cornerstone", href: "/work/youth-basketball" },
   { name: "Hair by Maya", shortName: "Hair by Maya", href: "/work/personal-stylist" },
   { name: "The Routine Review", shortName: "Routine Review", href: "/work/creator-platform" },
   { name: "Pine Tree Golf Course", shortName: "Pine Tree", href: "/work/golf-course" },
