@@ -182,18 +182,18 @@ export const projects: Project[] = [
       },
       {
         src: "/images/work/dbat/instructors.webp",
-        label: "Programs and Services",
-        alt: "Batter Up instructor directory page",
+        label: "Baseball Training",
+        alt: "Batter Up baseball training page with instructor cards",
       },
       {
         src: "/images/work/dbat/memberships.webp",
         label: "Membership Options",
-        alt: "Batter Up memberships and pricing page",
+        alt: "Batter Up memberships page with Platinum and Gold plans",
       },
       {
         src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
-        alt: "Batter Up mobile homepage screenshot",
+        alt: "Batter Up mobile homepage with booking actions",
       },
     ],
     demoUrl: "https://battingcages.hiresignalworks.com",
