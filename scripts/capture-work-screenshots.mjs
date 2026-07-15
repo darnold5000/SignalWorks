@@ -43,12 +43,22 @@ const targets = [
   },
   {
     id: "dbat",
-    url: process.env.DBAT_URL ?? "https://dbat.vercel.app",
+    url: process.env.DBAT_URL ?? "https://battingcages.hiresignalworks.com",
     pages: [
       { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
       { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
       { name: "instructors", path: "/instructors", viewport: { width: 1440, height: 900 } },
       { name: "memberships", path: "/memberships", viewport: { width: 1440, height: 900 } },
+    ],
+  },
+  {
+    id: "hair-by-maya",
+    url: process.env.MAYA_URL ?? "https://hairbymaya.hiresignalworks.com",
+    pages: [
+      { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
+      { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
+      { name: "services", path: "/", viewport: { width: 1440, height: 900 }, scrollY: 900 },
+      { name: "booking", path: "/", viewport: { width: 1440, height: 900 }, scrollY: 600 },
     ],
   },
   {
@@ -63,7 +73,7 @@ const targets = [
   },
   {
     id: "willow-mane",
-    url: process.env.SALON_URL ?? "http://127.0.0.1:3010",
+    url: process.env.SALON_URL ?? "https://willowsalon.hiresignalworks.com",
     pages: [
       { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
       { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },

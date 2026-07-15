@@ -337,7 +337,7 @@ export const projects: Project[] = [
         alt: "Willow & Mane mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://salon.hiresignalworks.com",
+    demoUrl: "https://willowsalon.hiresignalworks.com",
     featured: true,
   },
   {
@@ -426,7 +426,7 @@ export const projects: Project[] = [
   },
   {
     slug: "batting-academy",
-    name: "D-BAT",
+    name: "Batter Up",
     category: "Athletic Training",
     tagline:
       "An indoor baseball and softball academy site built for lessons, cages, camps, and memberships.",
@@ -487,25 +487,108 @@ export const projects: Project[] = [
       {
         src: "/images/work/dbat/desktop.webp",
         label: "Homepage",
-        alt: "D-BAT homepage desktop screenshot",
+        alt: "Batter Up homepage desktop screenshot",
       },
       {
         src: "/images/work/dbat/instructors.webp",
         label: "Programs and Services",
-        alt: "D-BAT instructor directory page",
+        alt: "Batter Up instructor directory page",
       },
       {
         src: "/images/work/dbat/memberships.webp",
         label: "Membership Options",
-        alt: "D-BAT memberships and pricing page",
+        alt: "Batter Up memberships and pricing page",
       },
       {
         src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
-        alt: "D-BAT mobile homepage screenshot",
+        alt: "Batter Up mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://dbat.hiresignalworks.com",
+    demoUrl: "https://battingcages.hiresignalworks.com",
+    featured: false,
+  },
+  {
+    slug: "personal-stylist",
+    name: "Hair by Maya",
+    category: "Health and Beauty",
+    tagline:
+      "A personal stylist site built for booking, services, and client trust.",
+    summary:
+      "A focused booking website for an individual stylist — services, pricing, before-and-afters, and a clear path to schedule.",
+    transformation:
+      "Turned a stylist into a bookable personal brand with clear services and a direct scheduling experience.",
+    before:
+      "Clients had to find Maya through the salon or social posts without a dedicated booking destination.",
+    whatWeBuilt:
+      "A personal brand site with service menus, pricing, transformations, location details, and online booking.",
+    challenge:
+      "Independent stylists often lose bookings when they lack a simple place for clients to learn about their work and schedule online.",
+    solution:
+      "Created a focused one-stylist website that highlights specialty, pricing, results, and booking in a few clear steps.",
+    impact:
+      "Clients can review Maya’s work and book directly — without navigating a full salon roster first.",
+    features: [
+      "Service & pricing menus",
+      "Online booking",
+      "Before & after gallery",
+      "Location details",
+      "Mobile-first booking",
+    ],
+    featureDetails: [
+      {
+        name: "Clear service paths",
+        description:
+          "Clients can quickly scan color, cut, and styling options with pricing.",
+      },
+      {
+        name: "Direct booking",
+        description:
+          "The next step from interest to appointment is always visible.",
+      },
+      {
+        name: "Proof of work",
+        description:
+          "Before-and-after photos help clients trust the stylist’s craft.",
+      },
+      {
+        name: "Mobile-first experience",
+        description:
+          "Most clients can book from a phone in a few taps.",
+      },
+    ],
+    growthFeatures: [
+      "online-scheduling",
+      "email-text-automation",
+      "customer-portals",
+      "recurring-payments",
+      "digital-forms",
+    ],
+    image: "/images/work/hair-by-maya/desktop.webp",
+    mobileImage: "/images/work/hair-by-maya/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/hair-by-maya/desktop.webp",
+        label: "Homepage",
+        alt: "Hair by Maya homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/hair-by-maya/services.webp",
+        label: "Programs and Services",
+        alt: "Hair by Maya services and pricing section",
+      },
+      {
+        src: "/images/work/hair-by-maya/booking.webp",
+        label: "Scheduling Experience",
+        alt: "Hair by Maya booking experience",
+      },
+      {
+        src: "/images/work/hair-by-maya/mobile.webp",
+        label: "Mobile Experience",
+        alt: "Hair by Maya mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://hairbymaya.hiresignalworks.com",
     featured: false,
   },
   {
