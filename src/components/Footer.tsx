@@ -14,6 +14,7 @@ const footerLinks = {
     { label: "Cornerstone Hoops", href: "/work/youth-basketball" },
     { label: "DAWGZ Training", href: "/work/athletic-training" },
     { label: "Willow & Mane", href: "/work/luxury-salon" },
+    { label: "NorthBridge Wealth", href: "/work/wealth-management" },
   ],
   company: [
     { label: "About", href: "/about" },

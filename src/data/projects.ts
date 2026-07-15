@@ -775,6 +775,90 @@ export const projects: Project[] = [
     demoUrl: "https://zerolimits-iota.vercel.app",
     featured: false,
   },
+  {
+    slug: "wealth-management",
+    name: "NorthBridge Wealth",
+    category: "Wealth Management",
+    tagline:
+      "A fee-only fiduciary site that makes planning services, advisors, and next steps clear.",
+    summary:
+      "A modern wealth management website built to help professionals understand services, meet the team, and schedule a consultation with confidence.",
+    transformation:
+      "Elevated a traditional advisory presence into a polished digital experience focused on trust, clarity, and an easy path from research to consultation.",
+    before:
+      "Prospective clients had to piece together services, advisor credentials, and office details from scattered pages and third-party tools before they could take a confident next step.",
+    whatWeBuilt:
+      "A dedicated advisory website where visitors can explore planning services, review the team, find office locations, read guidance content, and schedule a consultation online.",
+    challenge:
+      "Prospective clients had to piece together services, advisor credentials, and office details from scattered pages and third-party tools before they could take a confident next step.",
+    solution:
+      "A dedicated advisory website where visitors can explore planning services, review the team, find office locations, read guidance content, and schedule a consultation online.",
+    impact:
+      "Prospective clients can evaluate fit, understand the fee-only approach, and book a consultation without chasing details across channels.",
+    features: [
+      "Service education",
+      "Advisor profiles",
+      "Consultation scheduling",
+      "Multi-office locations",
+      "Planning resources",
+    ],
+    featureDetails: [
+      {
+        name: "Service clarity",
+        description:
+          "Wealth management, retirement, and foundations offerings are easy to compare.",
+      },
+      {
+        name: "Advisor credibility",
+        description:
+          "Team bios and credentials help visitors choose the right planning relationship.",
+      },
+      {
+        name: "Consultation-ready CTAs",
+        description:
+          "Scheduling paths are visible from the homepage through service and contact pages.",
+      },
+      {
+        name: "Multi-location support",
+        description:
+          "Carmel and Greenwood office details are presented clearly for in-person and virtual clients.",
+      },
+    ],
+    growthFeatures: [
+      "online-scheduling",
+      "customer-portals",
+      "digital-forms",
+      "email-text-automation",
+      "multi-location",
+      "custom-admin-tools",
+    ],
+    image: "/images/work/northbridge-wealth/desktop.webp",
+    mobileImage: "/images/work/northbridge-wealth/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/northbridge-wealth/desktop.webp",
+        label: "Homepage",
+        alt: "NorthBridge Wealth homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/northbridge-wealth/services.webp",
+        label: "Services",
+        alt: "NorthBridge Wealth services section",
+      },
+      {
+        src: "/images/work/northbridge-wealth/team.webp",
+        label: "Team",
+        alt: "NorthBridge Wealth advisor team page",
+      },
+      {
+        src: "/images/work/northbridge-wealth/mobile.webp",
+        label: "Mobile Experience",
+        alt: "NorthBridge Wealth mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://northbridgewealth.hiresignalworks.com",
+    featured: true,
+  },
 ];
 
 export function getProject(slug: string): Project | undefined {

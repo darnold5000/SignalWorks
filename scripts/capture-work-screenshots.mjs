@@ -91,6 +91,16 @@ const targets = [
       { name: "stylists", path: "/stylists", viewport: { width: 1440, height: 900 } },
     ],
   },
+  {
+    id: "northbridge-wealth",
+    url: process.env.NORTHBRIDGE_URL ?? "https://northbridgewealth.hiresignalworks.com",
+    pages: [
+      { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
+      { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
+      { name: "services", path: "/services/wealth-management", viewport: { width: 1440, height: 900 } },
+      { name: "team", path: "/team", viewport: { width: 1440, height: 900 } },
+    ],
+  },
 ];
 
 async function capture() {

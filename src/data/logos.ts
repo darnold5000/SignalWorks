@@ -14,5 +14,6 @@ export const clientLogos: ClientLogo[] = [
   { name: "Hair by Maya", shortName: "Hair by Maya", href: "/work/personal-stylist" },
   { name: "Creator Platform Concept", shortName: "Creator Platform", href: "/work/creator-platform" },
   { name: "Pine Tree Golf Course", shortName: "Pine Tree", href: "/work/golf-course" },
+  { name: "NorthBridge Wealth", shortName: "NorthBridge", href: "/work/wealth-management" },
   { name: "Zero Limits Baseball", shortName: "Zero Limits", href: "/work/baseball-facility" },
 ];
