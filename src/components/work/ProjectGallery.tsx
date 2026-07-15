@@ -38,30 +38,34 @@ export function ProjectGallery({ items }: ProjectGalleryProps) {
             >
               <div
                 className={cn(
-                  "relative overflow-hidden rounded-lg border border-border bg-neutral-100 shadow-sm",
+                  "relative overflow-hidden border border-border shadow-sm",
                   isMobile
-                    ? "mx-auto aspect-[9/19] w-full max-w-[280px] rounded-[1.75rem] sm:max-w-[320px] lg:col-span-5 lg:mx-0"
+                    ? "mx-auto w-full max-w-[280px] rounded-[1.75rem] bg-black sm:max-w-[320px] lg:col-span-5 lg:mx-0"
                     : cn(
+                        "rounded-lg bg-neutral-100",
                         isOdd ? "lg:col-span-7" : "lg:col-span-8",
                         index === 0 ? "aspect-[16/10]" : "aspect-[16/11]",
                       ),
                 )}
               >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes={
-                    isMobile
-                      ? "(max-width: 640px) 280px, 320px"
-                      : "(max-width: 1024px) 100vw, 66vw"
-                  }
-                  className={
-                    isMobile
-                      ? "object-contain object-top"
-                      : "object-cover object-top"
-                  }
-                />
+                {isMobile ? (
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={550}
+                    height={1024}
+                    sizes="(max-width: 640px) 280px, 320px"
+                    className="h-auto w-full"
+                  />
+                ) : (
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover object-top"
+                  />
+                )}
               </div>
               <figcaption
                 className={cn(
