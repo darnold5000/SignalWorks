@@ -559,6 +559,11 @@ export const projects: Project[] = [
         alt: "Cornerstone Hoops training programs section",
       },
       {
+        src: "/images/work/cornerstone-hoops/admin.webp",
+        label: "Staff Dashboard",
+        alt: "Cornerstone Hoops Admin staff dashboard with overview metrics and today’s sessions",
+      },
+      {
         src: "/images/work/cornerstone-hoops/schedule.webp",
         label: "Scheduling Experience",
         alt: "Cornerstone Hoops schedule and registration page",
