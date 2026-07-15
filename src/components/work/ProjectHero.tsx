@@ -60,19 +60,21 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         </div>
       </div>
 
-      <div className="relative mt-12">
-        <BrowserPreview
-          src={project.image}
-          alt={`${project.name} homepage`}
-          priority
-          className="shadow-sm"
-        />
-        {project.mobileImage && (
-          <div className="pointer-events-none absolute -bottom-6 right-4 w-[22%] max-w-[140px] sm:right-8 sm:w-[18%]">
-            <MobilePreview src={project.mobileImage} alt="" />
-          </div>
-        )}
-      </div>
+      {project.image ? (
+        <div className="relative mt-12">
+          <BrowserPreview
+            src={project.image}
+            alt={`${project.name} homepage`}
+            priority
+            className="shadow-sm"
+          />
+          {project.mobileImage && (
+            <div className="pointer-events-none absolute -bottom-6 right-4 w-[22%] max-w-[140px] sm:right-8 sm:w-[18%]">
+              <MobilePreview src={project.mobileImage} alt="" />
+            </div>
+          )}
+        </div>
+      ) : null}
     </section>
   );
 }

@@ -28,13 +28,21 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
         </Link>
       </h3>
       <p className="mt-2 text-sm leading-snug text-muted line-clamp-2">{line}</p>
-      <Link href={`/work/${project.slug}`} className="mt-4 block overflow-hidden rounded-lg">
-        <BrowserPreview
-          src={project.image}
-          alt={`${project.name} website preview`}
-          className="transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.02]"
-        />
-      </Link>
+      {project.image ? (
+        <Link href={`/work/${project.slug}`} className="mt-4 block overflow-hidden rounded-lg">
+          <BrowserPreview
+            src={project.image}
+            alt={`${project.name} website preview`}
+            className="transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.02]"
+          />
+        </Link>
+      ) : (
+        <div className="mt-4 flex aspect-[16/10] items-center justify-center rounded-lg border border-border bg-neutral-50 sm:aspect-[16/9]">
+          <p className="px-4 text-center text-sm text-muted">
+            Screenshots coming soon — explore the live site
+          </p>
+        </div>
+      )}
       {capabilities.length > 0 && (
         <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1" aria-label="Capabilities">
           {capabilities.map((item) => (

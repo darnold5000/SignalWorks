@@ -40,7 +40,15 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       </p>
 
       <div className="relative mt-4 overflow-hidden rounded-lg transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.02]">
-        <BrowserPreview src={project.image} alt={`${project.name} preview`} />
+        {project.image ? (
+          <BrowserPreview src={project.image} alt={`${project.name} preview`} />
+        ) : (
+          <div className="flex aspect-[16/10] items-center justify-center rounded-lg border border-border bg-neutral-50 sm:aspect-[16/9]">
+            <p className="px-4 text-center text-sm text-muted">
+              Screenshots coming soon — explore the live site
+            </p>
+          </div>
+        )}
       </div>
 
       {capabilities.length > 0 && (

@@ -44,7 +44,7 @@ export type Project = {
   features: string[];
   featureDetails: FeatureItem[];
   growthFeatures: string[];
-  image: string;
+  image?: string;
   mobileImage?: string;
   gallery: GalleryItem[];
   demoUrl: string;
@@ -453,31 +453,7 @@ export const projects: Project[] = [
       "email-text-automation",
       "custom-admin-tools",
     ],
-    image: "/images/work/oak-tree-golf/desktop.webp",
-    mobileImage: "/images/work/oak-tree-golf/mobile.webp",
-    gallery: [
-      {
-        src: "/images/work/oak-tree-golf/desktop.webp",
-        label: "Homepage",
-        alt: "Pine Tree Golf Course homepage desktop screenshot",
-      },
-      {
-        src: "/images/work/oak-tree-golf/course.webp",
-        label: "Programs and Services",
-        alt: "Pine Tree Golf Course course information section",
-      },
-      {
-        src: "/images/work/oak-tree-golf/booking.webp",
-        label: "Scheduling Experience",
-        alt: "Pine Tree Golf Course tee time booking experience",
-      },
-      {
-        src: "/images/work/oak-tree-golf/mobile.webp",
-        label: "Mobile Experience",
-        layout: "mobile",
-        alt: "Pine Tree Golf Course mobile homepage screenshot",
-      },
-    ],
+    gallery: [],
     demoUrl: "https://pinetreegolf.hiresignalworks.com",
     featured: false,
   },
