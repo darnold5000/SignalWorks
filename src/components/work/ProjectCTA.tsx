@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { WorkDisclaimer } from "./WorkDisclaimer";
 
 function ExternalLinkIcon() {
   return (
@@ -48,6 +49,10 @@ export function ProjectCTA({ demoUrl }: ProjectCTAProps) {
             <span className="sr-only">(opens in a new tab)</span>
           </a>
         </div>
+        <WorkDisclaimer
+          compact
+          className="mx-auto mt-12 max-w-xl text-center opacity-80"
+        />
       </div>
     </section>
   );
