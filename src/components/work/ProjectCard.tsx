@@ -74,6 +74,25 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         {project.transformation}
       </p>
 
+      <div className="mt-5 flex flex-wrap gap-3">
+        <a
+          href={project.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-accent-hover"
+        >
+          {project.demoCtaLabel ?? "Explore Live Website"}
+          <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
+          <span className="sr-only">(opens in a new tab)</span>
+        </a>
+        <Link
+          href={`/work/${project.slug}`}
+          className="inline-flex items-center border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-neutral-50"
+        >
+          View Project
+        </Link>
+      </div>
+
       <div className="mt-6 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
         <div>
           <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
@@ -103,25 +122,6 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           </li>
         ))}
       </ul>
-
-      <div className="mt-auto flex flex-wrap gap-3 pt-6">
-        <a
-          href={project.demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-accent-hover"
-        >
-          {project.demoCtaLabel ?? "Explore Live Website"}
-          <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
-          <span className="sr-only">(opens in a new tab)</span>
-        </a>
-        <Link
-          href={`/work/${project.slug}`}
-          className="inline-flex items-center border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-neutral-50"
-        >
-          View Project
-        </Link>
-      </div>
     </article>
   );
 }

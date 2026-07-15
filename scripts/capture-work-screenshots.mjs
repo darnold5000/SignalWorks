@@ -33,7 +33,7 @@ const targets = [
   },
   {
     id: "oak-tree-golf",
-    url: "https://oaktreegolf.vercel.app",
+    url: process.env.GOLF_URL ?? "https://pinetreegolf.hiresignalworks.com",
     pages: [
       { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
       { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },

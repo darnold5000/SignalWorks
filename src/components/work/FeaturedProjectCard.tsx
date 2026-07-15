@@ -44,19 +44,27 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
           {project.name}
         </Link>
       </h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+      <div className="mt-4 flex flex-wrap gap-3">
+        <a
+          href={project.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-muted"
+        >
+          Explore Website
+          <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
+          <span className="sr-only">(opens in a new tab)</span>
+        </a>
+        <Link
+          href={`/work/${project.slug}`}
+          className="inline-flex items-center text-sm font-medium transition-colors hover:text-muted"
+        >
+          View Details
+        </Link>
+      </div>
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
         {project.transformation}
       </p>
-      <a
-        href={project.demoUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-muted"
-      >
-        Explore Website
-        <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
-        <span className="sr-only">(opens in a new tab)</span>
-      </a>
     </article>
   );
 }

@@ -350,7 +350,7 @@ export const projects: Project[] = [
   },
   {
     slug: "golf-course",
-    name: "Oak Tree Golf Course",
+    name: "Pine Tree Golf Course",
     category: "Golf and Recreation",
     tagline:
       "A modern course website with course information and a clear path to book tee times.",
@@ -411,25 +411,25 @@ export const projects: Project[] = [
       {
         src: "/images/work/oak-tree-golf/desktop.webp",
         label: "Homepage",
-        alt: "Oak Tree Golf Course homepage desktop screenshot",
+        alt: "Pine Tree Golf Course homepage desktop screenshot",
       },
       {
         src: "/images/work/oak-tree-golf/course.webp",
         label: "Programs and Services",
-        alt: "Oak Tree Golf Course course information section",
+        alt: "Pine Tree Golf Course course information section",
       },
       {
         src: "/images/work/oak-tree-golf/booking.webp",
         label: "Scheduling Experience",
-        alt: "Oak Tree Golf Course tee time booking experience",
+        alt: "Pine Tree Golf Course tee time booking experience",
       },
       {
         src: "/images/work/oak-tree-golf/mobile.webp",
         label: "Mobile Experience",
-        alt: "Oak Tree Golf Course mobile homepage screenshot",
+        alt: "Pine Tree Golf Course mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://golf.hiresignalworks.com",
+    demoUrl: "https://pinetreegolf.hiresignalworks.com",
     featured: false,
   },
   {
