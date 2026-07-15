@@ -30,13 +30,7 @@ type FeaturedProjectCardProps = {
 export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
   return (
     <article className="group flex flex-col">
-      <Link href={`/work/${project.slug}`} className="block">
-        <BrowserPreview
-          src={project.image}
-          alt={`${project.name} website preview`}
-        />
-      </Link>
-      <p className="mt-5 text-xs font-semibold tracking-[0.18em] uppercase text-muted">
+      <p className="text-xs font-semibold tracking-[0.18em] uppercase text-muted">
         {project.category}
       </p>
       <h3 className="mt-2 font-display text-2xl tracking-tight">
@@ -44,6 +38,9 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
           {project.name}
         </Link>
       </h3>
+      <p className="mt-3 text-sm leading-relaxed text-muted">
+        {project.transformation}
+      </p>
       <div className="mt-4 flex flex-wrap gap-3">
         <a
           href={project.demoUrl}
@@ -62,9 +59,12 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
           View Details
         </Link>
       </div>
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
-        {project.transformation}
-      </p>
+      <Link href={`/work/${project.slug}`} className="mt-5 block">
+        <BrowserPreview
+          src={project.image}
+          alt={`${project.name} website preview`}
+        />
+      </Link>
     </article>
   );
 }

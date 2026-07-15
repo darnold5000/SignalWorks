@@ -12,7 +12,7 @@ const footerLinks = {
   work: [
     { label: "All Work", href: "/work" },
     { label: "Cornerstone Hoops", href: "/work/youth-basketball" },
-    { label: "DAWG Training", href: "/work/athletic-training" },
+    { label: "DAWGZ Training", href: "/work/athletic-training" },
     { label: "Willow & Mane", href: "/work/luxury-salon" },
   ],
   company: [

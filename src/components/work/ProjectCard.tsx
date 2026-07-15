@@ -41,23 +41,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         className,
       )}
     >
-      <div className="relative mb-6">
-        <BrowserPreview
-          src={project.image}
-          alt={`${project.name} preview`}
-        />
-        {project.mobileImage && (
-          <div className="pointer-events-none absolute -bottom-4 -right-2 w-[28%] max-w-[110px] sm:-right-3 sm:w-[26%]">
-            <MobilePreview
-              src={project.mobileImage}
-              alt=""
-              className="shadow-md"
-            />
-          </div>
-        )}
-      </div>
-
-      <p className="mt-2 text-xs font-semibold tracking-[0.18em] uppercase text-muted">
+      <p className="text-xs font-semibold tracking-[0.18em] uppercase text-muted">
         {project.category}
       </p>
       {project.productType && (
@@ -93,7 +77,23 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </Link>
       </div>
 
-      <div className="mt-6 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
+      <div className="relative mt-6">
+        <BrowserPreview
+          src={project.image}
+          alt={`${project.name} preview`}
+        />
+        {project.mobileImage && (
+          <div className="pointer-events-none absolute -bottom-4 -right-2 w-[28%] max-w-[110px] sm:-right-3 sm:w-[26%]">
+            <MobilePreview
+              src={project.mobileImage}
+              alt=""
+              className="shadow-md"
+            />
+          </div>
+        )}
+      </div>
+
+      <div className="mt-8 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
         <div>
           <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
             {project.beforeLabel ?? "Before"}

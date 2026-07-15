@@ -182,7 +182,7 @@ export const projects: Project[] = [
   },
   {
     slug: "athletic-training",
-    name: "DAWG Youth Training",
+    name: "DAWGZ Youth Training",
     category: "Athletic Training",
     tagline:
       "A booking-ready training site that makes sessions, coaches, and next steps obvious.",
@@ -191,11 +191,11 @@ export const projects: Project[] = [
     transformation:
       "Expanded a social-media-based presence into a professional training platform built around program discovery, communication, and online booking.",
     before:
-      "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWG offered.",
+      "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWGZ offered.",
     whatWeBuilt:
       "A dedicated training website where families can explore programs, learn about the coaching approach, find answers to common questions, and move directly into scheduling.",
     challenge:
-      "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWG offered.",
+      "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWGZ offered.",
     solution:
       "A dedicated training website where families can explore programs, learn about the coaching approach, find answers to common questions, and move directly into scheduling.",
     impact:
@@ -243,25 +243,25 @@ export const projects: Project[] = [
       {
         src: "/images/work/dawg-training/desktop.webp",
         label: "Homepage",
-        alt: "DAWG Youth Training homepage desktop screenshot",
+        alt: "DAWGZ Youth Training homepage desktop screenshot",
       },
       {
         src: "/images/work/dawg-training/programs.webp",
         label: "Programs and Services",
-        alt: "DAWG Youth Training programs section",
+        alt: "DAWGZ Youth Training programs section",
       },
       {
         src: "/images/work/dawg-training/schedule.webp",
         label: "Scheduling Experience",
-        alt: "DAWG Youth Training scheduling experience",
+        alt: "DAWGZ Youth Training scheduling experience",
       },
       {
         src: "/images/work/dawg-training/mobile.webp",
         label: "Mobile Experience",
-        alt: "DAWG Youth Training mobile homepage screenshot",
+        alt: "DAWGZ Youth Training mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://training.hiresignalworks.com",
+    demoUrl: "https://dawgz.hiresignalworks.com",
     featured: true,
   },
   {

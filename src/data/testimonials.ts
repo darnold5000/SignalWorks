@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "Parents noticed immediately how much easier it became to find sessions and book training.",
-    author: "DAWG Youth Training",
+    author: "DAWGZ Youth Training",
     role: "Athletic Training",
     href: "/work/athletic-training",
   },
