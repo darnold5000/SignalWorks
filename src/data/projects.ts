@@ -2,6 +2,8 @@ export type GalleryItem = {
   src: string;
   label: string;
   alt: string;
+  /** Portrait phone screenshots — shown full-height instead of a cropped landscape frame */
+  layout?: "desktop" | "mobile";
 };
 
 export type FeatureItem = {
@@ -193,6 +195,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "Batter Up mobile homepage with booking actions",
       },
     ],
@@ -280,6 +283,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/dawg-training/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "DAWGZ Youth Training mobile homepage screenshot",
       },
     ],
@@ -372,6 +376,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/willow-mane/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "Willow & Mane mobile homepage screenshot",
       },
     ],
@@ -464,6 +469,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/oak-tree-golf/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "Pine Tree Golf Course mobile homepage screenshot",
       },
     ],
@@ -555,6 +561,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/cornerstone-hoops/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "Cornerstone Hoops mobile homepage screenshot",
       },
     ],
@@ -646,6 +653,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/hair-by-maya/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "Hair by Maya mobile homepage screenshot",
       },
     ],
@@ -746,6 +754,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/creator-platform/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "The Routine Review creator platform mobile homepage screenshot",
       },
     ],
@@ -838,6 +847,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/zero-limits/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "Zero Limits Baseball mobile homepage screenshot",
       },
     ],
@@ -930,6 +940,7 @@ export const projects: Project[] = [
       {
         src: "/images/work/northbridge-wealth/mobile.webp",
         label: "Mobile Experience",
+        layout: "mobile",
         alt: "NorthBridge Wealth mobile homepage screenshot",
       },
     ],

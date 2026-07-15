@@ -23,6 +23,11 @@ export function ProjectGallery({ items }: ProjectGalleryProps) {
       <div className="mt-12 space-y-16">
         {items.map((item, index) => {
           const isOdd = index % 2 === 1;
+          const isMobile =
+            item.layout === "mobile" ||
+            item.label === "Mobile Experience" ||
+            item.src.includes("/mobile.");
+
           return (
             <figure
               key={`${item.src}-${item.label}`}
@@ -34,21 +39,37 @@ export function ProjectGallery({ items }: ProjectGalleryProps) {
               <div
                 className={cn(
                   "relative overflow-hidden rounded-lg border border-border bg-neutral-100 shadow-sm",
-                  isOdd ? "lg:col-span-7" : "lg:col-span-8",
-                  index === 0 ? "aspect-[16/10]" : "aspect-[16/11]",
+                  isMobile
+                    ? "mx-auto aspect-[9/19] w-full max-w-[280px] rounded-[1.75rem] sm:max-w-[320px] lg:col-span-5 lg:mx-0"
+                    : cn(
+                        isOdd ? "lg:col-span-7" : "lg:col-span-8",
+                        index === 0 ? "aspect-[16/10]" : "aspect-[16/11]",
+                      ),
                 )}
               >
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 66vw"
-                  className="object-cover object-top"
+                  sizes={
+                    isMobile
+                      ? "(max-width: 640px) 280px, 320px"
+                      : "(max-width: 1024px) 100vw, 66vw"
+                  }
+                  className={
+                    isMobile
+                      ? "object-contain object-top"
+                      : "object-cover object-top"
+                  }
                 />
               </div>
               <figcaption
                 className={cn(
-                  isOdd ? "lg:col-span-5" : "lg:col-span-4",
+                  isMobile
+                    ? "lg:col-span-7"
+                    : isOdd
+                      ? "lg:col-span-5"
+                      : "lg:col-span-4",
                   "lg:px-2",
                 )}
               >
