@@ -281,6 +281,11 @@ export const projects: Project[] = [
         alt: "DAWGZ Youth Training programs page with Little Dawgz and Big Dawgz",
       },
       {
+        src: "/images/work/dawg-training/admin.webp",
+        label: "Staff Dashboard",
+        alt: "DAWGZ Admin staff dashboard with overview metrics and today’s sessions",
+      },
+      {
         src: "/images/work/dawg-training/mobile.webp",
         label: "Mobile Experience",
         layout: "mobile",
