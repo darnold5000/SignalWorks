@@ -29,7 +29,7 @@ type FeaturedProjectCardProps = {
 
 export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
   return (
-    <article className="group flex flex-col">
+    <article className="group flex flex-col transition-transform duration-300 motion-safe:hover:-translate-y-1">
       <p className="text-xs font-semibold tracking-[0.18em] uppercase text-muted">
         {project.category}
       </p>
@@ -41,12 +41,12 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
       <p className="mt-3 text-sm leading-relaxed text-muted">
         {project.transformation}
       </p>
-      <div className="mt-4 flex flex-wrap gap-3">
+      <div className="mt-4 flex flex-col items-start gap-2">
         <a
           href={project.demoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-muted"
+          className="inline-flex items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-accent-hover"
         >
           Explore Website
           <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
@@ -54,15 +54,19 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
         </a>
         <Link
           href={`/work/${project.slug}`}
-          className="inline-flex items-center text-sm font-medium transition-colors hover:text-muted"
+          className="inline-flex items-center text-sm text-muted transition-colors hover:text-foreground"
         >
-          View Details
+          Read Case Study
+          <span aria-hidden="true" className="ml-1">
+            →
+          </span>
         </Link>
       </div>
-      <Link href={`/work/${project.slug}`} className="mt-5 block">
+      <Link href={`/work/${project.slug}`} className="mt-5 block overflow-hidden rounded-lg">
         <BrowserPreview
           src={project.image}
           alt={`${project.name} website preview`}
+          className="transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.02]"
         />
       </Link>
     </article>

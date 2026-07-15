@@ -32,12 +32,19 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, className }: ProjectCardProps) {
   const chips = project.features.slice(0, 5);
+  const metrics = project.metrics?.slice(0, 4) ?? [];
+  const beforeCopy = project.cardBefore ?? project.before;
+  const builtCopy = project.cardBuilt ?? project.whatWeBuilt;
+  const demoLabel =
+    project.demoCtaLabel === "Explore Live Platform"
+      ? "Explore Platform"
+      : "Explore Website";
 
   return (
     <article
       className={cn(
         "group flex flex-col border border-border bg-background p-5 transition-all duration-300 sm:p-6",
-        "motion-safe:hover:-translate-y-1 hover:border-neutral-300 hover:shadow-sm",
+        "motion-safe:hover:-translate-y-1.5 hover:border-neutral-300 hover:shadow-md",
         className,
       )}
     >
@@ -50,40 +57,40 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </p>
       )}
 
-      <h2 className="mt-2 font-display text-2xl tracking-tight sm:text-3xl">
+      <h2 className="mt-2 font-display text-2xl tracking-tight sm:text-[1.75rem]">
         {project.name}
       </h2>
 
-      <p className="mt-3 text-sm leading-relaxed text-foreground sm:text-base">
+      <p className="mt-3 text-sm leading-relaxed text-foreground sm:text-[0.95rem]">
         {project.transformation}
       </p>
 
-      <div className="mt-5 flex flex-wrap gap-3">
+      <div className="mt-5 flex flex-col items-start gap-2.5">
         <a
           href={project.demoUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-colors hover:bg-accent-hover"
         >
-          {project.demoCtaLabel ?? "Explore Live Website"}
+          {demoLabel}
           <ExternalLinkIcon className="transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
           <span className="sr-only">(opens in a new tab)</span>
         </a>
         <Link
           href={`/work/${project.slug}`}
-          className="inline-flex items-center border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-neutral-50"
+          className="inline-flex items-center text-sm text-muted transition-colors hover:text-foreground"
         >
-          View Project
+          Read Case Study
+          <span aria-hidden="true" className="ml-1">
+            →
+          </span>
         </Link>
       </div>
 
-      <div className="relative mt-6">
-        <BrowserPreview
-          src={project.image}
-          alt={`${project.name} preview`}
-        />
+      <div className="relative mt-5 overflow-hidden rounded-lg transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.015]">
+        <BrowserPreview src={project.image} alt={`${project.name} preview`} />
         {project.mobileImage && (
-          <div className="pointer-events-none absolute -bottom-4 -right-2 w-[28%] max-w-[110px] sm:-right-3 sm:w-[26%]">
+          <div className="pointer-events-none absolute -bottom-3 -right-2 w-[26%] max-w-[100px] sm:-right-2 sm:w-[24%]">
             <MobilePreview
               src={project.mobileImage}
               alt=""
@@ -93,30 +100,46 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         )}
       </div>
 
-      <div className="mt-8 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
+      {metrics.length > 0 && (
+        <ul
+          className="mt-3 flex flex-wrap gap-1.5"
+          aria-label="Project scope"
+        >
+          {metrics.map((metric) => (
+            <li
+              key={metric}
+              className="rounded-sm bg-neutral-100 px-2 py-0.5 text-[11px] font-medium tracking-wide text-foreground/75"
+            >
+              {metric}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div className="mt-5 grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
         <div>
-          <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
+          <h3 className="text-[11px] font-semibold tracking-[0.16em] uppercase text-muted">
             {project.beforeLabel ?? "Before"}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
-            {project.before}
+          <p className="mt-1.5 text-sm leading-snug text-muted line-clamp-3">
+            {beforeCopy}
           </p>
         </div>
         <div>
-          <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
+          <h3 className="text-[11px] font-semibold tracking-[0.16em] uppercase text-muted">
             {project.builtLabel ?? "What We Built"}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
-            {project.whatWeBuilt}
+          <p className="mt-1.5 text-sm leading-snug text-muted line-clamp-3">
+            {builtCopy}
           </p>
         </div>
       </div>
 
-      <ul className="mt-5 flex flex-wrap gap-2" aria-label="Key features">
+      <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Key features">
         {chips.map((feature) => (
           <li
             key={feature}
-            className="rounded-sm border border-border px-2.5 py-1 text-xs text-muted"
+            className="rounded-sm border border-border px-2 py-0.5 text-[11px] text-muted"
           >
             {feature}
           </li>

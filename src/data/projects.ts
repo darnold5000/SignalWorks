@@ -20,6 +20,12 @@ export type Project = {
   transformation: string;
   before: string;
   whatWeBuilt: string;
+  /** Short card copy for Before (2–3 lines). Falls back to `before`. */
+  cardBefore?: string;
+  /** Short card copy for What We Built (2–3 lines). Falls back to `whatWeBuilt`. */
+  cardBuilt?: string;
+  /** Small scope chips shown near the screenshot on works cards */
+  metrics?: string[];
   /** Card section label override (default: Before) */
   beforeLabel?: string;
   /** Card section label override (default: What We Built) */
@@ -111,6 +117,11 @@ export const projects: Project[] = [
       "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     whatWeBuilt:
       "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
+    cardBefore:
+      "Registration lived in SignUpGenius while schedules and updates were scattered across other channels.",
+    cardBuilt:
+      "One site for programs, schedules, coaching details, FAQs, and registration.",
+    metrics: ["Scheduling", "Registration", "Mobile First"],
     challenge:
       "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     solution:
@@ -194,6 +205,11 @@ export const projects: Project[] = [
       "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWGZ offered.",
     whatWeBuilt:
       "A dedicated training website where families can explore programs, learn about the coaching approach, find answers to common questions, and move directly into scheduling.",
+    cardBefore:
+      "Facebook carried announcements and signups, so new families struggled to understand the full program.",
+    cardBuilt:
+      "A booking-ready training site for programs, coaches, FAQs, and online scheduling.",
+    metrics: ["Online Booking", "Programs", "Mobile First"],
     challenge:
       "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWGZ offered.",
     solution:
@@ -278,6 +294,11 @@ export const projects: Project[] = [
       "The existing website provided basic salon information, but the design no longer reflected the quality of the brand and guests did not have a convenient way to book directly with a stylist.",
     whatWeBuilt:
       "A modern salon website with organized service menus, individual stylist profiles, new-guest guidance, bridal offerings, and clear booking paths throughout the experience.",
+    cardBefore:
+      "The old site felt dated and guests could not book a stylist online with confidence.",
+    cardBuilt:
+      "A polished salon experience for services, stylists, and appointment requests.",
+    metrics: ["Booking", "Stylists", "Brand-Led"],
     challenge:
       "The existing website provided basic salon information, but the design no longer reflected the quality of the brand and guests did not have a convenient way to book directly with a stylist.",
     solution:
@@ -362,6 +383,11 @@ export const projects: Project[] = [
       "The existing website had a more traditional design and offered course information, but golfers could not book tee times online and key visitor details were not always easy to find.",
     whatWeBuilt:
       "A refreshed golf course website with course details, rates, visitor information, lessons and events, prominent calls to action, and an integrated tee-time booking experience.",
+    cardBefore:
+      "Course details and next steps were hard to find for first-time visitors.",
+    cardBuilt:
+      "A clearer visitor path for course info, rates, and tee-time booking.",
+    metrics: ["Tee Times", "Course Info", "Responsive"],
     challenge:
       "The existing website had a more traditional design and offered course information, but golfers could not book tee times online and key visitor details were not always easy to find.",
     solution:
@@ -446,6 +472,11 @@ export const projects: Project[] = [
       "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     whatWeBuilt:
       "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
+    cardBefore:
+      "Families had to work harder to compare instructors and choose the right training path.",
+    cardBuilt:
+      "An academy platform for coaches, lessons, cages, camps, and memberships.",
+    metrics: ["AI Coach Finder", "Memberships", "Mobile First"],
     challenge:
       "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     solution:
@@ -530,6 +561,11 @@ export const projects: Project[] = [
       "Clients had to find Maya through the salon or social posts without a dedicated booking destination.",
     whatWeBuilt:
       "A personal brand site with service menus, pricing, transformations, location details, and online booking.",
+    cardBefore:
+      "Services and proof of work were hard to scan before requesting a booking.",
+    cardBuilt:
+      "A focused stylist site with clear services, gallery proof, and direct booking.",
+    metrics: ["Booking", "Gallery", "Mobile First"],
     challenge:
       "Independent stylists often lose bookings when they lack a simple place for clients to learn about their work and schedule online.",
     solution:
@@ -601,19 +637,24 @@ export const projects: Project[] = [
   },
   {
     slug: "creator-platform",
-    name: "Maren Cole",
+    name: "The Routine Review",
     category: "Creator & Sports Education",
     productType: "Digital Brand Platform",
     tagline:
       "A professional creator platform that consolidates educational content, partnerships, and community in one brand destination.",
     summary:
-      "A digital brand platform for gymnastics education creator Maren Cole—built to organize content, resources, partnerships, and membership opportunities beyond a basic brochure site.",
+      "A digital brand platform for The Routine Review — gymnastics education, Score Notes, resources, and brand partnerships in one destination.",
     transformation:
-      "Expanded a creator's online presence into a professional platform that brings educational content, resources, partnerships, and community together in one place.",
+      "Elevated a gymnastics educator's online presence into a professional media brand with content, partnerships, and clear next steps.",
     before:
       "Content and resources were spread across social platforms and individual links, making it difficult for followers and brands to discover everything from a single destination.",
     whatWeBuilt:
       "Designed a centralized platform where visitors can explore educational content, Score Notes, videos, brand collaborations, recommended products, and future membership opportunities—all within a cohesive brand experience.",
+    cardBefore:
+      "Content and resources were scattered across social links instead of one destination.",
+    cardBuilt:
+      "A brand platform for education, Score Notes, videos, and partnerships.",
+    metrics: ["Content Hub", "Partnerships", "Membership-Ready"],
     beforeLabel: "The Previous Experience",
     builtLabel: "The Signal Works Approach",
     demoCtaLabel: "Explore Live Platform",
@@ -670,22 +711,22 @@ export const projects: Project[] = [
       {
         src: "/images/work/creator-platform/desktop.webp",
         label: "Homepage",
-        alt: "Maren Cole creator platform homepage desktop screenshot",
+        alt: "The Routine Review creator platform homepage desktop screenshot",
       },
       {
         src: "/images/work/creator-platform/content.webp",
         label: "Learn Hub",
-        alt: "Maren Cole educational content and learn hub",
+        alt: "The Routine Review educational content and learn hub",
       },
       {
         src: "/images/work/creator-platform/partnerships.webp",
         label: "Brand Partnerships",
-        alt: "Maren Cole brand partnerships page",
+        alt: "The Routine Review brand partnerships page",
       },
       {
         src: "/images/work/creator-platform/mobile.webp",
         label: "Mobile Experience",
-        alt: "Maren Cole creator platform mobile homepage screenshot",
+        alt: "The Routine Review creator platform mobile homepage screenshot",
       },
     ],
     demoUrl: "https://influencer.hiresignalworks.com",
@@ -705,6 +746,11 @@ export const projects: Project[] = [
       "The previous website offered only a small amount of information about the facility and programs, with no clear scheduling or booking process for interested families.",
     whatWeBuilt:
       "A complete, mobile-first website that presents training programs, facility benefits, coaches, camps, and scheduling options in a clear and professional experience.",
+    cardBefore:
+      "The facility site shared little program detail and no clear scheduling path.",
+    cardBuilt:
+      "A complete training destination with programs, gallery, and booking CTAs.",
+    metrics: ["Scheduling", "Gallery", "Mobile First"],
     challenge:
       "The previous website offered only a small amount of information about the facility and programs, with no clear scheduling or booking process for interested families.",
     solution:
@@ -789,6 +835,11 @@ export const projects: Project[] = [
       "Prospective clients had to piece together services, advisor credentials, and office details from scattered pages and third-party tools before they could take a confident next step.",
     whatWeBuilt:
       "A dedicated advisory website where visitors can explore planning services, review the team, find office locations, read guidance content, and schedule a consultation online.",
+    cardBefore:
+      "Services, credentials, and office details were hard to assemble before booking a consult.",
+    cardBuilt:
+      "A trust-first advisory site for services, advisors, locations, and scheduling.",
+    metrics: ["Multi-Office", "Scheduling", "SEO Ready"],
     challenge:
       "Prospective clients had to piece together services, advisor credentials, and office details from scattered pages and third-party tools before they could take a confident next step.",
     solution:
