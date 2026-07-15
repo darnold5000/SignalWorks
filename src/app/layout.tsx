@@ -6,6 +6,7 @@ import { GoogleAnalytics, MicrosoftClarity } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -77,6 +78,7 @@ export default function RootLayout({
         <Footer />
         <GoogleAnalytics />
         <MicrosoftClarity />
+        <Analytics />
       </body>
     </html>
   );
