@@ -177,7 +177,7 @@ export const projects: Project[] = [
         alt: "Cornerstone Hoops mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://basketball.hiresignalworks.com",
+    demoUrl: "https://cornerstonehoops.vercel.app",
     featured: true,
   },
   {
