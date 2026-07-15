@@ -73,7 +73,7 @@ const targets = [
   },
   {
     id: "zero-limits",
-    url: "https://zerolimits.vercel.app",
+    url: "https://zerolimits-iota.vercel.app",
     pages: [
       { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
       { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
