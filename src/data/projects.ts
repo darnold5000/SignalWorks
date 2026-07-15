@@ -98,22 +98,22 @@ export const projects: Project[] = [
     summary:
       "A high-energy youth basketball website designed to help families understand the program and register more easily.",
     transformation:
-      "Turned a basic registration experience into a complete destination for programs, schedules, and parent information.",
+      "Turned a registration-first online presence into a complete destination where families can learn about training, view schedules, and confidently choose the right opportunity.",
     before:
-      "Families were sent directly to a third-party signup page with limited information about the program.",
+      "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     whatWeBuilt:
-      "A complete website with training options, schedules, coaching information, FAQs, and clear registration paths.",
+      "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
     challenge:
-      "The previous online experience depended primarily on a basic third-party registration page, leaving new families with limited information about the program.",
+      "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     solution:
-      "Created a full website with program details, schedules, coaching information, frequently asked questions, and clear registration paths.",
+      "A central website that brings training options, schedules, program information, coaching details, FAQs, and registration links together in one easy-to-navigate experience.",
     impact:
       "Families can learn about the program and decide whether it is a good fit before reaching the registration process.",
     features: [
       "Program pages",
       "Training schedules",
       "Registration links",
-      "Parent FAQs",
+      "Parent information",
       "Mobile-first design",
     ],
     featureDetails: [
@@ -181,23 +181,23 @@ export const projects: Project[] = [
     summary:
       "A modern athletic training website built to help parents find sessions, understand the program, and book with confidence.",
     transformation:
-      "Replaced a fragmented signup flow with a clear training destination and online booking path.",
+      "Expanded a social-media-based presence into a professional training platform built around program discovery, communication, and online booking.",
     before:
-      "Parents relied on scattered posts and third-party signup links with little program context.",
+      "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWG offered.",
     whatWeBuilt:
-      "A full training website with session discovery, coaching details, FAQs, and online scheduling.",
+      "A dedicated training website where families can explore programs, learn about the coaching approach, find answers to common questions, and move directly into scheduling.",
     challenge:
-      "Families needed more than a signup link — they needed to understand training options, schedules, and expectations before booking.",
+      "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWG offered.",
     solution:
-      "Built a complete marketing and scheduling experience with clear session information, coach context, and a direct booking path.",
+      "A dedicated training website where families can explore programs, learn about the coaching approach, find answers to common questions, and move directly into scheduling.",
     impact:
       "Parents can evaluate fit, pick a session, and complete the next step without chasing details across messages and forms.",
     features: [
-      "Session discovery",
+      "Training programs",
       "Online booking",
-      "Coach profiles",
+      "Coach information",
       "Parent FAQs",
-      "Mobile booking",
+      "Mobile scheduling",
     ],
     featureDetails: [
       {
@@ -265,22 +265,22 @@ export const projects: Project[] = [
     summary:
       "A luxury salon website designed to communicate atmosphere, service quality, and an easy next step for new guests.",
     transformation:
-      "Elevated a basic booking presence into a branded destination for services, stylists, and new-guest onboarding.",
+      "Refreshed a dated salon website into a polished, welcoming experience that makes it easier to explore services, meet the stylists, and request an appointment.",
     before:
-      "Prospective guests had limited ways to understand the salon, stylists, or which service path to choose.",
+      "The existing website provided basic salon information, but the design no longer reflected the quality of the brand and guests did not have a convenient way to book directly with a stylist.",
     whatWeBuilt:
-      "A polished website with service menus, stylist profiles, bridal options, and clear booking entry points.",
+      "A modern salon website with organized service menus, individual stylist profiles, new-guest guidance, bridal offerings, and clear booking paths throughout the experience.",
     challenge:
-      "Salon businesses often lose potential clients when the website cannot communicate quality, atmosphere, or how to book the right stylist.",
+      "The existing website provided basic salon information, but the design no longer reflected the quality of the brand and guests did not have a convenient way to book directly with a stylist.",
     solution:
-      "Designed a calm, editorial site that presents services, stylists, studio atmosphere, and booking paths with clarity.",
+      "A modern salon website with organized service menus, individual stylist profiles, new-guest guidance, bridal offerings, and clear booking paths throughout the experience.",
     impact:
       "New guests can explore the salon experience and choose a stylist or service before they commit to an appointment.",
     features: [
       "Service menus",
       "Stylist profiles",
-      "Booking links",
-      "New guest forms",
+      "Stylist booking",
+      "New-guest guidance",
       "Bridal packages",
     ],
     featureDetails: [
@@ -349,23 +349,23 @@ export const projects: Project[] = [
     summary:
       "A golf course website built to help golfers learn the course, find key details, and move into tee time booking.",
     transformation:
-      "Turned a limited online presence into a course destination with clearer information and booking flow.",
+      "Modernized the course’s online presence and created a clear path for golfers to explore the facility, find essential information, and reserve a tee time.",
     before:
-      "Golfers struggled to find course details and a reliable path from interest to a reserved tee time.",
+      "The existing website had a more traditional design and offered course information, but golfers could not book tee times online and key visitor details were not always easy to find.",
     whatWeBuilt:
-      "A modern website with course information, practical visitor details, and a booking-focused customer journey.",
+      "A refreshed golf course website with course details, rates, visitor information, lessons and events, prominent calls to action, and an integrated tee-time booking experience.",
     challenge:
-      "Course websites often bury the essentials — rates, pace, amenities, and booking — behind outdated layouts and unclear calls to action.",
+      "The existing website had a more traditional design and offered course information, but golfers could not book tee times online and key visitor details were not always easy to find.",
     solution:
-      "Built a clean recreation website that leads with the course experience and makes tee time booking the obvious next step.",
+      "A refreshed golf course website with course details, rates, visitor information, lessons and events, prominent calls to action, and an integrated tee-time booking experience.",
     impact:
       "Visitors can evaluate the course and move toward booking without hunting through outdated pages or phone calls.",
     features: [
       "Course overview",
-      "Tee time booking",
-      "Visitor details",
-      "Mobile-friendly layout",
-      "Clear CTAs",
+      "Tee-time booking",
+      "Rates and details",
+      "Events and lessons",
+      "Mobile-friendly design",
     ],
     featureDetails: [
       {
@@ -426,30 +426,30 @@ export const projects: Project[] = [
   },
   {
     slug: "batting-academy",
-    name: "Batter Up",
+    name: "D-BAT",
     category: "Athletic Training",
     tagline:
       "An indoor baseball and softball academy site built for lessons, cages, camps, and memberships.",
     summary:
       "A batting academy website designed to help families find coaches, book lessons, rent cages, and explore memberships.",
     transformation:
-      "Replaced a franchise-style presence with a clearer academy destination focused on training paths and booking next steps.",
+      "Reimagined a conventional franchise website experience into a modern academy platform that makes training options, instructors, memberships, and next steps easier to understand.",
     before:
-      "Families struggled to compare instructors, understand cage vs. lesson options, or know where to book next.",
+      "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     whatWeBuilt:
-      "A structured academy site with instructor discovery, coach matching, membership pricing, camps, and facility details.",
+      "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
     challenge:
-      "Training academies lose leads when visitors cannot tell which coach fits their athlete or how to book cages and lessons.",
+      "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     solution:
-      "Organized instructors, training programs, memberships, and facility access into a clear parent-friendly journey.",
+      "A more engaging academy website with instructor discovery, coach matching, clear training paths, membership comparisons, camp listings, and detailed facility information.",
     impact:
       "Parents can match a coach, compare memberships, and take the next booking step without hunting across third-party tools.",
     features: [
       "Instructor directory",
       "AI coach finder",
-      "Cage & lesson CTAs",
-      "Memberships & pricing",
-      "Camps & facility tour",
+      "Lessons and cage rentals",
+      "Membership pricing",
+      "Camps and facility tour",
     ],
     featureDetails: [
       {
@@ -487,22 +487,22 @@ export const projects: Project[] = [
       {
         src: "/images/work/dbat/desktop.webp",
         label: "Homepage",
-        alt: "Batter Up homepage desktop screenshot",
+        alt: "D-BAT homepage desktop screenshot",
       },
       {
         src: "/images/work/dbat/instructors.webp",
         label: "Programs and Services",
-        alt: "Batter Up instructor directory page",
+        alt: "D-BAT instructor directory page",
       },
       {
         src: "/images/work/dbat/memberships.webp",
         label: "Membership Options",
-        alt: "Batter Up memberships and pricing page",
+        alt: "D-BAT memberships and pricing page",
       },
       {
         src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
-        alt: "Batter Up mobile homepage screenshot",
+        alt: "D-BAT mobile homepage screenshot",
       },
     ],
     demoUrl: "https://battingcages.hiresignalworks.com",
@@ -600,23 +600,23 @@ export const projects: Project[] = [
     summary:
       "A youth baseball facility website designed to showcase programs, training quality, and a clear path to inquire or schedule.",
     transformation:
-      "Modernized an outdated facility presence into a fast, mobile-first program and recruiting destination.",
+      "Expanded a limited facility website into a modern baseball destination with clearer program information, stronger calls to action, and online scheduling.",
     before:
-      "An outdated site made it hard for families to understand programs or trust the quality of the facility.",
+      "The previous website offered only a small amount of information about the facility and programs, with no clear scheduling or booking process for interested families.",
     whatWeBuilt:
-      "A premium facility website with program pages, strong calls to action, and a mobile-first experience for parents.",
+      "A complete, mobile-first website that presents training programs, facility benefits, coaches, camps, and scheduling options in a clear and professional experience.",
     challenge:
-      "Youth sports facilities lose interest when the website looks outdated, loads slowly on phones, or fails to explain programs clearly.",
+      "The previous website offered only a small amount of information about the facility and programs, with no clear scheduling or booking process for interested families.",
     solution:
-      "Rebuilt the experience around program clarity, facility credibility, and conversion paths that work for parents on mobile.",
+      "A complete, mobile-first website that presents training programs, facility benefits, coaches, camps, and scheduling options in a clear and professional experience.",
     impact:
       "Families can evaluate programs and take the next step with confidence — whether that is scheduling training or visiting the facility.",
     features: [
       "Program pages",
-      "Facility messaging",
-      "Strong CTAs",
-      "SEO structure",
-      "Mobile responsive",
+      "Online scheduling",
+      "Facility information",
+      "Camps and training",
+      "Mobile-first design",
     ],
     featureDetails: [
       {
