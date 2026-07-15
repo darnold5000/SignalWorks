@@ -652,8 +652,8 @@ export const projects: Project[] = [
       },
       {
         src: "/images/work/hair-by-maya/services.webp",
-        label: "Programs and Services",
-        alt: "Hair by Maya services and pricing section",
+        label: "Services and Pricing",
+        alt: "Hair by Maya services and pricing with before and after gallery",
       },
       {
         src: "/images/work/hair-by-maya/booking.webp",
