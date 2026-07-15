@@ -453,7 +453,31 @@ export const projects: Project[] = [
       "email-text-automation",
       "custom-admin-tools",
     ],
-    gallery: [],
+    image: "/images/work/pine-tree-golf/desktop.webp",
+    mobileImage: "/images/work/pine-tree-golf/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/pine-tree-golf/desktop.webp",
+        label: "Homepage",
+        alt: "Pine Tree Golf Course homepage with tee time booking",
+      },
+      {
+        src: "/images/work/pine-tree-golf/offerings.webp",
+        label: "Rates and Offerings",
+        alt: "Pine Tree Golf Course rates page with daily play, passes, and driving range pricing",
+      },
+      {
+        src: "/images/work/pine-tree-golf/mobile.webp",
+        label: "Mobile Experience",
+        layout: "mobile",
+        alt: "Pine Tree Golf Course mobile homepage screenshot",
+      },
+      {
+        src: "/images/work/pine-tree-golf/admin.webp",
+        label: "Staff Portal",
+        alt: "Pine Tree Golf Course staff dashboard with course settings and homepage status",
+      },
+    ],
     demoUrl: "https://pinetreegolf.hiresignalworks.com",
     featured: false,
   },
