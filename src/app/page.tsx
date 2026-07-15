@@ -5,13 +5,11 @@ import { CTASection } from "@/components/CTASection";
 import { WhySignalWorksIntro } from "@/components/WhySignalWorksIntro";
 import { FeaturedProjectCard } from "@/components/work/FeaturedProjectCard";
 import { HowWeWork } from "@/components/HowWeWork";
-import { Testimonials } from "@/components/Testimonials";
 import { RecentExperiments } from "@/components/RecentExperiments";
 import { WhatIDontDo } from "@/components/WhatIDontDo";
 import { FlexibleWaysSection } from "@/components/FlexibleWaysSection";
 import { Button } from "@/components/Button";
 import { getFeaturedProjects } from "@/data/projects";
-import { testimonials } from "@/data/testimonials";
 import { SHOW_WORK } from "@/lib/flags";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -102,8 +100,6 @@ export default function HomePage() {
       <HowWeWork />
 
       {SHOW_WORK && <RecentExperiments />}
-
-      {SHOW_WORK && <Testimonials items={testimonials} />}
 
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
         <SectionHeading

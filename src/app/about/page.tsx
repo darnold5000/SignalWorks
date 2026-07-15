@@ -3,10 +3,8 @@ import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FounderIntro } from "@/components/FounderIntro";
 import { WhySignalWorks } from "@/components/WhySignalWorks";
-import { Testimonials } from "@/components/Testimonials";
 import { industryExperience } from "@/data/industries";
-import { testimonials } from "@/data/testimonials";
-import { SHOW_FOUNDER, SHOW_WORK } from "@/lib/flags";
+import { SHOW_FOUNDER } from "@/lib/flags";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -119,8 +117,6 @@ export default function AboutPage() {
       </section>
 
       <WhySignalWorks />
-
-      {SHOW_WORK && <Testimonials items={testimonials} />}
 
       <CTASection
         title="Let's build something together"
