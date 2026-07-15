@@ -24,8 +24,12 @@ export type Project = {
   cardBefore?: string;
   /** Short card copy for What We Built (2–3 lines). Falls back to `whatWeBuilt`. */
   cardBuilt?: string;
+  /** One-line card summary. Falls back to `transformation`. */
+  cardLine?: string;
   /** Small scope chips shown near the screenshot on works cards */
   metrics?: string[];
+  /** Unique differentiator badge on works cards (e.g. Booking Platform) */
+  badge?: string;
   /** Card section label override (default: Before) */
   beforeLabel?: string;
   /** Card section label override (default: What We Built) */
@@ -121,7 +125,10 @@ export const projects: Project[] = [
       "Registration lived in SignUpGenius while schedules and updates were scattered across other channels.",
     cardBuilt:
       "One site for programs, schedules, coaching details, FAQs, and registration.",
-    metrics: ["Scheduling", "Registration", "Mobile First"],
+    metrics: ["Scheduling", "Registration", "Parent Portal"],
+    badge: "Registration Platform",
+    cardLine:
+      "A complete home for youth basketball programs, schedules, and registration.",
     challenge:
       "Program registration was handled through SignUpGenius, while schedules, updates, and important details were shared through more traditional communication channels.",
     solution:
@@ -209,7 +216,10 @@ export const projects: Project[] = [
       "Facebook carried announcements and signups, so new families struggled to understand the full program.",
     cardBuilt:
       "A booking-ready training site for programs, coaches, FAQs, and online scheduling.",
-    metrics: ["Online Booking", "Programs", "Mobile First"],
+    metrics: ["Lesson Booking", "Coach Profiles", "Programs"],
+    badge: "Online Booking",
+    cardLine:
+      "A booking-ready training site for sessions, coaches, and parents.",
     challenge:
       "Facebook served as the main source for announcements, training updates, and signup information, making it difficult for new families to quickly understand everything DAWGZ offered.",
     solution:
@@ -298,7 +308,10 @@ export const projects: Project[] = [
       "The old site felt dated and guests could not book a stylist online with confidence.",
     cardBuilt:
       "A polished salon experience for services, stylists, and appointment requests.",
-    metrics: ["Booking", "Stylists", "Brand-Led"],
+    metrics: ["Stylist Booking", "Service Menus", "New Guest Flow"],
+    badge: "Stylist Booking",
+    cardLine:
+      "A refined salon experience for services, stylists, and appointments.",
     challenge:
       "The existing website provided basic salon information, but the design no longer reflected the quality of the brand and guests did not have a convenient way to book directly with a stylist.",
     solution:
@@ -387,7 +400,10 @@ export const projects: Project[] = [
       "Course details and next steps were hard to find for first-time visitors.",
     cardBuilt:
       "A clearer visitor path for course info, rates, and tee-time booking.",
-    metrics: ["Tee Times", "Course Info", "Responsive"],
+    metrics: ["Online Tee Times", "Events", "Course Info"],
+    badge: "Tee Time Booking",
+    cardLine:
+      "A clearer path from course discovery to booking a tee time.",
     challenge:
       "The existing website had a more traditional design and offered course information, but golfers could not book tee times online and key visitor details were not always easy to find.",
     solution:
@@ -476,7 +492,10 @@ export const projects: Project[] = [
       "Families had to work harder to compare instructors and choose the right training path.",
     cardBuilt:
       "An academy platform for coaches, lessons, cages, camps, and memberships.",
-    metrics: ["AI Coach Finder", "Memberships", "Mobile First"],
+    metrics: ["Lesson Booking", "Coach Profiles", "Memberships"],
+    badge: "AI Features",
+    cardLine:
+      "An academy platform for coaches, lessons, cages, and memberships.",
     challenge:
       "The existing experience followed a familiar franchise-style structure, but families had to work harder to compare instructors, understand lesson and cage options, and determine the best path forward.",
     solution:
@@ -565,7 +584,10 @@ export const projects: Project[] = [
       "Services and proof of work were hard to scan before requesting a booking.",
     cardBuilt:
       "A focused stylist site with clear services, gallery proof, and direct booking.",
-    metrics: ["Booking", "Gallery", "Mobile First"],
+    metrics: ["Direct Booking", "Service Menus", "Gallery"],
+    badge: "Direct Booking",
+    cardLine:
+      "A focused stylist brand site with clear services and booking.",
     challenge:
       "Independent stylists often lose bookings when they lack a simple place for clients to learn about their work and schedule online.",
     solution:
@@ -654,7 +676,10 @@ export const projects: Project[] = [
       "Content and resources were scattered across social links instead of one destination.",
     cardBuilt:
       "A brand platform for education, Score Notes, videos, and partnerships.",
-    metrics: ["Content Hub", "Partnerships", "Membership-Ready"],
+    metrics: ["Content Hub", "Partnerships", "Video Library"],
+    badge: "Content Platform",
+    cardLine:
+      "A gymnastics media brand for education, Score Notes, and partnerships.",
     beforeLabel: "The Previous Experience",
     builtLabel: "The Signal Works Approach",
     demoCtaLabel: "Explore Live Platform",
@@ -750,7 +775,10 @@ export const projects: Project[] = [
       "The facility site shared little program detail and no clear scheduling path.",
     cardBuilt:
       "A complete training destination with programs, gallery, and booking CTAs.",
-    metrics: ["Scheduling", "Gallery", "Mobile First"],
+    metrics: ["Lesson Booking", "Programs", "Gallery"],
+    badge: "Scheduling",
+    cardLine:
+      "A training facility site built for programs, gallery, and booking CTAs.",
     challenge:
       "The previous website offered only a small amount of information about the facility and programs, with no clear scheduling or booking process for interested families.",
     solution:
@@ -839,7 +867,10 @@ export const projects: Project[] = [
       "Services, credentials, and office details were hard to assemble before booking a consult.",
     cardBuilt:
       "A trust-first advisory site for services, advisors, locations, and scheduling.",
-    metrics: ["Multi-Office", "Scheduling", "SEO Ready"],
+    metrics: ["Consultation Booking", "Advisor Profiles", "Multi-Office"],
+    badge: "Consultation Platform",
+    cardLine:
+      "A trust-first advisory site for services, advisors, and consultations.",
     challenge:
       "Prospective clients had to piece together services, advisor credentials, and office details from scattered pages and third-party tools before they could take a confident next step.",
     solution:

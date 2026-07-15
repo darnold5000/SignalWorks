@@ -30,7 +30,7 @@ export function BrowserPreview({
         <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
         <span className="ml-2 h-5 flex-1 rounded-sm bg-neutral-200/80" />
       </div>
-      <div className="relative aspect-[16/10] overflow-hidden bg-neutral-200">
+      <div className="relative aspect-[16/10] overflow-hidden bg-neutral-200 sm:aspect-[16/9]">
         <Image
           src={src}
           alt={alt}
