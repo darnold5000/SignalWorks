@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props) {
     title: `${project.name} Website`,
     description: project.summary,
     path: `/work/${slug}`,
+    ogImage: project.image,
   });
 }
 
