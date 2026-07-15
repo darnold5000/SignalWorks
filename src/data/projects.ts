@@ -425,87 +425,87 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "fitness-studio",
-    name: "MA5 Performance",
-    category: "Fitness",
+    slug: "batting-academy",
+    name: "D-BAT",
+    category: "Athletic Training",
     tagline:
-      "A performance-focused fitness site that clarifies training options and membership paths.",
+      "An indoor baseball and softball academy site built for lessons, cages, camps, and memberships.",
     summary:
-      "A fitness and performance website designed to communicate training programs, open-gym access, and how to get started.",
+      "A batting academy website designed to help families find coaches, book lessons, rent cages, and explore memberships.",
     transformation:
-      "Replaced an unclear service mix with a focused site that explains training options and membership next steps.",
+      "Replaced a franchise-style presence with a clearer academy destination focused on training paths and booking next steps.",
     before:
-      "Prospective clients struggled to distinguish personal training, sports performance, and open-gym offerings.",
+      "Families struggled to compare instructors, understand cage vs. lesson options, or know where to book next.",
     whatWeBuilt:
-      "A structured fitness website with service pages, membership messaging, and clear calls to begin training.",
+      "A structured academy site with instructor discovery, coach matching, membership pricing, camps, and facility details.",
     challenge:
-      "Fitness businesses often lose leads when visitors cannot tell which program fits them or how to take the next step.",
+      "Training academies lose leads when visitors cannot tell which coach fits their athlete or how to book cages and lessons.",
     solution:
-      "Organized services, memberships, and facility access into a clear customer journey with strong conversion paths.",
+      "Organized instructors, training programs, memberships, and facility access into a clear parent-friendly journey.",
     impact:
-      "New clients can compare options and choose a training path that matches their goals before contacting the gym.",
+      "Parents can match a coach, compare memberships, and take the next booking step without hunting across third-party tools.",
     features: [
-      "Service pages",
-      "Membership options",
-      "Facility details",
-      "Booking CTAs",
-      "Mobile-first design",
+      "Instructor directory",
+      "AI coach finder",
+      "Cage & lesson CTAs",
+      "Memberships & pricing",
+      "Camps & facility tour",
     ],
     featureDetails: [
       {
-        name: "Clear service paths",
+        name: "Coach discovery",
         description:
-          "Visitors can quickly understand and compare available training options.",
+          "Parents can filter instructors by sport and booking availability.",
       },
       {
-        name: "Membership clarity",
+        name: "AI coach finder",
         description:
-          "Open-gym and membership details help clients choose the right level of access.",
+          "A guided quiz recommends instructors matched to an athlete’s goals.",
       },
       {
-        name: "Conversion-focused CTAs",
+        name: "Clear training paths",
         description:
-          "Every major section points toward booking or getting started.",
+          "Lessons, cages, camps, and memberships are separated into obvious next steps.",
       },
       {
         name: "Mobile-first experience",
         description:
-          "Busy athletes can explore options and take action from a phone.",
+          "Busy parents can explore coaches and book from a phone.",
       },
     ],
     growthFeatures: [
       "online-scheduling",
       "membership-management",
+      "parent-dashboards",
       "recurring-payments",
-      "customer-portals",
       "email-text-automation",
       "staff-management",
     ],
-    image: "/images/work/ma5-performance/desktop.webp",
-    mobileImage: "/images/work/ma5-performance/mobile.webp",
+    image: "/images/work/dbat/desktop.webp",
+    mobileImage: "/images/work/dbat/mobile.webp",
     gallery: [
       {
-        src: "/images/work/ma5-performance/desktop.webp",
+        src: "/images/work/dbat/desktop.webp",
         label: "Homepage",
-        alt: "MA5 Performance homepage desktop screenshot",
+        alt: "D-BAT homepage desktop screenshot",
       },
       {
-        src: "/images/work/ma5-performance/services.webp",
+        src: "/images/work/dbat/instructors.webp",
         label: "Programs and Services",
-        alt: "MA5 Performance services page",
+        alt: "D-BAT instructor directory page",
       },
       {
-        src: "/images/work/ma5-performance/memberships.webp",
+        src: "/images/work/dbat/memberships.webp",
         label: "Membership Options",
-        alt: "MA5 Performance membership and open-gym options",
+        alt: "D-BAT memberships and pricing page",
       },
       {
-        src: "/images/work/ma5-performance/mobile.webp",
+        src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
-        alt: "MA5 Performance mobile homepage screenshot",
+        alt: "D-BAT mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://fitness.hiresignalworks.com",
+    demoUrl: "https://dbat.hiresignalworks.com",
     featured: false,
   },
   {

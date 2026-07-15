@@ -11,6 +11,6 @@ export const clientLogos: ClientLogo[] = [
   { name: "DAWG Youth Training", shortName: "DAWG", href: "/work/athletic-training" },
   { name: "Willow & Mane", shortName: "Willow & Mane", href: "/work/luxury-salon" },
   { name: "Oak Tree Golf Course", shortName: "Oak Tree", href: "/work/golf-course" },
-  { name: "MA5 Performance", shortName: "MA5", href: "/work/fitness-studio" },
+  { name: "D-BAT", shortName: "D-BAT", href: "/work/batting-academy" },
   { name: "Zero Limits Baseball", shortName: "Zero Limits", href: "/work/baseball-facility" },
 ];

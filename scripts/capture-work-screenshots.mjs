@@ -42,13 +42,13 @@ const targets = [
     ],
   },
   {
-    id: "ma5-performance",
-    url: "https://ma5.vercel.app",
+    id: "dbat",
+    url: process.env.DBAT_URL ?? "https://dbat.vercel.app",
     pages: [
       { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
       { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
-      { name: "services", path: "/services", viewport: { width: 1440, height: 900 } },
-      { name: "memberships", path: "/open-gym", viewport: { width: 1440, height: 900 } },
+      { name: "instructors", path: "/instructors", viewport: { width: 1440, height: 900 } },
+      { name: "memberships", path: "/memberships", viewport: { width: 1440, height: 900 } },
     ],
   },
   {
