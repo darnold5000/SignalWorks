@@ -758,13 +758,13 @@ export const projects: Project[] = [
       },
       {
         src: "/images/work/zero-limits/programs.webp",
-        label: "Programs and Services",
-        alt: "Zero Limits Baseball training programs page",
+        label: "Schedule Training",
+        alt: "Zero Limits Baseball schedule training and pricing page",
       },
       {
-        src: "/images/work/zero-limits/facility.webp",
-        label: "Facility Experience",
-        alt: "Zero Limits Baseball facility information page",
+        src: "/images/work/zero-limits/gallery.webp",
+        label: "Gallery",
+        alt: "Zero Limits Baseball facility gallery page",
       },
       {
         src: "/images/work/zero-limits/mobile.webp",

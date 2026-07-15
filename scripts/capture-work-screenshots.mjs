@@ -78,7 +78,7 @@ const targets = [
       { name: "desktop", path: "/", viewport: { width: 1440, height: 900 } },
       { name: "mobile", path: "/", viewport: { width: 390, height: 844 } },
       { name: "programs", path: "/schedule-training", viewport: { width: 1440, height: 900 } },
-      { name: "facility", path: "/facility", viewport: { width: 1440, height: 900 } },
+      { name: "gallery", path: "/gallery", viewport: { width: 1440, height: 900 } },
     ],
   },
   {
