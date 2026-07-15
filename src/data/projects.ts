@@ -434,7 +434,7 @@ export const projects: Project[] = [
   },
   {
     slug: "batting-academy",
-    name: "D-BAT",
+    name: "Batter Up",
     category: "Athletic Training",
     tagline:
       "An indoor baseball and softball academy site built for lessons, cages, camps, and memberships.",
@@ -495,22 +495,22 @@ export const projects: Project[] = [
       {
         src: "/images/work/dbat/desktop.webp",
         label: "Homepage",
-        alt: "D-BAT homepage desktop screenshot",
+        alt: "Batter Up homepage desktop screenshot",
       },
       {
         src: "/images/work/dbat/instructors.webp",
         label: "Programs and Services",
-        alt: "D-BAT instructor directory page",
+        alt: "Batter Up instructor directory page",
       },
       {
         src: "/images/work/dbat/memberships.webp",
         label: "Membership Options",
-        alt: "D-BAT memberships and pricing page",
+        alt: "Batter Up memberships and pricing page",
       },
       {
         src: "/images/work/dbat/mobile.webp",
         label: "Mobile Experience",
-        alt: "D-BAT mobile homepage screenshot",
+        alt: "Batter Up mobile homepage screenshot",
       },
     ],
     demoUrl: "https://battingcages.hiresignalworks.com",
