@@ -772,7 +772,7 @@ export const projects: Project[] = [
         alt: "Zero Limits Baseball mobile homepage screenshot",
       },
     ],
-    demoUrl: "https://baseball.hiresignalworks.com",
+    demoUrl: "https://zerolimits-iota.vercel.app",
     featured: false,
   },
 ];
