@@ -7,10 +7,10 @@ export type ClientLogo = {
 };
 
 export const clientLogos: ClientLogo[] = [
-  { name: "Market Street Wealth Management", shortName: "Market Street", href: "/work/market-street" },
-  { name: "Zero Limits Baseball", shortName: "Zero Limits", href: "/work/zero-limits" },
-  { name: "Dugout Intel", href: "/work/dugout-intel" },
-  { name: "Gym Meet Tracker", shortName: "Gym Scores", href: "/work/gymnastics-meet-tracker" },
-  { name: "Cheer Meet Tracker", shortName: "Cheer Tracker", href: "/work/cheer-meet-tracker" },
-  { name: "OnDeck Reps", href: "/work/ondeck-reps" },
+  { name: "Cornerstone Hoops", shortName: "Cornerstone", href: "/work/youth-basketball" },
+  { name: "DAWG Youth Training", shortName: "DAWG", href: "/work/athletic-training" },
+  { name: "Willow & Mane", shortName: "Willow & Mane", href: "/work/luxury-salon" },
+  { name: "Oak Tree Golf Course", shortName: "Oak Tree", href: "/work/golf-course" },
+  { name: "MA5 Performance", shortName: "MA5", href: "/work/fitness-studio" },
+  { name: "Zero Limits Baseball", shortName: "Zero Limits", href: "/work/baseball-facility" },
 ];

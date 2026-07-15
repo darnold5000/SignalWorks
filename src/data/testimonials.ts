@@ -8,15 +8,16 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Dave completely modernized our website and made it easier for clients to navigate.",
-    author: "Market Street Wealth Management",
-    role: "Financial Services",
-    href: "/work/market-street",
+      "Families can finally understand the program before they register — the site makes the next step obvious.",
+    author: "Cornerstone Hoops",
+    role: "Youth Sports",
+    href: "/work/youth-basketball",
   },
   {
-    quote: "Parents immediately noticed how much easier everything became.",
-    author: "Zero Limits Baseball",
-    role: "Youth Sports",
-    href: "/work/zero-limits",
+    quote:
+      "Parents noticed immediately how much easier it became to find sessions and book training.",
+    author: "DAWG Youth Training",
+    role: "Athletic Training",
+    href: "/work/athletic-training",
   },
 ];

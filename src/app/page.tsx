@@ -3,13 +3,14 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CTASection } from "@/components/CTASection";
 import { WhySignalWorksIntro } from "@/components/WhySignalWorksIntro";
-import { ProjectPreviewCard } from "@/components/ProjectPreviewCard";
+import { FeaturedProjectCard } from "@/components/work/FeaturedProjectCard";
 import { HowWeWork } from "@/components/HowWeWork";
 import { Testimonials } from "@/components/Testimonials";
 import { RecentExperiments } from "@/components/RecentExperiments";
 import { WhatIDontDo } from "@/components/WhatIDontDo";
 import { FlexibleWaysSection } from "@/components/FlexibleWaysSection";
-import { getHomepagePreviewProjects } from "@/data/projects";
+import { Button } from "@/components/Button";
+import { getFeaturedProjects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
 import { SHOW_WORK } from "@/lib/flags";
 import { createPageMetadata } from "@/lib/metadata";
@@ -61,7 +62,7 @@ const whatIBuild = [
 ];
 
 export default function HomePage() {
-  const previewProjects = getHomepagePreviewProjects();
+  const featuredProjects = getFeaturedProjects();
 
   return (
     <>
@@ -80,14 +81,19 @@ export default function HomePage() {
         <section className="border-t border-border bg-neutral-50">
           <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
             <SectionHeading
-              eyebrow="Work"
-              title="Recent projects"
-              description="A sample of what we build — full stories on the Work page."
+              eyebrow="Our Work"
+              title="Built around real business needs."
+              description="Explore websites designed to improve how local businesses present their services, communicate with customers, and handle the next step."
             />
             <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-8">
-              {previewProjects.map((project) => (
-                <ProjectPreviewCard key={project.slug} project={project} />
+              {featuredProjects.map((project) => (
+                <FeaturedProjectCard key={project.slug} project={project} />
               ))}
+            </div>
+            <div className="mt-12">
+              <Button href="/work" variant="secondary">
+                View All Work
+              </Button>
             </div>
           </div>
         </section>

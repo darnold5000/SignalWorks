@@ -1,394 +1,596 @@
-export type ProjectCategory =
-  | "Business Websites"
-  | "Sports Technology"
-  | "AI Tools"
-  | "Marketplaces"
-  | "Internal Apps";
+export type GalleryItem = {
+  src: string;
+  label: string;
+  alt: string;
+};
+
+export type FeatureItem = {
+  name: string;
+  description: string;
+};
 
 export type Project = {
   slug: string;
-  title: string;
-  category: ProjectCategory;
-  categories: string[];
-  industry: string;
+  name: string;
+  category: string;
+  tagline: string;
   summary: string;
-  description: string;
-  storyHook: string;
-  previewDescription: string;
-  transformation: {
-    from: string;
-    to: string;
-  };
-  featured: boolean;
-  technologies: string[];
-  result: string;
-  problem: string;
+  transformation: string;
+  before: string;
+  whatWeBuilt: string;
+  challenge: string;
   solution: string;
+  impact: string;
   features: string[];
-  results: string[];
-  before?: string[];
-  after?: string[];
-  workStory: {
-    challenge: string;
-    solution: string;
-    results: string[];
-  };
-  accent: string;
+  featureDetails: FeatureItem[];
+  growthFeatures: string[];
+  image: string;
+  mobileImage?: string;
+  gallery: GalleryItem[];
+  demoUrl: string;
+  featured: boolean;
+};
+
+/** Shared growth capability catalog referenced by project.growthFeatures */
+export const growthCapabilityCatalog: Record<
+  string,
+  { title: string; description: string }
+> = {
+  "online-scheduling": {
+    title: "Online scheduling",
+    description:
+      "Let customers book appointments, classes, or tee times without phone tag.",
+  },
+  "recurring-payments": {
+    title: "Recurring payments",
+    description:
+      "Collect memberships and packages on a predictable schedule.",
+  },
+  "membership-management": {
+    title: "Membership management",
+    description:
+      "Track plans, renewals, and member status in one place.",
+  },
+  "customer-portals": {
+    title: "Customer portals",
+    description:
+      "Give clients a private login for bookings, documents, and history.",
+  },
+  "parent-dashboards": {
+    title: "Parent dashboards",
+    description:
+      "Parents manage athletes, schedules, and forms without back-and-forth.",
+  },
+  "staff-management": {
+    title: "Staff management",
+    description:
+      "Coordinate instructors, stylists, or coaches with clearer internal tools.",
+  },
+  "digital-forms": {
+    title: "Digital forms and waivers",
+    description:
+      "Collect signatures and intake details before the first visit.",
+  },
+  "email-text-automation": {
+    title: "Email and text automation",
+    description:
+      "Send confirmations, reminders, and follow-ups automatically.",
+  },
+  "custom-admin-tools": {
+    title: "Custom admin tools",
+    description:
+      "Build workflows around how your team already operates.",
+  },
+  "multi-location": {
+    title: "Multi-location support",
+    description:
+      "Extend the experience as you add facilities, chairs, or markets.",
+  },
 };
 
 export const projects: Project[] = [
   {
-    slug: "market-street",
-    title: "Market Street Wealth Management",
-    category: "Business Websites",
-    categories: ["Business Website", "SEO", "AEO"],
-    industry: "Financial Services",
+    slug: "youth-basketball",
+    name: "Cornerstone Hoops",
+    category: "Youth Sports",
+    tagline:
+      "A complete home for programs, schedules, registration, and parent information.",
     summary:
-      "Premium financial advisor website built with modern design, trust-focused content, fee transparency, and AI-answer optimized pages.",
-    description:
-      "Replaced an outdated WordPress site with a premium platform built for credibility, search, and client trust.",
-    storyHook:
-      "Real software for a real financial advisory firm — not a template.",
-    previewDescription: "Premium financial advisor website.",
-    transformation: {
-      from: "WordPress",
-      to: "Premium Next.js platform",
-    },
-    featured: true,
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel", "Schema.org"],
-    result: "A credible, high-trust digital presence built for search and AI discovery.",
-    problem:
-      "The firm needed a website that communicated credibility, transparency, and expertise — not generic financial advisor templates. Visitors needed clear paths to services, fees, and client resources while search engines and AI assistants needed structured, authoritative content.",
+      "A high-energy youth basketball website designed to help families understand the program and register more easily.",
+    transformation:
+      "Turned a basic registration experience into a complete destination for programs, schedules, and parent information.",
+    before:
+      "Families were sent directly to a third-party signup page with limited information about the program.",
+    whatWeBuilt:
+      "A complete website with training options, schedules, coaching information, FAQs, and clear registration paths.",
+    challenge:
+      "The previous online experience depended primarily on a basic third-party registration page, leaving new families with limited information about the program.",
     solution:
-      "Built a premium Next.js site with editorial design, dedicated service landing pages, fee transparency, client login integration, blog architecture, and comprehensive SEO/AEO structure including FAQ schema and answer-focused content sections.",
+      "Created a full website with program details, schedules, coaching information, frequently asked questions, and clear registration paths.",
+    impact:
+      "Families can learn about the program and decide whether it is a good fit before reaching the registration process.",
     features: [
-      "Premium homepage with trust-focused messaging",
-      "Service landing pages",
-      "Our Fees transparency page",
-      "Client Login dropdown",
-      "Blog migration and architecture",
-      "Financial Answers section",
-      "FAQ schema markup",
-      "Technical SEO metadata",
-      "Vercel deployment",
+      "Program pages",
+      "Training schedules",
+      "Registration links",
+      "Parent FAQs",
+      "Mobile-first design",
     ],
-    results: [
-      "Clear positioning as a premium financial advisory firm",
-      "Structured content optimized for Google and AI answer engines",
-      "Reduced content clutter with improved hierarchy and scanability",
-      "Foundation for ongoing content and SEO growth",
+    featureDetails: [
+      {
+        name: "Clear program paths",
+        description:
+          "Visitors can quickly understand training options and who each session is for.",
+      },
+      {
+        name: "Integrated scheduling",
+        description:
+          "Families move from interest to available sessions with fewer unnecessary steps.",
+      },
+      {
+        name: "Coach credibility",
+        description:
+          "Parents see who leads the program before they commit.",
+      },
+      {
+        name: "Mobile-first experience",
+        description:
+          "Every major action remains easy to complete from a phone.",
+      },
     ],
-    before: [
-      "Old WordPress site with outdated branding",
-      "Hard to navigate service and fee information",
-      "No structure for search or AI discovery",
-      "Cluttered content with poor hierarchy",
+    growthFeatures: [
+      "online-scheduling",
+      "parent-dashboards",
+      "digital-forms",
+      "email-text-automation",
+      "recurring-payments",
     ],
-    after: [
-      "Modern premium website with editorial design",
-      "Improved information architecture and fee transparency",
-      "SEO and AEO optimized with FAQ schema",
-      "Client portal integration and blog architecture",
+    image: "/images/work/cornerstone-hoops/desktop.webp",
+    mobileImage: "/images/work/cornerstone-hoops/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/cornerstone-hoops/desktop.webp",
+        label: "Homepage",
+        alt: "Cornerstone Hoops homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/cornerstone-hoops/programs.webp",
+        label: "Programs and Services",
+        alt: "Cornerstone Hoops training programs section",
+      },
+      {
+        src: "/images/work/cornerstone-hoops/schedule.webp",
+        label: "Scheduling Experience",
+        alt: "Cornerstone Hoops schedule and registration page",
+      },
+      {
+        src: "/images/work/cornerstone-hoops/mobile.webp",
+        label: "Mobile Experience",
+        alt: "Cornerstone Hoops mobile homepage screenshot",
+      },
     ],
-    workStory: {
-      challenge:
-        "Modernize an outdated WordPress site while improving SEO, trust, and lead generation.",
-      solution:
-        "Rebuilt in Next.js with structured SEO, AI-ready content, advisor profiles, client login, and a modern design system.",
-      results: [
-        "Faster website",
-        "Modern brand",
-        "Better search structure",
-        "Easier content publishing",
-      ],
-    },
-    accent: "from-neutral-800 to-neutral-600",
+    demoUrl: "https://basketball.hiresignalworks.com",
+    featured: true,
   },
   {
-    slug: "zero-limits",
-    title: "Zero Limits Baseball",
-    category: "Business Websites",
-    categories: ["Business Website", "Sports Facility"],
-    industry: "Youth Sports",
+    slug: "athletic-training",
+    name: "DAWG Youth Training",
+    category: "Athletic Training",
+    tagline:
+      "A booking-ready training site that makes sessions, coaches, and next steps obvious.",
     summary:
-      "Modern sports performance facility website built to replace an outdated site with a fast, mobile-first, premium design.",
-    description:
-      "Transformed an outdated youth sports website into a fast, mobile-first recruiting and program platform.",
-    storyHook:
-      "Built for travel baseball families on their phones — where decisions actually happen.",
-    previewDescription: "Sports training and facility website.",
-    transformation: {
-      from: "Old website",
-      to: "Modern recruiting platform",
-    },
-    featured: true,
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
-    result: "A fast, mobile-first site that drives program inquiries and facility visits.",
-    problem:
-      "The facility's existing website was outdated, slow on mobile, and failed to communicate the quality of their training programs. Prospective athletes and parents needed a clear, compelling reason to visit.",
+      "A modern athletic training website built to help parents find sessions, understand the program, and book with confidence.",
+    transformation:
+      "Replaced a fragmented signup flow with a clear training destination and online booking path.",
+    before:
+      "Parents relied on scattered posts and third-party signup links with little program context.",
+    whatWeBuilt:
+      "A full training website with session discovery, coaching details, FAQs, and online scheduling.",
+    challenge:
+      "Families needed more than a signup link — they needed to understand training options, schedules, and expectations before booking.",
     solution:
-      "Designed and built a modern, performance-focused website with strong hero messaging, dedicated program pages, clear CTAs, and SEO-ready structure — all optimized for speed on Vercel.",
+      "Built a complete marketing and scheduling experience with clear session information, coach context, and a direct booking path.",
+    impact:
+      "Parents can evaluate fit, pick a session, and complete the next step without chasing details across messages and forms.",
     features: [
-      "Impactful hero section",
+      "Session discovery",
+      "Online booking",
+      "Coach profiles",
+      "Parent FAQs",
+      "Mobile booking",
+    ],
+    featureDetails: [
+      {
+        name: "Session discovery",
+        description:
+          "Available training options are easy to scan by age, focus, and timing.",
+      },
+      {
+        name: "Integrated scheduling",
+        description:
+          "Customers can move from interest to booking with fewer handoffs.",
+      },
+      {
+        name: "Parent-ready content",
+        description:
+          "Expectations, location details, and FAQs reduce pre-booking questions.",
+      },
+      {
+        name: "Mobile-first booking",
+        description:
+          "Busy parents can reserve a spot from their phone in minutes.",
+      },
+    ],
+    growthFeatures: [
+      "online-scheduling",
+      "recurring-payments",
+      "parent-dashboards",
+      "digital-forms",
+      "email-text-automation",
+      "custom-admin-tools",
+    ],
+    image: "/images/work/dawg-training/desktop.webp",
+    mobileImage: "/images/work/dawg-training/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/dawg-training/desktop.webp",
+        label: "Homepage",
+        alt: "DAWG Youth Training homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/dawg-training/programs.webp",
+        label: "Programs and Services",
+        alt: "DAWG Youth Training programs section",
+      },
+      {
+        src: "/images/work/dawg-training/schedule.webp",
+        label: "Scheduling Experience",
+        alt: "DAWG Youth Training scheduling experience",
+      },
+      {
+        src: "/images/work/dawg-training/mobile.webp",
+        label: "Mobile Experience",
+        alt: "DAWG Youth Training mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://training.hiresignalworks.com",
+    featured: true,
+  },
+  {
+    slug: "luxury-salon",
+    name: "Willow & Mane",
+    category: "Health and Beauty",
+    tagline:
+      "A refined salon experience that showcases services, stylists, and booking paths.",
+    summary:
+      "A luxury salon website designed to communicate atmosphere, service quality, and an easy next step for new guests.",
+    transformation:
+      "Elevated a basic booking presence into a branded destination for services, stylists, and new-guest onboarding.",
+    before:
+      "Prospective guests had limited ways to understand the salon, stylists, or which service path to choose.",
+    whatWeBuilt:
+      "A polished website with service menus, stylist profiles, bridal options, and clear booking entry points.",
+    challenge:
+      "Salon businesses often lose potential clients when the website cannot communicate quality, atmosphere, or how to book the right stylist.",
+    solution:
+      "Designed a calm, editorial site that presents services, stylists, studio atmosphere, and booking paths with clarity.",
+    impact:
+      "New guests can explore the salon experience and choose a stylist or service before they commit to an appointment.",
+    features: [
+      "Service menus",
+      "Stylist profiles",
+      "Booking links",
+      "New guest forms",
+      "Bridal packages",
+    ],
+    featureDetails: [
+      {
+        name: "Clear service paths",
+        description:
+          "Visitors can quickly understand and compare available services.",
+      },
+      {
+        name: "Stylist discovery",
+        description:
+          "Guests choose a stylist based on specialty, style, and availability cues.",
+      },
+      {
+        name: "New guest onboarding",
+        description:
+          "Intake and first-visit details reduce friction before the appointment.",
+      },
+      {
+        name: "Brand atmosphere",
+        description:
+          "Photography and layout communicate the quality of the in-person experience.",
+      },
+    ],
+    growthFeatures: [
+      "online-scheduling",
+      "customer-portals",
+      "staff-management",
+      "email-text-automation",
+      "recurring-payments",
+      "multi-location",
+    ],
+    image: "/images/work/willow-mane/desktop.webp",
+    mobileImage: "/images/work/willow-mane/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/willow-mane/desktop.webp",
+        label: "Homepage",
+        alt: "Willow & Mane salon homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/willow-mane/services.webp",
+        label: "Programs and Services",
+        alt: "Willow & Mane salon services page",
+      },
+      {
+        src: "/images/work/willow-mane/stylists.webp",
+        label: "Contact Experience",
+        alt: "Willow & Mane stylist profiles and booking paths",
+      },
+      {
+        src: "/images/work/willow-mane/mobile.webp",
+        label: "Mobile Experience",
+        alt: "Willow & Mane mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://salon.hiresignalworks.com",
+    featured: true,
+  },
+  {
+    slug: "golf-course",
+    name: "Oak Tree Golf Course",
+    category: "Golf and Recreation",
+    tagline:
+      "A modern course website with course information and a clear path to book tee times.",
+    summary:
+      "A golf course website built to help golfers learn the course, find key details, and move into tee time booking.",
+    transformation:
+      "Turned a limited online presence into a course destination with clearer information and booking flow.",
+    before:
+      "Golfers struggled to find course details and a reliable path from interest to a reserved tee time.",
+    whatWeBuilt:
+      "A modern website with course information, practical visitor details, and a booking-focused customer journey.",
+    challenge:
+      "Course websites often bury the essentials — rates, pace, amenities, and booking — behind outdated layouts and unclear calls to action.",
+    solution:
+      "Built a clean recreation website that leads with the course experience and makes tee time booking the obvious next step.",
+    impact:
+      "Visitors can evaluate the course and move toward booking without hunting through outdated pages or phone calls.",
+    features: [
+      "Course overview",
+      "Tee time booking",
+      "Visitor details",
+      "Mobile-friendly layout",
+      "Clear CTAs",
+    ],
+    featureDetails: [
+      {
+        name: "Course clarity",
+        description:
+          "Golfers quickly understand what to expect before they visit.",
+      },
+      {
+        name: "Booking-first paths",
+        description:
+          "The next step to reserve a tee time is visible throughout the experience.",
+      },
+      {
+        name: "Practical visitor info",
+        description:
+          "Hours, location, and course details reduce pre-visit questions.",
+      },
+      {
+        name: "Mobile-ready browsing",
+        description:
+          "Players can review the course and book from a phone on the go.",
+      },
+    ],
+    growthFeatures: [
+      "online-scheduling",
+      "recurring-payments",
+      "membership-management",
+      "customer-portals",
+      "email-text-automation",
+      "custom-admin-tools",
+    ],
+    image: "/images/work/oak-tree-golf/desktop.webp",
+    mobileImage: "/images/work/oak-tree-golf/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/oak-tree-golf/desktop.webp",
+        label: "Homepage",
+        alt: "Oak Tree Golf Course homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/oak-tree-golf/course.webp",
+        label: "Programs and Services",
+        alt: "Oak Tree Golf Course course information section",
+      },
+      {
+        src: "/images/work/oak-tree-golf/booking.webp",
+        label: "Scheduling Experience",
+        alt: "Oak Tree Golf Course tee time booking experience",
+      },
+      {
+        src: "/images/work/oak-tree-golf/mobile.webp",
+        label: "Mobile Experience",
+        alt: "Oak Tree Golf Course mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://golf.hiresignalworks.com",
+    featured: false,
+  },
+  {
+    slug: "fitness-studio",
+    name: "MA5 Performance",
+    category: "Fitness",
+    tagline:
+      "A performance-focused fitness site that clarifies training options and membership paths.",
+    summary:
+      "A fitness and performance website designed to communicate training programs, open-gym access, and how to get started.",
+    transformation:
+      "Replaced an unclear service mix with a focused site that explains training options and membership next steps.",
+    before:
+      "Prospective clients struggled to distinguish personal training, sports performance, and open-gym offerings.",
+    whatWeBuilt:
+      "A structured fitness website with service pages, membership messaging, and clear calls to begin training.",
+    challenge:
+      "Fitness businesses often lose leads when visitors cannot tell which program fits them or how to take the next step.",
+    solution:
+      "Organized services, memberships, and facility access into a clear customer journey with strong conversion paths.",
+    impact:
+      "New clients can compare options and choose a training path that matches their goals before contacting the gym.",
+    features: [
+      "Service pages",
+      "Membership options",
+      "Facility details",
+      "Booking CTAs",
+      "Mobile-first design",
+    ],
+    featureDetails: [
+      {
+        name: "Clear service paths",
+        description:
+          "Visitors can quickly understand and compare available training options.",
+      },
+      {
+        name: "Membership clarity",
+        description:
+          "Open-gym and membership details help clients choose the right level of access.",
+      },
+      {
+        name: "Conversion-focused CTAs",
+        description:
+          "Every major section points toward booking or getting started.",
+      },
+      {
+        name: "Mobile-first experience",
+        description:
+          "Busy athletes can explore options and take action from a phone.",
+      },
+    ],
+    growthFeatures: [
+      "online-scheduling",
+      "membership-management",
+      "recurring-payments",
+      "customer-portals",
+      "email-text-automation",
+      "staff-management",
+    ],
+    image: "/images/work/ma5-performance/desktop.webp",
+    mobileImage: "/images/work/ma5-performance/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/ma5-performance/desktop.webp",
+        label: "Homepage",
+        alt: "MA5 Performance homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/ma5-performance/services.webp",
+        label: "Programs and Services",
+        alt: "MA5 Performance services page",
+      },
+      {
+        src: "/images/work/ma5-performance/memberships.webp",
+        label: "Membership Options",
+        alt: "MA5 Performance membership and open-gym options",
+      },
+      {
+        src: "/images/work/ma5-performance/mobile.webp",
+        label: "Mobile Experience",
+        alt: "MA5 Performance mobile homepage screenshot",
+      },
+    ],
+    demoUrl: "https://fitness.hiresignalworks.com",
+    featured: false,
+  },
+  {
+    slug: "baseball-facility",
+    name: "Zero Limits Baseball",
+    category: "Youth Sports",
+    tagline:
+      "A recruiting-ready facility site built for athletes, parents, and program discovery.",
+    summary:
+      "A youth baseball facility website designed to showcase programs, training quality, and a clear path to inquire or schedule.",
+    transformation:
+      "Modernized an outdated facility presence into a fast, mobile-first program and recruiting destination.",
+    before:
+      "An outdated site made it hard for families to understand programs or trust the quality of the facility.",
+    whatWeBuilt:
+      "A premium facility website with program pages, strong calls to action, and a mobile-first experience for parents.",
+    challenge:
+      "Youth sports facilities lose interest when the website looks outdated, loads slowly on phones, or fails to explain programs clearly.",
+    solution:
+      "Rebuilt the experience around program clarity, facility credibility, and conversion paths that work for parents on mobile.",
+    impact:
+      "Families can evaluate programs and take the next step with confidence — whether that is scheduling training or visiting the facility.",
+    features: [
       "Program pages",
       "Facility messaging",
-      "Strong conversion CTAs",
+      "Strong CTAs",
       "SEO structure",
-      "Mobile responsive design",
+      "Mobile responsive",
     ],
-    results: [
-      "Dramatically improved mobile experience",
-      "Clear program discovery for prospective athletes",
-      "Professional brand presence matching facility quality",
-      "Fast load times on modern hosting",
+    featureDetails: [
+      {
+        name: "Program discovery",
+        description:
+          "Athletes and parents can quickly find the right training path.",
+      },
+      {
+        name: "Facility credibility",
+        description:
+          "The site communicates quality before a family ever walks through the door.",
+      },
+      {
+        name: "Conversion CTAs",
+        description:
+          "Clear next steps reduce drop-off between interest and inquiry.",
+      },
+      {
+        name: "Mobile-first experience",
+        description:
+          "Parents researching from the sidelines can act immediately.",
+      },
     ],
-    before: [
-      "Outdated youth sports website",
-      "Hard for staff to update content",
-      "Poor mobile experience for parents and athletes",
-      "Weak conversion paths for program inquiries",
+    growthFeatures: [
+      "online-scheduling",
+      "parent-dashboards",
+      "membership-management",
+      "digital-forms",
+      "email-text-automation",
+      "custom-admin-tools",
     ],
-    after: [
-      "Modern recruiting-focused website",
-      "Fast loading on every device",
-      "Clear program pages and strong CTAs",
-      "Easy content updates on modern hosting",
+    image: "/images/work/zero-limits/desktop.webp",
+    mobileImage: "/images/work/zero-limits/mobile.webp",
+    gallery: [
+      {
+        src: "/images/work/zero-limits/desktop.webp",
+        label: "Homepage",
+        alt: "Zero Limits Baseball homepage desktop screenshot",
+      },
+      {
+        src: "/images/work/zero-limits/programs.webp",
+        label: "Programs and Services",
+        alt: "Zero Limits Baseball training programs page",
+      },
+      {
+        src: "/images/work/zero-limits/facility.webp",
+        label: "Facility Experience",
+        alt: "Zero Limits Baseball facility information page",
+      },
+      {
+        src: "/images/work/zero-limits/mobile.webp",
+        label: "Mobile Experience",
+        alt: "Zero Limits Baseball mobile homepage screenshot",
+      },
     ],
-    workStory: {
-      challenge:
-        "Replace an outdated youth sports website with poor mobile experience and weak conversion paths.",
-      solution:
-        "Built a modern, mobile-first site with program pages, strong CTAs, and fast performance on Vercel.",
-      results: [
-        "Dramatically improved mobile experience",
-        "Clear program discovery for athletes",
-        "Professional brand matching facility quality",
-        "Parents noticed the difference immediately",
-      ],
-    },
-    accent: "from-neutral-700 to-neutral-500",
-  },
-  {
-    slug: "dugout-intel",
-    title: "Dugout Intel",
-    category: "AI Tools",
-    categories: ["AI Application", "Baseball Scouting"],
-    industry: "Youth Sports",
-    summary:
-      "AI-powered youth baseball scouting tool that converts GameChanger screenshots into structured opponent reports.",
-    description:
-      "Custom AI scouting platform that turns screenshot uploads into structured opponent reports — saving coaches hours every week.",
-    storyHook:
-      "AI that coaches actually use — not a demo, a daily workflow.",
-    previewDescription: "AI scouting application.",
-    transformation: {
-      from: "Manual stat entry",
-      to: "AI-powered scouting platform",
-    },
-    featured: true,
-    technologies: ["Next.js", "Supabase", "OpenAI", "TypeScript", "Vercel"],
-    result: "Coaches save hours of manual stat entry with AI-powered scouting reports.",
-    problem:
-      "Youth baseball coaches spend significant time manually extracting stats from GameChanger screenshots to prepare scouting reports before games. The process is tedious, error-prone, and takes time away from coaching.",
-    solution:
-      "Built an AI-powered platform where coaches upload GameChanger screenshots, AI vision extracts player and stat data, and structured opponent scouting reports are generated automatically with batting and pitching breakdowns.",
-    features: [
-      "Screenshot upload workflow",
-      "AI vision extraction",
-      "Player data tables",
-      "Batting stats analysis",
-      "Pitching stats analysis",
-      "Opponent report generation",
-      "Supabase authentication",
-      "Exportable scouting reports",
-    ],
-    results: [
-      "Hours of manual data entry eliminated per week",
-      "Consistent, structured scouting reports",
-      "Faster game preparation for coaching staff",
-      "Demonstrated practical AI application in sports",
-    ],
-    after: [
-      "Screenshot uploads with AI player extraction",
-      "Structured batting and pitching stat tables",
-      "Automated opponent scouting reports",
-      "Pitching ledger and exportable reports",
-    ],
-    workStory: {
-      challenge:
-        "Coaches spent hours manually extracting stats from GameChanger screenshots before every game.",
-      solution:
-        "Built a custom AI platform with screenshot upload, vision extraction, player tables, and automated scouting reports.",
-      results: [
-        "Hours of manual entry eliminated weekly",
-        "Consistent, structured scouting reports",
-        "Faster game preparation",
-        "AI that coaches actually use",
-      ],
-    },
-    accent: "from-neutral-900 to-neutral-700",
-  },
-  {
-    slug: "gymnastics-meet-tracker",
-    title: "Gymnastics Meet Tracker",
-    category: "Sports Technology",
-    categories: ["Custom Web App", "Sports Technology"],
-    industry: "Youth Sports",
-    summary:
-      "Custom gymnastics tracking platform for meet schedules, athletes, scores, and reporting.",
-    description:
-      "Live meet tracking platform so parents follow results, schedules, and rankings in real time.",
-    storyHook:
-      "Parents follow meets live — scores, schedules, and rankings in one place.",
-    previewDescription: "Live gymnastics meet tracking platform.",
-    transformation: {
-      from: "Spreadsheets",
-      to: "Live meet tracking app",
-    },
-    featured: true,
-    technologies: ["Next.js", "React", "Database", "Cloud"],
-    result: "Centralized meet data management replacing scattered spreadsheets and manual tracking.",
-    problem:
-      "Gymnastics meet data — schedules, athlete rosters, scores, and results — was spread across spreadsheets, paper forms, and disconnected tools. Organizers needed a single system to track everything in real time.",
-    solution:
-      "Built a custom web application for meet tracking with athlete management, score workflows, schedule views, admin tools, and data-driven reporting pages.",
-    features: [
-      "Meet tracking dashboard",
-      "Athlete data management",
-      "Score entry workflows",
-      "Admin tools",
-      "Schedule views",
-      "Data-driven reporting pages",
-    ],
-    results: [
-      "Single source of truth for meet data",
-      "Reduced manual data entry during events",
-      "Real-time score and schedule visibility",
-      "Foundation for future analytics and reporting",
-    ],
-    after: [
-      "Parents follow meets live from any device",
-      "Automatic results and score workflows",
-      "Meet scheduling and athlete management",
-      "Rankings and reporting dashboards",
-    ],
-    workStory: {
-      challenge:
-        "Meet data spread across spreadsheets and paper — no single way for parents to follow live results.",
-      solution:
-        "Built a custom meet tracking platform with live scores, schedules, athlete data, and reporting.",
-      results: [
-        "Parents follow meets live",
-        "Automatic results and rankings",
-        "Centralized scheduling",
-        "Single source of truth for meet data",
-      ],
-    },
-    accent: "from-neutral-800 to-neutral-600",
-  },
-  {
-    slug: "cheer-meet-tracker",
-    title: "Cheer Meet Tracker",
-    category: "Sports Technology",
-    categories: ["Custom Web App", "Sports Technology"],
-    industry: "Youth Sports",
-    summary:
-      "Cheer competition tracking platform designed around event schedules, teams, divisions, and performance data.",
-    description:
-      "Competition management platform for cheer events — schedules, divisions, teams, and live performance data.",
-    storyHook:
-      "Built for the complexity of live cheer competitions — not spreadsheets.",
-    previewDescription: "Cheer competition management platform.",
-    transformation: {
-      from: "Manual tracking",
-      to: "Cloud competition platform",
-    },
+    demoUrl: "https://baseball.hiresignalworks.com",
     featured: false,
-    technologies: ["Next.js", "Cloud Run", "Data Ingestion", "Automation"],
-    result: "Streamlined competition management from event ingestion through reporting.",
-    problem:
-      "Cheer competitions involve complex schedules across multiple divisions, teams, and performance rounds. Tracking everything manually created bottlenecks and errors during live events.",
-    solution:
-      "Developed a custom platform with event ingestion, schedule tracking, team and division organization, cloud-based workflows, and reporting pages for organizers and coaches.",
-    features: [
-      "Event data ingestion",
-      "Schedule tracking",
-      "Team and division organization",
-      "Cloud-based workflows",
-      "Reporting pages",
-      "Performance data views",
-    ],
-    results: [
-      "Organized competition data in one platform",
-      "Faster schedule updates during live events",
-      "Clear division and team visibility",
-      "Automated data workflows reducing manual work",
-    ],
-    workStory: {
-      challenge:
-        "Live cheer competitions with complex schedules across divisions — tracked manually with bottlenecks and errors.",
-      solution:
-        "Built a platform with event ingestion, schedule tracking, team organization, and cloud-based reporting.",
-      results: [
-        "Organized competition data in one place",
-        "Faster updates during live events",
-        "Clear division and team visibility",
-        "Reduced manual coordination",
-      ],
-    },
-    accent: "from-neutral-700 to-neutral-500",
-  },
-  {
-    slug: "ondeck-reps",
-    title: "OnDeck Reps",
-    category: "Marketplaces",
-    categories: ["Marketplace", "Youth Sports"],
-    industry: "Youth Sports",
-    summary:
-      "Marketplace concept for youth baseball players to find live reps, including request posting, availability, player profiles, and interest workflows.",
-    description:
-      "Marketplace connecting youth baseball players who need live reps with teammates who are available.",
-    storyHook:
-      "A marketplace concept built with real authentication, profiles, and secure data.",
-    previewDescription: "Youth baseball rep marketplace.",
-    transformation: {
-      from: "Group texts",
-      to: "Structured marketplace",
-    },
-    featured: false,
-    technologies: ["Next.js", "Supabase", "TypeScript", "Tailwind", "RLS"],
-    result: "A connected marketplace concept linking players who need reps with available teammates.",
-    problem:
-      "Youth baseball players often need extra live at-bats or pitching reps but lack an easy way to find teammates available for impromptu practice sessions. Coordination happens through scattered group texts and word of mouth.",
-    solution:
-      "Designed and built a marketplace platform where players create profiles, post rep requests, list availability, and respond to interest — all backed by Supabase with row-level security policies.",
-    features: [
-      "User authentication",
-      "Player profiles",
-      "Request marketplace",
-      "Availability postings",
-      "Interest response workflows",
-      "Supabase database with RLS policies",
-    ],
-    results: [
-      "Structured marketplace for rep coordination",
-      "Player profiles enabling trust and discovery",
-      "Secure data access with RLS policies",
-      "Foundation for community-driven sports networking",
-    ],
-    workStory: {
-      challenge:
-        "Youth players needed live reps but coordination happened through scattered group texts and word of mouth.",
-      solution:
-        "Built a marketplace with player profiles, rep requests, availability postings, and secure Supabase backend.",
-      results: [
-        "Structured rep coordination",
-        "Player profiles for trust and discovery",
-        "Secure data with RLS policies",
-        "Foundation for community networking",
-      ],
-    },
-    accent: "from-neutral-900 to-neutral-700",
   },
 ];
 
@@ -397,25 +599,16 @@ export function getProject(slug: string): Project | undefined {
 }
 
 export function getFeaturedProjects(): Project[] {
-  return projects.filter((p) => p.featured);
+  return projects.filter((p) => p.featured).slice(0, 3);
 }
 
-export const homepagePreviewSlugs = [
-  "market-street",
-  "zero-limits",
-  "dugout-intel",
-] as const;
-
-export function getHomepagePreviewProjects(): Project[] {
-  return homepagePreviewSlugs
-    .map((slug) => getProject(slug))
-    .filter((p): p is Project => p !== undefined);
+export function getProjectGrowthFeatures(project: Project) {
+  return project.growthFeatures
+    .map((id) => {
+      const item = growthCapabilityCatalog[id];
+      return item ? { id, ...item } : null;
+    })
+    .filter((item): item is { id: string; title: string; description: string } =>
+      Boolean(item),
+    );
 }
-
-export const projectCategories: ProjectCategory[] = [
-  "Business Websites",
-  "Sports Technology",
-  "AI Tools",
-  "Marketplaces",
-  "Internal Apps",
-];

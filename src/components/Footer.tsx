@@ -10,10 +10,10 @@ const footerLinks = {
     { label: "SEO + AEO", href: "/services/seo-aeo" },
   ],
   work: [
-    { label: "Market Street", href: "/work/market-street" },
-    { label: "Zero Limits", href: "/work/zero-limits" },
-    { label: "Dugout Intel", href: "/work/dugout-intel" },
-    { label: "Gymnastics Tracker", href: "/work/gymnastics-meet-tracker" },
+    { label: "All Work", href: "/work" },
+    { label: "Cornerstone Hoops", href: "/work/youth-basketball" },
+    { label: "DAWG Training", href: "/work/athletic-training" },
+    { label: "Willow & Mane", href: "/work/luxury-salon" },
   ],
   company: [
     { label: "About", href: "/about" },
@@ -62,7 +62,7 @@ export function Footer() {
           {SHOW_WORK && (
             <div>
               <h3 className="text-xs font-semibold tracking-wider uppercase text-muted">
-                Work
+                Our Work
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.work.map((link) => (

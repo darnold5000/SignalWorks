@@ -18,7 +18,7 @@ export const siteConfig = {
 } as const;
 
 const allNavLinks = [
-  { label: "Work", href: "/work", show: SHOW_WORK },
+  { label: "Our Work", href: "/work", show: SHOW_WORK },
   { label: "Services", href: "/services", show: true },
   { label: "Capabilities", href: "/capabilities", show: true },
   { label: "Process", href: "/process", show: true },
