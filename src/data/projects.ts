@@ -596,8 +596,8 @@ export const projects: Project[] = [
       "Services and proof of work were hard to scan before requesting a booking.",
     cardBuilt:
       "A focused stylist site with clear services, gallery proof, and direct booking.",
-    metrics: ["Direct Booking", "Service Menus", "Gallery"],
-    badge: "Direct Booking",
+    metrics: ["Online Scheduling", "Service Menus", "Gallery"],
+    badge: "Scheduling Integration",
     cardLine:
       "A focused stylist brand site with clear services and booking.",
     challenge:
@@ -608,7 +608,7 @@ export const projects: Project[] = [
       "Clients can review Maya’s work and book directly — without navigating a full salon roster first.",
     features: [
       "Service & pricing menus",
-      "Online booking",
+      "Third-party scheduling",
       "Before & after gallery",
       "Location details",
       "Mobile-first booking",
@@ -657,8 +657,8 @@ export const projects: Project[] = [
       },
       {
         src: "/images/work/hair-by-maya/booking.webp",
-        label: "Scheduling Experience",
-        alt: "Hair by Maya booking experience",
+        label: "Scheduling Integration",
+        alt: "Hair by Maya Schedule with Maya page with embedded Calendly booking",
       },
       {
         src: "/images/work/hair-by-maya/mobile.webp",
