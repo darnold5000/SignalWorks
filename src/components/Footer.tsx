@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site";
 import { SHOW_WORK } from "@/lib/flags";
 
@@ -27,6 +30,12 @@ const footerLinks = {
 };
 
 export function Footer() {
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/proposals")) {
+    return null;
+  }
+
   return (
     <footer className="border-t border-border bg-neutral-50">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">

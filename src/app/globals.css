@@ -86,3 +86,24 @@ body {
     transform: none;
   }
 }
+
+@media print {
+  .proposal-chrome,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .proposal-microsite {
+    background: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
