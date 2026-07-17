@@ -10,7 +10,7 @@ type Props = {
 export function FoundingPartnerPricing({ section, pricing }: Props) {
   return (
     <section id="pricing" className="scroll-mt-24 border-b border-border">
-      <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
+      <div className="proposal-landmark proposal-landmark-gold mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
         <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted">
           Partnership
         </p>
@@ -30,6 +30,9 @@ export function FoundingPartnerPricing({ section, pricing }: Props) {
             <p className="mt-3 text-sm text-muted">
               First {pricing.introductoryMonths} months
             </p>
+            <p className="proposal-body mt-4 text-sm leading-relaxed">
+              {section.introductoryBillingNote}
+            </p>
           </div>
           <div className="bg-neutral-50 p-8 sm:p-10">
             <p className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
@@ -39,16 +42,21 @@ export function FoundingPartnerPricing({ section, pricing }: Props) {
               {formatCurrency(pricing.ongoingMonthlyPrice)}
               <span className="text-xl text-muted">/month</span>
             </p>
-            <p className="mt-3 text-sm font-medium">{section.ongoingLabel}</p>
+            <p className="mt-3 text-sm font-medium text-foreground">
+              {section.ongoingLabel}
+            </p>
           </div>
         </div>
 
         <div className="mt-8 max-w-3xl space-y-4">
           {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)} className="text-base text-muted leading-relaxed">
+            <p key={paragraph.slice(0, 48)} className="proposal-body text-base leading-relaxed">
               {paragraph}
             </p>
           ))}
+          <p className="proposal-body text-sm leading-relaxed">
+            {section.commitmentNote}
+          </p>
         </div>
 
         <div className="mt-10">
@@ -57,8 +65,8 @@ export function FoundingPartnerPricing({ section, pricing }: Props) {
           </p>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {section.monthlyIncludes.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-muted">
-                <span className="mt-0.5 text-foreground/50" aria-hidden="true">
+              <li key={item} className="proposal-body flex items-start gap-2 text-sm">
+                <span className="proposal-check mt-0.5" aria-hidden="true">
                   ✓
                 </span>
                 {item}

@@ -16,7 +16,7 @@ export function ExecutiveSummary({ section }: Props) {
         </h2>
         <div className="mt-8 max-w-3xl space-y-5">
           {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)} className="text-base text-muted leading-relaxed sm:text-lg">
+            <p key={paragraph.slice(0, 48)} className="proposal-body text-base leading-relaxed sm:text-lg">
               {paragraph}
             </p>
           ))}

@@ -6,7 +6,7 @@ export function ProposalChrome() {
     <header className="proposal-chrome sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-sm print:static print:border-0">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 lg:px-8">
         <p className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
-          Client Proposal
+          Platform Proposal
         </p>
         <Link
           href="/"

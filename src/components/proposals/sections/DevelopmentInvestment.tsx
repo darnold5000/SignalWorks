@@ -16,7 +16,7 @@ export function DevelopmentInvestment({ section, pricing }: Props) {
 
   return (
     <section id="investment" className="scroll-mt-24 border-b border-border">
-      <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
+      <div className="proposal-landmark proposal-landmark-red mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
         <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted">
           Investment
         </p>
@@ -24,20 +24,30 @@ export function DevelopmentInvestment({ section, pricing }: Props) {
           {section.title}
         </h2>
 
-        <div className="mt-10 max-w-2xl border border-border bg-neutral-50 p-8 sm:p-10">
-          <p className="text-sm text-muted line-through decoration-foreground/30">
+        <div
+          className="mt-10 max-w-2xl border border-border p-8 sm:p-10"
+          style={{ background: "var(--proposal-accent-soft)" }}
+        >
+          <span
+            className="inline-flex items-center rounded-sm px-2.5 py-1 text-[11px] font-semibold tracking-[0.14em] uppercase text-white"
+            style={{ background: "var(--proposal-accent)" }}
+          >
+            {section.waivedBadge}
+          </span>
+          <p className="mt-5 text-sm text-muted line-through decoration-foreground/40">
             {formatCurrency(pricing.developmentValue)} One-Time Platform Development
           </p>
-          <p className="mt-6 text-xs font-semibold tracking-[0.18em] uppercase text-muted">
-            {section.foundingBenefitLabel}
-          </p>
-          <p className="mt-2 font-display text-5xl tracking-tight sm:text-6xl">
+          <p className="mt-1.5 text-xs text-muted">{section.normalFeeNote}</p>
+          <p className="mt-6 font-display text-5xl tracking-tight sm:text-6xl">
             {formatCurrency(pricing.developmentPrice)}
           </p>
-          <p className="mt-4 text-base text-muted leading-relaxed">
+          <p className="proposal-body mt-4 text-base leading-relaxed">
             {section.foundingBenefitCopy}
           </p>
-          <p className="mt-6 text-sm font-medium">
+          <p className="proposal-body mt-3 text-base leading-relaxed">
+            {section.foundingBenefitSupportingCopy}
+          </p>
+          <p className="mt-6 text-sm font-semibold text-foreground">
             {section.estimatedValueLabel}:{" "}
             {formatCurrency(pricing.developmentValue)}
           </p>
@@ -64,8 +74,8 @@ export function DevelopmentInvestment({ section, pricing }: Props) {
           {open && (
             <ul className="grid gap-2 border-t border-border px-6 py-5 sm:grid-cols-2">
               {section.whatsIncluded.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-muted">
-                  <span className="mt-0.5 text-foreground/50" aria-hidden="true">
+                <li key={item} className="proposal-body flex items-start gap-2 text-sm">
+                  <span className="proposal-check mt-0.5" aria-hidden="true">
                     ✓
                   </span>
                   {item}

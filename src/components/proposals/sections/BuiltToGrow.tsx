@@ -7,7 +7,7 @@ type Props = {
 export function BuiltToGrow({ section }: Props) {
   return (
     <section className="border-b border-border bg-neutral-50">
-      <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
+      <div className="proposal-landmark proposal-landmark-green mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
         <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted">
           Roadmap
         </p>
@@ -16,7 +16,7 @@ export function BuiltToGrow({ section }: Props) {
         </h2>
         <div className="mt-8 max-w-3xl space-y-4">
           {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)} className="text-base text-muted leading-relaxed">
+            <p key={paragraph.slice(0, 48)} className="proposal-body text-base leading-relaxed">
               {paragraph}
             </p>
           ))}
@@ -29,8 +29,8 @@ export function BuiltToGrow({ section }: Props) {
             </h3>
             <ul className="mt-4 space-y-2">
               {section.included.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-muted">
-                  <span className="mt-0.5 text-foreground/50" aria-hidden="true">
+                <li key={item} className="proposal-body flex items-start gap-2 text-sm">
+                  <span className="proposal-check mt-0.5" aria-hidden="true">
                     ✓
                   </span>
                   {item}
@@ -44,8 +44,8 @@ export function BuiltToGrow({ section }: Props) {
             </h3>
             <ul className="mt-4 space-y-2">
               {section.future.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-muted">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/30" aria-hidden="true" />
+                <li key={item} className="proposal-body flex items-start gap-2 text-sm">
+                  <span className="proposal-dot mt-1.5 h-1 w-1 shrink-0 rounded-full" aria-hidden="true" />
                   {item}
                 </li>
               ))}

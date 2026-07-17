@@ -13,6 +13,7 @@ import { FoundingPartnerPricing } from "./sections/FoundingPartnerPricing";
 import { BuiltToGrow } from "./sections/BuiltToGrow";
 import { OngoingPartnership } from "./sections/OngoingPartnership";
 import { WhySignalWorks } from "./sections/WhySignalWorks";
+import { PartnershipDifference } from "./sections/PartnershipDifference";
 import { NextSteps } from "./sections/NextSteps";
 
 type ProposalViewProps = {
@@ -67,6 +68,8 @@ export function ProposalView({ proposal }: ProposalViewProps) {
             return <OngoingPartnership key={section.id} section={section} />;
           case "why-signal-works":
             return <WhySignalWorks key={section.id} section={section} />;
+          case "partnership-difference":
+            return <PartnershipDifference key={section.id} section={section} />;
           case "next-steps":
             return (
               <NextSteps

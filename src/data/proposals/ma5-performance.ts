@@ -36,9 +36,8 @@ export const ma5PerformanceProposal: Proposal = {
       title: "Executive Summary",
       paragraphs: [
         "Thank you for the opportunity to partner with MA5 Performance.",
-        "Our goal is not simply to redesign your website, but to build a modern digital platform that enhances the experience for athletes, parents, coaches, and staff while giving your business a foundation that can continue to grow for years to come.",
-        "Unlike traditional website projects that are completed once and rarely updated, Signal Works provides an actively maintained platform with continuous improvements, feature enhancements, security updates, and long-term technical support.",
-        "We believe your website should evolve alongside your business—not become outdated every few years.",
+        "Our goal is not simply to redesign your website, but to build a modern digital platform that improves the experience for athletes, parents, coaches, and staff — with a foundation that can continue to grow for years to come.",
+        "Unlike traditional website projects that launch once and fade, Signal Works provides an actively maintained platform with ongoing improvements, security updates, and long-term technical support.",
       ],
     },
     {
@@ -119,11 +118,14 @@ export const ma5PerformanceProposal: Proposal = {
       id: "development-investment",
       type: "development-investment",
       title: "Platform Development Investment",
-      foundingBenefitLabel: "Founding Partner Benefit",
+      waivedBadge: "Founding Partner Exclusive",
+      normalFeeNote: "Standard investment for new platform implementations",
       foundingBenefitCopy:
         "As one of our founding partners, we're waiving the entire platform development investment.",
-      estimatedValueLabel: "Estimated Development Value",
-      whatsIncludedLabel: "What's included",
+      foundingBenefitSupportingCopy:
+        "This allows you to invest in growing your business rather than paying an upfront development fee.",
+      estimatedValueLabel: "Estimated Value Delivered",
+      whatsIncludedLabel: "Everything Included in Your Platform",
       whatsIncluded: [
         "Discovery and planning",
         "Complete website redesign",
@@ -147,8 +149,7 @@ export const ma5PerformanceProposal: Proposal = {
       title: "60-Day Guided Launch & Optimization Program",
       paragraphs: [
         "Every Signal Works platform includes a 60-Day Guided Launch & Optimization Program at no additional cost.",
-        "Launching a new platform is a collaborative process. During the first 60 days after launch, we'll work closely together to gather feedback from you, your coaches, and your members to ensure the platform fits the way MA5 operates.",
-        "This allows us to make thoughtful improvements based on how your team actually uses the platform—not just how it was designed before launch.",
+        "During the first 60 days after launch, we'll work closely with you, your coaches, and your members to gather feedback and ensure the platform fits the way MA5 operates — refining based on real use, not just the pre-launch design.",
       ],
       includes: [
         "Content updates and refinements",
@@ -176,9 +177,13 @@ export const ma5PerformanceProposal: Proposal = {
       title: "Founding Partner Pricing",
       introductoryLabel: "Initial 6 Months",
       ongoingLabel: "Founding Partner Rate",
+      introductoryBillingNote:
+        "The introductory monthly rate begins on the production launch date.",
+      commitmentNote:
+        "Monthly service begins at launch and continues month-to-month unless otherwise documented in the final service agreement.",
       paragraphs: [
-        "As one of our inaugural platform partners, MA5 receives preferred pricing reserved exclusively for our earliest clients.",
-        "As one of our inaugural partners, MA5 will always receive preferred pricing compared to new clients. As the Signal Works platform continues to evolve and expand, any future pricing changes will continue to recognize your early partnership with Signal Works.",
+        "As one of our inaugural platform partners, MA5 receives preferred pricing reserved for our earliest clients. As the Signal Works platform continues to evolve, any future pricing changes will continue to recognize your early partnership.",
+        "Our goal is to build a long-term partnership where your platform continues to evolve without the need for costly redesigns every few years.",
       ],
       monthlyIncludes: [
         "Secure cloud hosting",
@@ -188,18 +193,16 @@ export const ma5PerformanceProposal: Proposal = {
         "Technical support",
         "Infrastructure monitoring",
         "Continuous platform improvements",
-        "New feature releases",
-        "Ongoing enhancements as the business grows",
+        "Platform-wide feature improvements",
       ],
       disclaimer:
-        "Third-party usage, transaction, messaging, or premium integration fees are not included unless specifically stated.",
+        "Third-party usage, transaction, messaging, or premium integration fees are not included unless specifically stated. Custom or substantial additions unique to MA5 may be scoped separately.",
     },
     {
       id: "built-to-grow",
       type: "built-to-grow",
       title: "Built to Grow",
       paragraphs: [
-        "The MA5 platform is designed to evolve alongside your business.",
         "Your initial launch already includes a comprehensive digital platform—not just a marketing website.",
       ],
       includedLabel: "Included at launch",
@@ -213,7 +216,7 @@ export const ma5PerformanceProposal: Proposal = {
         "Push notifications with an installable mobile app",
         "Secure cloud hosting and ongoing platform maintenance",
       ],
-      futureLabel: "Potential future enhancements",
+      futureLabel: "Future Growth Opportunities",
       future: [
         "Nutrition tracking",
         "Attendance and class check-in",
@@ -236,9 +239,8 @@ export const ma5PerformanceProposal: Proposal = {
       type: "ongoing-partnership",
       title: "More Than a Website Provider",
       paragraphs: [
-        "Signal Works becomes your long-term technology partner.",
-        "Our commitment does not end when the platform launches. We'll continue maintaining, improving, and supporting the platform so it can evolve alongside your business.",
-        "Rather than paying for a completely new website every few years, MA5 will have a modern platform supported through ongoing maintenance, thoughtful improvements, and new capabilities.",
+        "Signal Works becomes your long-term technology partner. Our commitment does not end at launch — we continue maintaining and supporting the platform so it stays modern as MA5 grows.",
+        "Rather than paying for a completely new website every few years, you get ongoing maintenance, thoughtful improvements, and new capabilities when they make sense.",
       ],
       monthlyValue: [
         "Hosting",
@@ -266,9 +268,22 @@ export const ma5PerformanceProposal: Proposal = {
       ],
     },
     {
+      id: "partnership-difference",
+      type: "partnership-difference",
+      title: "Why This Partnership Is Different",
+      contrastLines: [
+        "Most website projects end when the website launches.",
+        "Our partnership begins there.",
+      ],
+      paragraphs: [
+        "Signal Works continues to improve your platform through ongoing maintenance, thoughtful enhancements, security updates, and platform-wide improvements so your digital presence evolves alongside your business.",
+        "You'll always know who built your platform, who maintains it, and who to call when you have your next idea.",
+      ],
+    },
+    {
       id: "next-steps",
       type: "next-steps",
-      title: "Next Steps",
+      title: "Ready to Move Forward?",
       steps: [
         "Review the proposal",
         "Confirm any final launch adjustments",
@@ -277,7 +292,7 @@ export const ma5PerformanceProposal: Proposal = {
         "Begin the Guided Launch Program",
       ],
       agreementNote:
-        "Final service terms will be documented in the Signal Works service agreement.",
+        "Final terms, billing details, and service responsibilities will be documented in the Signal Works service agreement.",
     },
   ],
 };

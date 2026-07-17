@@ -87,6 +87,50 @@ body {
   }
 }
 
+/* Proposal microsite: slightly stronger contrast without darkening the page */
+.proposal-microsite {
+  --muted: #525252;
+  --border: #d4d4d4;
+  --proposal-body: #404040;
+  --proposal-accent: #e2062b;
+  --proposal-accent-soft: color-mix(in srgb, #e2062b 8%, #fafafa);
+  --proposal-blue: #2563eb;
+  --proposal-gold: #b45309;
+  --proposal-green: #15803d;
+}
+
+.proposal-microsite .proposal-body {
+  color: var(--proposal-body);
+}
+
+.proposal-microsite .proposal-check {
+  color: #404040;
+}
+
+.proposal-microsite .proposal-dot {
+  background-color: #737373;
+}
+
+.proposal-microsite .proposal-landmark {
+  border-left: 2px solid var(--proposal-landmark-color, transparent);
+}
+
+.proposal-microsite .proposal-landmark-red {
+  --proposal-landmark-color: var(--proposal-accent);
+}
+
+.proposal-microsite .proposal-landmark-blue {
+  --proposal-landmark-color: var(--proposal-blue);
+}
+
+.proposal-microsite .proposal-landmark-gold {
+  --proposal-landmark-color: var(--proposal-gold);
+}
+
+.proposal-microsite .proposal-landmark-green {
+  --proposal-landmark-color: var(--proposal-green);
+}
+
 @media print {
   .proposal-chrome,
   .print\:hidden {

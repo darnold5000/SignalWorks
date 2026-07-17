@@ -34,8 +34,10 @@ export type ProposalSection =
       id: "development-investment";
       type: "development-investment";
       title: string;
-      foundingBenefitLabel: string;
+      waivedBadge: string;
+      normalFeeNote: string;
       foundingBenefitCopy: string;
+      foundingBenefitSupportingCopy: string;
       estimatedValueLabel: string;
       whatsIncludedLabel: string;
       whatsIncluded: string[];
@@ -55,6 +57,8 @@ export type ProposalSection =
       title: string;
       introductoryLabel: string;
       ongoingLabel: string;
+      introductoryBillingNote: string;
+      commitmentNote: string;
       paragraphs: string[];
       monthlyIncludes: string[];
       disclaimer: string;
@@ -83,6 +87,13 @@ export type ProposalSection =
       type: "why-signal-works";
       title: string;
       items: string[];
+    }
+  | {
+      id: "partnership-difference";
+      type: "partnership-difference";
+      title: string;
+      contrastLines: [string, string];
+      paragraphs: string[];
     }
   | {
       id: "next-steps";

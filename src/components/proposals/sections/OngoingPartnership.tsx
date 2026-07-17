@@ -16,14 +16,14 @@ export function OngoingPartnership({ section }: Props) {
         </h2>
         <div className="mt-8 max-w-3xl space-y-4">
           {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)} className="text-base text-muted leading-relaxed">
+            <p key={paragraph.slice(0, 48)} className="proposal-body text-base leading-relaxed">
               {paragraph}
             </p>
           ))}
         </div>
         <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
           {section.monthlyValue.map((item) => (
-            <li key={item} className="text-sm text-muted">
+            <li key={item} className="proposal-body text-sm">
               {item}
             </li>
           ))}

@@ -63,7 +63,7 @@ export function ProposalHeader({
         <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl lg:text-6xl">
           {proposal.hero.title}
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-muted leading-relaxed">
+        <p className="proposal-body mt-5 max-w-2xl text-lg leading-relaxed">
           {proposal.hero.summary}
         </p>
 
