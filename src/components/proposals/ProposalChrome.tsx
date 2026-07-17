@@ -1,25 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export function ProposalChrome() {
   return (
     <header className="proposal-chrome sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-sm print:static print:border-0">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/icon.png"
-            alt=""
-            width={28}
-            height={28}
-            className="h-7 w-7 shrink-0"
-            priority
-          />
-          <span className="text-sm font-semibold tracking-[0.2em] uppercase">
-            {siteConfig.name}
-          </span>
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 lg:px-8">
+        <p className="text-xs font-semibold tracking-[0.16em] uppercase text-muted">
+          Client Proposal
+        </p>
+        <Link
+          href="/"
+          className="text-xs text-muted transition-colors hover:text-foreground"
+        >
+          {siteConfig.name}
         </Link>
-        <p className="hidden text-xs text-muted sm:block">Client Proposal</p>
       </div>
     </header>
   );

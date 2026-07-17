@@ -19,7 +19,7 @@ export function ProposalHeader({
   return (
     <header className="border-b border-border">
       <div className="mx-auto max-w-5xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="flex flex-wrap items-center gap-6">
+        <div className="flex flex-wrap items-center gap-5">
           <div className="flex items-center gap-3">
             <Image
               src="/icon.png"
@@ -33,7 +33,9 @@ export function ProposalHeader({
               Signal Works
             </span>
           </div>
-          <span className="hidden h-6 w-px bg-border sm:block" aria-hidden="true" />
+          <span className="text-muted" aria-hidden="true">
+            ×
+          </span>
           <div className="flex items-center gap-3">
             {proposal.clientLogo ? (
               <Image
