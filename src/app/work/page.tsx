@@ -1,7 +1,7 @@
 import { WorkHero } from "@/components/work/WorkHero";
 import { ProjectGrid } from "@/components/work/ProjectGrid";
 import { CTASection } from "@/components/CTASection";
-import { projects } from "@/data/projects";
+import { getVisibleProjects } from "@/data/projects";
 import { createPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -34,7 +34,7 @@ export default function WorkPage() {
 
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
-          <ProjectGrid projects={projects} />
+          <ProjectGrid projects={getVisibleProjects()} />
         </div>
       </section>
 

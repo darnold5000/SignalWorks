@@ -49,6 +49,8 @@ export type Project = {
   gallery: GalleryItem[];
   demoUrl: string;
   featured: boolean;
+  /** When true, omitted from Our Work listings, homepage, sitemap, and related links. */
+  hidden?: boolean;
 };
 
 /** Shared growth capability catalog referenced by project.growthFeatures */
@@ -294,6 +296,7 @@ export const projects: Project[] = [
     ],
     demoUrl: "https://dawgz.hiresignalworks.com",
     featured: true,
+    hidden: true,
   },
   {
     slug: "luxury-salon",
@@ -963,8 +966,14 @@ export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }
 
+export function getVisibleProjects(): Project[] {
+  return projects.filter((p) => !p.hidden);
+}
+
 export function getFeaturedProjects(): Project[] {
-  return projects.filter((p) => p.featured).slice(0, 3);
+  return getVisibleProjects()
+    .filter((p) => p.featured)
+    .slice(0, 3);
 }
 
 export function getProjectGrowthFeatures(project: Project) {

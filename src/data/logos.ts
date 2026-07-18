@@ -8,7 +8,7 @@ export type ClientLogo = {
 
 export const clientLogos: ClientLogo[] = [
   { name: "Batter Up", shortName: "Batter Up", href: "/work/batting-academy" },
-  { name: "DAWGZ Youth Training", shortName: "DAWGZ", href: "/work/athletic-training" },
+  // { name: "DAWGZ Youth Training", shortName: "DAWGZ", href: "/work/athletic-training" },
   { name: "Willow & Mane", shortName: "Willow & Mane", href: "/work/luxury-salon" },
   { name: "Cornerstone Hoops", shortName: "Cornerstone", href: "/work/youth-basketball" },
   { name: "Hair by Maya", shortName: "Hair by Maya", href: "/work/personal-stylist" },

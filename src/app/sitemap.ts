@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { projects } from "@/data/projects";
+import { getVisibleProjects } from "@/data/projects";
 import { services } from "@/data/services";
 import { SHOW_WORK } from "@/lib/flags";
 import { siteConfig } from "@/lib/site";
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const projectPages = SHOW_WORK
-    ? projects.map((project) => ({
+    ? getVisibleProjects().map((project) => ({
         url: `${baseUrl}/work/${project.slug}`,
         lastModified: new Date(),
         changeFrequency: "monthly" as const,
